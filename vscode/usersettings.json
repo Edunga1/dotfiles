@@ -1,0 +1,10 @@
+{
+    "workbench.editor.showTabs": false,
+    "editor.renderIndentGuides": true,
+    "editor.renderWhitespace": "all",
+    "workbench.colorCustomizations": {
+        "editorBracketMatch.background": "#f00"
+    },
+    "files.trimTrailingWhitespace": true,
+    "editor.minimap.enabled": false
+}
