@@ -1,7 +1,16 @@
+[credential]
+	helper = cache
 [user]
-	email = goonr21@gmail.com
-	name = edunga1
-[push]
-	default = simple
+	email = dupark@pyundoori.com
+	name = Park Dong-uk
+[core]
+	filemode = false
 [alias]
-    lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold red)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(cyan)<%an>%C(reset)%C(bold yellow)%d%C(reset)' --all
+	lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold red)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(cyan)<%an>%C(reset)%C(bold yellow)%d%C(reset)' --all
+	unstage = reset HEAD
+    st = status
+    co = commit
+    df = diff
+    dif = diff
+    ch = checkout
+
