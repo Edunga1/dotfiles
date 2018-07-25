@@ -35,16 +35,22 @@ Plug '~/my-prototype-plugin'
 
 " My plugins.....
 Plug 'pangloss/vim-javascript'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'w0rp/ale'
+Plug 'tpope/vim-vinegar'
 
 " Initialize plugin system
 call plug#end()
 
 set number
 syntax on
-set ts=4
+set ts=4 sw=4 sts=4
 set et
 set backspace=indent,eol,start
+let g:netrw_browse_split=3
+set ruler
+set hlsearch
+set completeopt=longest,menuone
 
-" NERDTree Settings
-NERDTreeToggle
-let NERDTreeShowHidden=1
+" syntax highlighting
+au BufRead,BufNewFile *.ejs set filetype=html
