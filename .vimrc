@@ -190,19 +190,7 @@ endfunction
 " sudo write
 cmap w!! %!sudo tee > /dev/null %
 
-" CtrlP
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-
 filetype plugin indent on   " required!
-
-" Valloric/YouCompleteMe
-" - Start autocompletion after 4 chars
-let g:ycm_min_num_of_chars_for_completion = 4
-let g:ycm_min_num_identifier_candidate_chars = 4
-let g:ycm_enable_diagnostic_highlighting = 0
-" - Don't show YCM's preview window
-set completeopt-=preview
-let g:ycm_add_preview_to_completeopt = 0
 
 " Vroom
 let g:vroom_map_keys = 0
@@ -226,19 +214,6 @@ colorscheme solarized
 highlight ExtraWhitespace ctermbg=red guibg=red
 " highlight SpecialKey guibg=red ctermbg=red
 highlight SpecialKey guibg=#424242 ctermfg=236 ctermbg=234
-
-" Plugin scrooloose/syntastic
-let g:syntastic_python_checkers = ['pylint']
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_pylint_args = '--disable=C0111'
-map <Leader>c :SyntasticCheck<CR>
-map <Leader>C :SyntasticReset<CR>
-
-" Plugin davidhalter/jedi-vim
-let g:jedi#popup_on_dot = 0
 
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/

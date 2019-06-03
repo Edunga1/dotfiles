@@ -2,7 +2,6 @@
 
 let g:ag_prg="ag --column --nogroup"
 
-
 " Search for selection
 function! VisualSelection()
   try
