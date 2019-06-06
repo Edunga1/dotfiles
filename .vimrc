@@ -16,7 +16,7 @@ Plug 'rizzatti/funcoo.vim'
 Plug 'rizzatti/dash.vim'
 
 " Navigation
- Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 
 " Programming
