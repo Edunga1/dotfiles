@@ -60,6 +60,9 @@ Plug 'skalnik/vim-vroom'
 " Colorscheme
 Plug 'altercation/vim-colors-solarized'
 
+" Personal Wiki
+Plug 'vimwiki/vimwiki'
+
 call plug#end()
 
 " General {
