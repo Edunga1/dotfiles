@@ -16,8 +16,9 @@ Plug 'rizzatti/funcoo.vim'
 Plug 'rizzatti/dash.vim'
 
 " Navigation
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Programming
 Plug 'groenewege/vim-less'
