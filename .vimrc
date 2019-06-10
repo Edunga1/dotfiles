@@ -44,6 +44,8 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'rhysd/vim-crystal'
 Plug 'posva/vim-vue'
 Plug 'leafgarland/typescript-vim'
+" quoting/parenthesizing made simple
+Plug 'tpope/vim-surround'
 
 " Python
 Plug 'scrooloose/syntastic'
@@ -147,9 +149,6 @@ map <Leader>w4 :set tabstop=4<CR>:set softtabstop=4<CR>:set shiftwidth=4<CR>:set
 map <Leader>w2 :set tabstop=2<CR>:set softtabstop=2<CR>:set shiftwidth=2<CR>:set expandtab<CR>
 set list
 set listchars=tab:T>
-nnoremap <Tab> gt
-nnoremap <S-Tab> gT
-nnoremap <c-t> :tabnew<cr>
 
 " Keep content after pasting
 vnoremap <leader>p "_dP
@@ -162,33 +161,6 @@ nmap <Leader>r :!ruby %<CR>
 set shell=/bin/sh
 
 set pastetoggle=<F2>
-" }
-
-" NERDCommenter {
-vnoremap <leader><leader> :call NERDComment('nx', 'Toggle')<CR>
-vnoremap <Bslash><Bslash> :call NERDComment('nx', 'Toggle')<CR>
-noremap <leader><leader> :call NERDComment('n', 'Toggle')<CR>
-noremap <Bslash><Bslash> :call NERDComment('n', 'Toggle')<CR>
-
-let g:ft = ''
-function! NERDCommenter_before()
-  if &ft == 'vue'
-    let g:ft = 'vue'
-    let stack = synstack(line('.'), col('.'))
-    if len(stack) > 0
-      let syn = synIDattr((stack)[0], 'name')
-      if len(syn) > 0
-        exe 'setf ' . substitute(tolower(syn), '^vue_', '', '')
-      endif
-    endif
-  endif
-endfunction
-function! NERDCommenter_after()
-  if g:ft == 'vue'
-    setf vue
-    let g:ft = ''
-  endif
-endfunction
 " }
 
 " sudo write
