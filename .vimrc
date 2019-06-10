@@ -19,6 +19,7 @@ Plug 'rizzatti/dash.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'majutsushi/tagbar'
 
 " Programming
 Plug 'groenewege/vim-less'
