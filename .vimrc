@@ -7,9 +7,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'ervandew/supertab'
 Plug 'Valloric/YouCompleteMe'
 
-" Requires ag(homebrew)
-Plug 'rking/ag.vim'
-
 " Documents
 " - Dash needs Dash.app (OSX Only)
 Plug 'rizzatti/funcoo.vim'
@@ -19,7 +16,10 @@ Plug 'rizzatti/dash.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+" - tagbar requires universal-ctags
 Plug 'majutsushi/tagbar'
+" - ag requires the silver searcher
+Plug 'rking/ag.vim'
 
 " Programming
 Plug 'groenewege/vim-less'
