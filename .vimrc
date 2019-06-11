@@ -1,7 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
 " Git
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'               " a git wrapper
+Plug 'airblade/vim-gitgutter'           " shows a git diff in the gutter
 
 " Completion
 Plug 'ervandew/supertab'
@@ -13,15 +14,14 @@ Plug 'rizzatti/funcoo.vim'
 Plug 'rizzatti/dash.vim'
 
 " Navigation
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'              " a tree explorer
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-" - tagbar requires universal-ctags
-Plug 'majutsushi/tagbar'
-" - ag requires the silver searcher
-Plug 'rking/ag.vim'
+Plug 'junegunn/fzf.vim'                 " a fuzzy finder. requires fzf adove
+Plug 'majutsushi/tagbar'                " displays tags in a window. requires universal-ctags
+Plug 'rking/ag.vim'                     " the silver searcher wrapper. requires the silver searcher
 
 " Programming
+Plug 'tpope/vim-surround'               " quoting/parenthesizing made simple
 Plug 'groenewege/vim-less'
 Plug 'kchmck/vim-coffee-script'
 Plug 'nono/vim-handlebars'
@@ -45,8 +45,6 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'rhysd/vim-crystal'
 Plug 'posva/vim-vue'
 Plug 'leafgarland/typescript-vim'
-" quoting/parenthesizing made simple
-Plug 'tpope/vim-surround'
 
 " Python
 Plug 'scrooloose/syntastic'
@@ -56,7 +54,6 @@ Plug 'davidhalter/jedi-vim'
 Plug 'vim-scripts/AutoTag'
 Plug 'vim-scripts/ZoomWin'
 Plug 'benmills/vimux'
-Plug 'airblade/vim-gitgutter'
 
 " Vroom
 Plug 'skalnik/vim-vroom'
@@ -64,8 +61,8 @@ Plug 'skalnik/vim-vroom'
 " Colorscheme
 Plug 'altercation/vim-colors-solarized'
 
-" Personal Wiki
-Plug 'vimwiki/vimwiki'
+" ETC
+Plug 'vimwiki/vimwiki'                  " personal wiki
 
 call plug#end()
 
