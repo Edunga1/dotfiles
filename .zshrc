@@ -104,6 +104,9 @@ source $ZSH/oh-my-zsh.sh
 autoload -U promptinit; promptinit
 prompt pure
 
+# built-in command aliases
+alias ll='ls -alh'
+
 # util function for include a file
 include () {
     [[ -f "$1" ]] && source "$1"
