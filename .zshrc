@@ -104,6 +104,11 @@ source $ZSH/oh-my-zsh.sh
 autoload -U promptinit; promptinit
 prompt pure
 
+# util function for include a file
+include () {
+    [[ -f "$1" ]] && source "$1"
+}
+
 # fzf(brew). Respecting git working tree if git project.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='
@@ -119,8 +124,8 @@ export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # gcloud completion
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+include '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+include '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
 # docker
 alias doco="docker-compose"
