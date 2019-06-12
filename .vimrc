@@ -18,7 +18,6 @@ Plug 'scrooloose/nerdtree'              " a tree explorer
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                 " a fuzzy finder. requires fzf adove
 Plug 'majutsushi/tagbar'                " displays tags in a window. requires universal-ctags
-Plug 'rking/ag.vim'                     " the silver searcher wrapper. requires the silver searcher
 
 " Programming
 Plug 'tpope/vim-surround'               " quoting/parenthesizing made simple
