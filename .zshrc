@@ -132,6 +132,7 @@ include '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion
 
 # docker
 alias doco="docker-compose"
+alias dexec="docker exec -t -i"
 
 # kubectl completion & alias
 source <(kubectl completion zsh)
