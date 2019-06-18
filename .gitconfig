@@ -13,4 +13,4 @@
   df = diff
   dif = diff
   ch = checkout
-
+  ignored = !git ls-files -v | grep ^[a-z]
