@@ -5,7 +5,7 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_python_pylint_args = '--disable=C0111'
+let g:syntastic_python_pylint_args = '--disable=C0111,R0903,R0902,R0201'
 
 map <Leader>c :SyntasticCheck<CR>
 map <Leader>C :SyntasticReset<CR>
