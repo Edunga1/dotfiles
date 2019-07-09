@@ -115,7 +115,7 @@ include () {
 # fzf(brew). Respecting git working tree if git project.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='
-  (git ls-files -c -o ||
+  (git ls-files --exclude-standard -c -o ||
    git ls-tree -r --name-only HEAD ||
    find . -path "*/\.*" -prune -o -type f -print -o -type l -print |
       sed s/^..//) 2> /dev/null'
