@@ -143,3 +143,9 @@ alias kub="kubectl"
 # tmux
 export EDITOR='vim'
 alias tmuxn="tmuxinator"
+
+# python pyenv-virtualenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
