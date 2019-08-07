@@ -46,8 +46,9 @@ Plug 'posva/vim-vue'
 Plug 'leafgarland/typescript-vim'
 
 " Python
-Plug 'scrooloose/syntastic'
-Plug 'davidhalter/jedi-vim'
+" Plug 'scrooloose/syntastic'
+" Plug 'davidhalter/jedi-vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Utility
 Plug 'vim-scripts/AutoTag'
