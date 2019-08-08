@@ -21,15 +21,12 @@ Plug 'majutsushi/tagbar'                " displays tags in a window. requires un
 
 " Programming
 Plug 'tpope/vim-surround'               " quoting/parenthesizing made simple
-Plug 'groenewege/vim-less'
-Plug 'kchmck/vim-coffee-script'
-Plug 'nono/vim-handlebars'
+Plug 'groenewege/vim-less'              " vim syntax for LESS
 Plug 'slim-template/vim-slim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-rails'
-Plug 'vim-ruby/vim-ruby'
 Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-rake'
@@ -51,12 +48,8 @@ Plug 'leafgarland/typescript-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Utility
-Plug 'vim-scripts/AutoTag'
-Plug 'vim-scripts/ZoomWin'
-Plug 'benmills/vimux'
-
-" Vroom
-Plug 'skalnik/vim-vroom'
+Plug 'vim-scripts/AutoTag'              " Updates entries in a tags file automatically when saving
+Plug 'vim-scripts/ZoomWin'              " Zoom in/out of windows (<c-w>o to toggle)
 
 " Colorscheme
 Plug 'altercation/vim-colors-solarized'
@@ -151,10 +144,6 @@ set listchars=tab:T>
 " Keep content after pasting
 vnoremap <leader>p "_dP
 
-" Run cucumber {
-silent! map <unique> <Leader>w :!bundle exec cucumber --profile=wip<CR>
-nmap <Leader>r :!ruby %<CR>
-
 " Fix for rvm
 set shell=/bin/sh
 
@@ -165,16 +154,6 @@ set pastetoggle=<F2>
 cmap w!! %!sudo tee > /dev/null %
 
 filetype plugin indent on   " required!
-
-" Vroom
-let g:vroom_map_keys = 0
-let g:vroom_use_vimux = 1
-map <leader>t :VroomRunTestFile<cr>
-map <leader>T :VroomRunNearestTest<cr>
-
-" Vimux
-map <Leader>vz :VimuxZoomRunner<CR>
-map <Leader>vq :VimuxCloseRunner<CR>
 
 " vim-json
 let g:vim_json_syntax_conceal = 0
