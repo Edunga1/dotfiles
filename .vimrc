@@ -22,7 +22,6 @@ Plug 'majutsushi/tagbar'                " displays tags in a window. requires un
 " Programming
 Plug 'tpope/vim-surround'               " quoting/parenthesizing made simple
 Plug 'groenewege/vim-less'              " vim syntax for LESS
-Plug 'slim-template/vim-slim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-markdown'
@@ -34,7 +33,6 @@ Plug 'tpope/vim-repeat'
 Plug 'vim-scripts/matchit.zip'
 Plug 'othree/html5.vim'
 Plug 'tpope/vim-bundler'
-Plug 'alfredodeza/jacinto.vim'
 Plug 'rudes/vim-java'
 Plug 'fatih/vim-go'
 Plug 'elixir-editors/vim-elixir'
