@@ -12,5 +12,6 @@
   co = commit
   df = diff
   dif = diff
+  cached = diff --cached
   ch = checkout
   ignored = !git ls-files -v | grep ^[a-z]
