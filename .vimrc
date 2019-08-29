@@ -80,7 +80,6 @@ set fo+=o " Automatically insert the current comment leader after hitting 'o' or
 set fo-=r " Do not automatically insert a comment leader after an enter
 set fo-=t " Do no auto-wrap text using textwidth (does not apply to comments)
 
-set wrap
 set textwidth=0           " Don't wrap lines by default
 
 set backspace=indent,eol,start " more powerful backspacing
@@ -92,6 +91,7 @@ syntax on                 " enable syntax
 " }
 
 " Visual {
+set wrap
 set number                " Show line numbers
 set showmatch             " Show matching brackets.
 set matchtime=5           " Bracket blinking.
