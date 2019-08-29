@@ -26,7 +26,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-rails'
-Plug 'elzr/vim-json'
 Plug 'pangloss/vim-javascript'
 Plug 'tpope/vim-rake'
 Plug 'tpope/vim-repeat'
@@ -146,13 +145,7 @@ set shell=/bin/sh
 set pastetoggle=<F2>
 " }
 
-" sudo write
-cmap w!! %!sudo tee > /dev/null %
-
 filetype plugin indent on   " required!
-
-" vim-json
-let g:vim_json_syntax_conceal = 0
 
 " Colorscheme
 let g:solarized_termcolors=256
