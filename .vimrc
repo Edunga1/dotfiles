@@ -1,17 +1,19 @@
 call plug#begin('~/.vim/plugged')
 
+" Colorscheme
+Plug 'altercation/vim-colors-solarized'
+
 " Git
 Plug 'tpope/vim-fugitive'               " a git wrapper
 Plug 'airblade/vim-gitgutter'           " shows a git diff in the gutter
 
 " Completion
 Plug 'ervandew/supertab'
-Plug 'Valloric/YouCompleteMe'
 
-" Documents
+" Documentation
 " - Dash needs Dash.app (OSX Only)
-Plug 'rizzatti/funcoo.vim'
-Plug 'rizzatti/dash.vim'
+Plug 'rizzatti/dash.vim'                " search Dash.app from Vim
+Plug 'rizzatti/funcoo.vim'              " use by dash.vim
 
 " Navigation
 Plug 'scrooloose/nerdtree'              " a tree explorer
@@ -20,34 +22,19 @@ Plug 'junegunn/fzf.vim'                 " a fuzzy finder. requires fzf adove
 Plug 'majutsushi/tagbar'                " displays tags in a window. requires universal-ctags
 
 " Programming
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " full language server protocol support as VSCode
 Plug 'tpope/vim-surround'               " quoting/parenthesizing made simple
 Plug 'groenewege/vim-less'              " vim syntax for LESS
 Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-markdown'
-Plug 'tpope/vim-rails'
-Plug 'pangloss/vim-javascript'
-Plug 'tpope/vim-rake'
-Plug 'tpope/vim-repeat'
-Plug 'vim-scripts/matchit.zip'
-Plug 'othree/html5.vim'
-Plug 'tpope/vim-bundler'
-Plug 'rudes/vim-java'
-Plug 'fatih/vim-go'
-Plug 'elixir-editors/vim-elixir'
-Plug 'rhysd/vim-crystal'
-Plug 'posva/vim-vue'
-Plug 'leafgarland/typescript-vim'
+Plug 'tpope/vim-repeat'                 " repeat.vim: enable repeating supported plugin maps with dot operator
 
-" Python
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" HTML
+Plug 'vim-scripts/matchit.zip'          " extended % matching for HTML, LaTeX, and many other languages
 
 " Utility
 Plug 'vim-scripts/AutoTag'              " Updates entries in a tags file automatically when saving
-Plug 'vim-scripts/ZoomWin'              " Zoom in/out of windows (<c-w>o to toggle)
-
-" Colorscheme
-Plug 'altercation/vim-colors-solarized'
+Plug 'vim-scripts/ZoomWin'              " zoom in/out of windows (<c-w>o to toggle)
 
 " ETC
 Plug 'vimwiki/vimwiki'                  " personal wiki
