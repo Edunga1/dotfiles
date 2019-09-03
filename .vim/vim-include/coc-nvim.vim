@@ -39,6 +39,10 @@ nmap <silent> ]c <Plug>(coc-diagnostic-next)
 nmap <leader>rn <Plug>(coc-rename)
 
 
+" Remap for do codeAction of current line
+nmap <leader>ac  <Plug>(coc-codeaction)
+
+
 " Using CocList
 " Show all diagnostics
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
