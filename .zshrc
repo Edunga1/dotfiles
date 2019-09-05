@@ -42,8 +42,7 @@ export FZF_DEFAULT_COMMAND='
    find . -path "*/\.*" -prune -o -type f -print -o -type l -print |
       sed s/^..//) 2> /dev/null'
 
-# android sdk
-export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
+export LC_ALL=ko_KR.UTF-8
 
 # completion
 fpath=(/usr/local/share/zsh-completions $fpath)
