@@ -13,15 +13,12 @@ function! s:show_documentation()
   endif
 endfunction
 
-
 " Remap for format selected region
 xmap <leader>f <Plug>(coc-format-selected)
 nmap <leader>f <Plug>(coc-format-selected)
 
-
 " Remap for do codeAction of current line
-nmap <leader>ac  <Plug>(coc-codeaction)
-
+nmap <leader>ac <Plug>(coc-codeaction)
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
@@ -29,26 +26,18 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-
 " Use `[c` and `]c` to navigate diagnostics
 nmap <silent> [c <Plug>(coc-diagnostic-prev)
 nmap <silent> ]c <Plug>(coc-diagnostic-next)
 
-
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
-
-
-" Remap for do codeAction of current line
-nmap <leader>ac  <Plug>(coc-codeaction)
-
 
 " Using CocList
 " Show all diagnostics
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Find symbol of current document
 nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-
 
 " coc-highlight
 " Highlight symbol under cursor on CursorHold
