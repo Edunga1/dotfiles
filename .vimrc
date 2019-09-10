@@ -32,6 +32,9 @@ Plug 'tpope/vim-repeat'                 " repeat.vim: enable repeating supported
 " HTML
 Plug 'vim-scripts/matchit.zip'          " extended % matching for HTML, LaTeX, and many other languages
 
+" Javascript
+Plug 'pangloss/vim-javascript'          " Vastly improved Javascript indentation and syntax support in Vim
+
 " Utility
 Plug 'vim-scripts/AutoTag'              " Updates entries in a tags file automatically when saving
 Plug 'vim-scripts/ZoomWin'              " zoom in/out of windows (<c-w>o to toggle)
