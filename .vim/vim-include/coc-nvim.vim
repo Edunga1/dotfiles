@@ -35,9 +35,11 @@ nmap <leader>rn <Plug>(coc-rename)
 
 " Using CocList
 " Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>a :<C-u>CocList diagnostics<cr>
 " Find symbol of current document
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent> <space>o :<C-u>CocList outline<cr>
+" Show all vim commands
+nnoremap <silent> <space>p :<C-u>CocList vimcommands<cr>
 
 " coc-highlight
 " Highlight symbol under cursor on CursorHold
