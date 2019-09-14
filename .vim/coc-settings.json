@@ -1,5 +1,8 @@
 {
     "diagnostic.messageTarget": "echo",
+
+    "javascript.suggestionActions.enabled": false,
+
     "python.jediEnabled": false,
     "python.linting.pylintEnabled": true,
     "python.linting.flake8Enabled": true
