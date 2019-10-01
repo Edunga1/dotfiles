@@ -28,6 +28,7 @@ Plug 'groenewege/vim-less'              " vim syntax for LESS
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-repeat'                 " repeat.vim: enable repeating supported plugin maps with dot operator
+Plug 'terryma/vim-expand-region'        " allows you to visually select increasingly larger regions of text
 
 " HTML
 Plug 'vim-scripts/matchit.zip'          " extended % matching for HTML, LaTeX, and many other languages
