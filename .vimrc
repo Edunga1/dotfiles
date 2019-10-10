@@ -36,6 +36,9 @@ Plug 'vim-scripts/matchit.zip'          " extended % matching for HTML, LaTeX, a
 " Javascript
 Plug 'pangloss/vim-javascript'          " Vastly improved Javascript indentation and syntax support in Vim
 
+" Python
+Plug 'jeetsukumaran/vim-pythonsense'    " A Vim plugin that provides text objects
+
 " Utility
 Plug 'vim-scripts/AutoTag'              " Updates entries in a tags file automatically when saving
 Plug 'vim-scripts/ZoomWin'              " zoom in/out of windows (<c-w>o to toggle)
