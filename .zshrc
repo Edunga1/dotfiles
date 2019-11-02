@@ -10,6 +10,10 @@ export ZSH=~/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
 
+# avoid permission issue
+# ref. https://github.com/robbyrussell/oh-my-zsh/issues/6835
+export ZSH_DISABLE_COMPFIX=true
+
 plugins=(
   git
   zsh-syntax-highlighting
