@@ -14,6 +14,12 @@ ZSH_THEME="robbyrussell"
 # ref. https://github.com/robbyrussell/oh-my-zsh/issues/6835
 export ZSH_DISABLE_COMPFIX=true
 
+# completion
+fpath=(/usr/local/share/zsh-completions $fpath)
+
+# zsh theme pure-prompt
+fpath=($HOME/.zsh/pure $fpath)
+
 plugins=(
   git
   zsh-syntax-highlighting
@@ -48,9 +54,6 @@ export FZF_DEFAULT_COMMAND='
 
 export LC_ALL=ko_KR.UTF-8
 
-# completion
-fpath=(/usr/local/share/zsh-completions $fpath)
-
 # gcloud completion
 include '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 include '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
@@ -68,6 +71,9 @@ alias kub="kubectl"
 # tmux
 export EDITOR='vim'
 alias tmuxn="tmuxinator"
+
+# npm global packages
+export PATH="~/.npm-global/bin:$PATH"
 
 # python pyenv-virtualenv
 export PATH="$HOME/.pyenv/bin:$PATH"
