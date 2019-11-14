@@ -44,6 +44,9 @@ Plug 'jeetsukumaran/vim-pythonsense'    " A Vim plugin that provides text object
 " Utility
 Plug 'vim-scripts/AutoTag'              " Updates entries in a tags file automatically when saving
 Plug 'vim-scripts/ZoomWin'              " zoom in/out of windows (<c-w>o to toggle)
+Plug 'vim-airline/vim-airline'          " lean & mean status/tabline for vim that's light as air
+Plug 'vim-airline/vim-airline-themes'   " a collection of themes for vim-airline
+
 
 " ETC
 Plug 'vimwiki/vimwiki'                  " personal wiki
