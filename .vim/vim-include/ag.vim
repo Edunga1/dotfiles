@@ -14,7 +14,7 @@ function! VisualSelection()
 endfunction
 
 function! SearchProjectForSelect()
-  exec ":Ag! \"" . VisualSelection() . "\""
+  exec ":Ag! " . VisualSelection()
 endfunction
 
 map <leader>s :call SearchProjectForSelect()<cr>
