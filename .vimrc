@@ -34,9 +34,10 @@ Plug 'terryma/vim-expand-region'        " allows you to visually select increasi
 " HTML
 Plug 'vim-scripts/matchit.zip'          " extended % matching for HTML, LaTeX, and many other languages
 
-" Javascript
+" Javascript & Typescript
 Plug 'pangloss/vim-javascript'          " Vastly improved Javascript indentation and syntax support in Vim
 Plug 'mxw/vim-jsx'                      " React JSX syntax highlighting and indenting for vim
+Plug 'leafgarland/typescript-vim'       " Typescript syntax files for Vim
 
 " Python
 Plug 'jeetsukumaran/vim-pythonsense'    " A Vim plugin that provides text objects
