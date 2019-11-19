@@ -63,7 +63,7 @@ alias doco="docker-compose"
 alias dexec="docker exec -t -i"
 
 # kubectl completion & alias
-source <(kubectl completion zsh)
+if which kubectl > /dev/null; then eval "$(source <(kubectl completion zsh))"; fi
 alias k="kubectl"
 alias ku="kubectl"
 alias kub="kubectl"
@@ -77,6 +77,8 @@ export PATH="~/.npm-global/bin:$PATH"
 
 # python pyenv-virtualenv
 export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+if which pyenv > /dev/null; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
