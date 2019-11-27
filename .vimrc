@@ -68,6 +68,7 @@ set nobackup
 set directory=/tmp//      " prepend(^=) $HOME/.tmp/ toA default path; use full path as backup filename(//)
 
 set hidden                " The current buffer can be put to the background without writing to disk
+set updatetime=300        " CursorHold evet waiting time.
 
 set hlsearch              " highlight search
 set ignorecase            " Do case in sensitive matching with
