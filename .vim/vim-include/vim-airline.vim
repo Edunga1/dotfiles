@@ -9,3 +9,4 @@ let g:airline_section_x=''
 " enables coc.nvim extension and shows background processing
 let g:airline#extensions#coc#enabled=1
 let g:airline_section_y='%{coc#status()}'
+let g:airline_section_z = '%3p%% %l:%c'
