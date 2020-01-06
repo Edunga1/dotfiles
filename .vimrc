@@ -128,9 +128,6 @@ nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 nnoremap <c-t> :tabnew<cr>
 
-" Remap reverse of <c-o>. because <Tab> overwrites <c-i>
-nnoremap <c-i> <c-i>
-
 set tabstop=2             " Set the default tabstop
 set softtabstop=2
 set shiftwidth=2          " Set the default shift width for indents
