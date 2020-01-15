@@ -124,8 +124,8 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-nnoremap <Tab> gt
-nnoremap <S-Tab> gT
+nnoremap <s-h> gT
+nnoremap <s-l> gt
 nnoremap <c-t> :tabnew<cr>
 
 set tabstop=2             " Set the default tabstop
