@@ -265,3 +265,6 @@ set -g prefix C-a
 
 # move status line to top
 #set -g status-position top
+
+# Ref. https://github.com/neovim/neovim/wiki/FAQ#esc-in-tmux-or-gnu-screen-is-delayed
+set -sg escape-time 10
