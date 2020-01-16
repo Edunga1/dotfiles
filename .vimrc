@@ -103,6 +103,7 @@ set vb t_vb=              " disable any beeps or flashes on error
 set ruler                 " Show ruler
 set showcmd               " Display an incomplete command in the lower right corner of the Vim window
 set equalalways
+set wildmenu              " command line completion
 
 set splitbelow
 set splitright
