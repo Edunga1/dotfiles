@@ -55,6 +55,7 @@ Plug 'vimwiki/vimwiki'                  " personal wiki
 call plug#end()
 
 " General {
+set encoding=utf-8
 set nocompatible          " disable vi compatibility.
 set history=256           " Number of things to remember in history.
 set autowrite             " Writes on make/shell commands
