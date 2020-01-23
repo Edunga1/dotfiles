@@ -9,6 +9,7 @@ Plug 'airblade/vim-gitgutter'           " shows a git diff in the gutter
 
 " Completion
 Plug 'ervandew/supertab'                " Perform all your vim insert mode completions with Tab
+Plug 'SirVer/ultisnips'                 " The ultimate snippet solution for Vim
 
 " Documentation
 " - Dash needs Dash.app (OSX Only)
