@@ -53,6 +53,7 @@ export FZF_DEFAULT_COMMAND='
       sed s/^..//) 2> /dev/null'
 
 export LC_ALL=ko_KR.UTF-8
+export LESSCHARSET=utf-8
 
 # gcloud completion
 include '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
