@@ -8,7 +8,7 @@ Plug 'tpope/vim-fugitive'               " a git wrapper
 Plug 'airblade/vim-gitgutter'           " shows a git diff in the gutter
 
 " Completion
-Plug 'ervandew/supertab'
+Plug 'ervandew/supertab'                " Perform all your vim insert mode completions with Tab
 
 " Documentation
 " - Dash needs Dash.app (OSX Only)
