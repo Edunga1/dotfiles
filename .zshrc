@@ -52,7 +52,7 @@ export FZF_DEFAULT_COMMAND='
    find . -path "*/\.*" -prune -o -type f -print -o -type l -print |
       sed s/^..//) 2> /dev/null'
 
-export LC_ALL=C.UTF-8
+export LC_ALL=ko_KR.UTF-8
 
 # gcloud completion
 include '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
