@@ -268,3 +268,6 @@ set -g prefix C-a
 
 # Ref. https://github.com/neovim/neovim/wiki/FAQ#esc-in-tmux-or-gnu-screen-is-delayed
 set -sg escape-time 10
+
+# Disable repeat time
+set-option -g repeat-time 0
