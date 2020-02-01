@@ -15,6 +15,7 @@
   cached = diff --cached
   ch = checkout
   ignored = !git ls-files -v | grep ^[a-z]
+  amend = commit --amend
 
   # === Integrated with fzf ===============================================
   # = ref. http://www.mimul.com/pebble/default/2019/08/23/1566550403384.html
