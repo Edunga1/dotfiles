@@ -4,7 +4,7 @@
 let g:airline_theme = 'jellybeans'
 
 " hide filetype (section x)
-let g:airline_section_x=''
+let g:airline_section_x = ''
 
 " enables coc.nvim extension and shows background processing
 let g:airline#extensions#coc#enabled = 1
