@@ -2,6 +2,9 @@
 " Using coc modules:
 " - coc-python
 " - coc-highlight
+" - coc-ultisnips
+" - coc-lists
+" - coc-tsserver
 
 " Use K to show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
