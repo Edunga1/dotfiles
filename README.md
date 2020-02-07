@@ -6,7 +6,8 @@ clone this repository into the home directory. (`~/dotfiles`)
 
 e.g.) `ln -s ~/dotfiles/.vimrc .`
 
-| Source           | Directory |
-|------------------|-----------|
-| .vimrc           | `~`       |
-| .vim/vim-include | `~/.vim`  |
+| Source           | Directory      |
+|------------------|----------------|
+| .vimrc           |  `~`           |
+| .vim/vim-include |  `~/.vim`      |
+| .hammerspoon     | ~/.hammerspoon |
