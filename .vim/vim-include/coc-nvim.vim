@@ -41,6 +41,7 @@ nmap <leader>rn <Plug>(coc-rename)
 nnoremap <silent> <space>a :<C-u>CocList diagnostics<cr>
 " Find symbol of current document
 nnoremap <silent> <space>o :<C-u>CocList outline<cr>
+nnoremap <silent> <space>O :<C-u>CocList -I symbols<cr>
 " Show all vim commands
 nnoremap <silent> <space>p :<C-u>CocList vimcommands<cr>
 
