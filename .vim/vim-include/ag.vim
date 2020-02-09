@@ -1,5 +1,3 @@
-" ag.vim
-
 let g:ag_prg = "ag --column --nogroup"
 
 " Search for selection

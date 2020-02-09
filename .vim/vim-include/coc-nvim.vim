@@ -1,4 +1,3 @@
-" 'neoclide/coc.nvim'
 " Using coc modules:
 " - coc-python
 " - coc-highlight
