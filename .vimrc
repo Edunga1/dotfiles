@@ -41,8 +41,8 @@ Plug 'mxw/vim-jsx'                      " React JSX syntax highlighting and inde
 Plug 'leafgarland/typescript-vim'       " Typescript syntax files for Vim
 
 " Markdown
-Plug 'godlygeek/tabular'
-Plug 'plasticboy/vim-markdown'
+Plug 'godlygeek/tabular'                " Vim script for text filtering and alignment. vim-markdown uses this.
+Plug 'plasticboy/vim-markdown'          " Syntax highlighting, matching rules and mappings
 
 " Python
 Plug 'jeetsukumaran/vim-pythonsense'    " A Vim plugin that provides text objects
