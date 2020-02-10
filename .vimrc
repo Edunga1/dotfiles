@@ -28,7 +28,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " full language server protocol 
 Plug 'tpope/vim-surround'               " quoting/parenthesizing made simple
 Plug 'groenewege/vim-less'              " vim syntax for LESS
 Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-repeat'                 " repeat.vim: enable repeating supported plugin maps with dot operator
 Plug 'terryma/vim-expand-region'        " allows you to visually select increasingly larger regions of text
                                         " Press + to expand the visual selection and _ to shrink it.
@@ -40,6 +39,10 @@ Plug 'vim-scripts/matchit.zip'          " extended % matching for HTML, LaTeX, a
 Plug 'pangloss/vim-javascript'          " Vastly improved Javascript indentation and syntax support in Vim
 Plug 'mxw/vim-jsx'                      " React JSX syntax highlighting and indenting for vim
 Plug 'leafgarland/typescript-vim'       " Typescript syntax files for Vim
+
+" Markdown
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 " Python
 Plug 'jeetsukumaran/vim-pythonsense'    " A Vim plugin that provides text objects
