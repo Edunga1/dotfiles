@@ -169,5 +169,10 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 " }
 
+" Neovim
+if has('nvim')
+  set inccommand=nosplit  " highlights during a substitution in progress
+endif
+
 " Extend
 runtime! vim-include/*.vim
