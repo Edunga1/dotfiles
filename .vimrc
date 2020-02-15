@@ -151,12 +151,6 @@ set pastetoggle=<F2>
 
 filetype plugin indent on   " required!
 
-" Colorscheme
-let g:solarized_termcolors=256
-let g:solarized_termtrans = 1
-set background=dark
-colorscheme solarized
-
 " Highlight extra white spaces
 highlight ExtraWhitespace ctermbg=red guibg=red
 " highlight SpecialKey guibg=red ctermbg=red
