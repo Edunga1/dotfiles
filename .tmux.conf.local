@@ -263,8 +263,6 @@ tmux_conf_copy_to_os_clipboard=false
 set -g prefix C-a
 # bind C-a send-prefix
 
-bind-key l last-window
-
 # move status line to top
 #set -g status-position top
 
