@@ -87,8 +87,13 @@ set textwidth=0           " Don't wrap lines by default
 
 set backspace=indent,eol,start " more powerful backspacing
 
-set smarttab              " Smarter tab levels
 set foldlevelstart=20
+
+set smarttab              " Smarter tab levels
+set tabstop=2             " Set the default tabstop
+set expandtab             " Make tabs into spaces (set by tabstop)
+set shiftwidth=2          " Set the default shift width for indents
+set softtabstop=2
 
 syntax on                 " enable syntax
 " }
@@ -109,6 +114,10 @@ set wildmenu              " command line completion
 
 set splitbelow
 set splitright
+set shell=/bin/sh
+set background=dark
+set list
+set listchars=tab:T>
 
 " Auto commands {
 au BufRead,BufNewFile {Gemfile,config.ru,*.thor}  set ft=ruby
@@ -131,20 +140,11 @@ nnoremap <s-h> gT
 nnoremap <s-l> gt
 nnoremap <c-t> :tabnew<cr>
 
-set tabstop=2             " Set the default tabstop
-set softtabstop=2
-set shiftwidth=2          " Set the default shift width for indents
-set expandtab             " Make tabs into spaces (set by tabstop)
 map <Leader>w4 :set tabstop=4<CR>:set softtabstop=4<CR>:set shiftwidth=4<CR>:set expandtab<CR>
 map <Leader>w2 :set tabstop=2<CR>:set softtabstop=2<CR>:set shiftwidth=2<CR>:set expandtab<CR>
-set list
-set listchars=tab:T>
 
 " Keep content after pasting
 vnoremap <leader>p "_dP
-
-" Fix for rvm
-set shell=/bin/sh
 
 set pastetoggle=<F2>
 " }
