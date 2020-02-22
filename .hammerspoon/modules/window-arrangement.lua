@@ -1,3 +1,5 @@
+-- ctrl + shift + direction keys to arrange windows
+
 local function move_win(xx, yy, ww, hh)
   return function()
       local win = hs.window.focusedWindow()

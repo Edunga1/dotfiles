@@ -1,3 +1,5 @@
+-- highlights the top if input source is changed
+
 local boxes = {}
 local inputEnglish = "com.apple.keylayout.ABC"
 local box_height = 10
