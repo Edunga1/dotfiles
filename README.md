@@ -1,4 +1,4 @@
-# Installation
+# How to setup
 
 clone this repository into the home directory. (`~/dotfiles`)
 
