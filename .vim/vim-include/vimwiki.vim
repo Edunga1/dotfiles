@@ -14,10 +14,3 @@ let g:vimwiki_list = [
 
 " disable conceallevel
 let g:vimwiki_conceallevel = 0
-
-" shortcuts
-command! WikiIndex :VimwikiIndex
-nmap <LocalLeader>ww <Plug>VimwikiIndex
-nmap <LocalLeader>wi <Plug>VimwikiDiaryIndex
-nmap <LocalLeader>w<LocalLeader>w <Plug>VimwikiMakeDiaryNote
-nmap <LocalLeader>wt :VimwikiTable<CR>
