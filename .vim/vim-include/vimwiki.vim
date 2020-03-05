@@ -3,12 +3,15 @@ let g:vimwiki_list = [
     \{
     \   'path': '~/workspace/cat-logic/docs',
     \   'ext' : '.md',
+    \   'syntax' : 'markdown',
     \   'diary_rel_path': '.',
     \},
     \{
     \   'path': '~/workspace/personal-wiki/docs',
     \   'ext' : '.md',
     \   'diary_rel_path': '.',
+    \   'syntax' : 'markdown',
+    \   'auto_toc':1,
     \},
 \]
 
