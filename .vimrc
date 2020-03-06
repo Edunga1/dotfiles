@@ -141,6 +141,8 @@ nnoremap <c-l> <c-w>l
 nnoremap <s-h> gT
 nnoremap <s-l> gt
 nnoremap <c-t> :tabnew<cr>
+nnoremap [b :bp<cr>
+nnoremap ]b :bn<cr>
 
 map <Leader>w4 :set tabstop=4<CR>:set softtabstop=4<CR>:set shiftwidth=4<CR>:set expandtab<CR>
 map <Leader>w2 :set tabstop=2<CR>:set softtabstop=2<CR>:set shiftwidth=2<CR>:set expandtab<CR>
