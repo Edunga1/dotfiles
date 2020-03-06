@@ -53,6 +53,7 @@ Plug 'vim-scripts/ZoomWin'              " zoom in/out of windows (<c-w>o to togg
 Plug 'vim-airline/vim-airline'          " lean & mean status/tabline for vim that's light as air
 Plug 'vim-airline/vim-airline-themes'   " a collection of themes for vim-airline
 
+" Etc.
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 
 call plug#end()
@@ -167,10 +168,11 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 " }
 
-" Neovim
+" Neovim initialization {
 if has('nvim')
   set inccommand=nosplit  " highlights during a substitution in progress
 endif
+" }
 
 " Extend
 runtime! vim-include/*.vim
