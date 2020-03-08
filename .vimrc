@@ -58,7 +58,7 @@ Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 
 call plug#end()
 
-" General {
+" General
 set encoding=utf-8
 set nocompatible          " disable vi compatibility.
 set history=256           " Number of things to remember in history.
@@ -79,9 +79,8 @@ set hlsearch              " highlight search
 set ignorecase            " Do case in sensitive matching with
 set smartcase             " be sensitive when there's a capital letter
 set incsearch
-" }
 
-" Formatting {
+" Formatting
 set fo+=o " Automatically insert the current comment leader after hitting 'o' or 'O' in Normal mode.
 set fo-=r " Do not automatically insert a comment leader after an enter
 set fo-=t " Do no auto-wrap text using textwidth (does not apply to comments)
@@ -99,9 +98,8 @@ set shiftwidth=2          " Set the default shift width for indents
 set softtabstop=2
 
 syntax on                 " enable syntax
-" }
 
-" Visual {
+" Visual
 set wrap
 set number                " Show line numbers
 set showmatch             " Show matching brackets.
@@ -122,13 +120,12 @@ set background=dark
 set list
 set listchars=tab:T>
 
-" Auto commands {
+" Auto commands
 au BufRead,BufNewFile {Gemfile,config.ru,*.thor}  set ft=ruby
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown}     set ft=markdown
 au BufRead,BufNewFile {COMMIT_EDITMSG}            set ft=gitcommit
-" }
 
-" Key mappings {
+" Key mappings
 " Clear last search highlighting
 nnoremap <Space> :noh<cr>
 
@@ -152,7 +149,6 @@ map <Leader>w2 :set tabstop=2<CR>:set softtabstop=2<CR>:set shiftwidth=2<CR>:set
 vnoremap <leader>p "_dP
 
 set pastetoggle=<F2>
-" }
 
 filetype plugin indent on   " required!
 
@@ -166,13 +162,11 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
-" }
 
-" Neovim initialization {
+" Neovim initialization
 if has('nvim')
   set inccommand=nosplit  " highlights during a substitution in progress
 endif
-" }
 
 " Extend
 runtime! vim-include/*.vim
