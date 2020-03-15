@@ -85,8 +85,8 @@ export EDITOR='vim'
 alias tmuxn="tmuxinator"
 
 # python pyenv-virtualenv
-export PATH="$HOME/.pyenv/bin:$PATH"
 if which pyenv > /dev/null; then
+  export PATH="$HOME/.pyenv/bin:$PATH"
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
 fi
