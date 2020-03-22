@@ -120,16 +120,31 @@ set background=dark
 set list
 set listchars=tab:T>
 
+" Highlight extra white spaces
+highlight ExtraWhitespace ctermbg=red guibg=red
+" Highlight SpecialKey guibg=red ctermbg=red
+highlight SpecialKey guibg=#424242 ctermfg=236 ctermbg=234
+
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
 " Auto commands
 au BufRead,BufNewFile {Gemfile,config.ru,*.thor}  set ft=ruby
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown}     set ft=markdown
 au BufRead,BufNewFile {COMMIT_EDITMSG}            set ft=gitcommit
 
+filetype plugin indent on   " required!
+
 " Key mappings
+set pastetoggle=<F2>
+
+let mapleader = ","
+
 " Clear last search highlighting
 nnoremap <Space> :noh<cr>
-
-let mapleader = ","         " Change leader key
 
 " Navigating between windows
 nnoremap <c-j> <c-w>j
@@ -142,26 +157,12 @@ nnoremap <c-t> :tabnew<cr>
 nnoremap [b :bp<cr>
 nnoremap ]b :bn<cr>
 
+" Change tab size
 map <Leader>w4 :set tabstop=4<CR>:set softtabstop=4<CR>:set shiftwidth=4<CR>:set expandtab<CR>
 map <Leader>w2 :set tabstop=2<CR>:set softtabstop=2<CR>:set shiftwidth=2<CR>:set expandtab<CR>
 
 " Keep content after pasting
 vnoremap <leader>p "_dP
-
-set pastetoggle=<F2>
-
-filetype plugin indent on   " required!
-
-" Highlight extra white spaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-" highlight SpecialKey guibg=red ctermbg=red
-highlight SpecialKey guibg=#424242 ctermfg=236 ctermbg=234
-
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
 
 " Neovim initialization
 if has('nvim')
