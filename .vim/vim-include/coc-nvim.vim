@@ -44,6 +44,10 @@ nnoremap <silent> <space>O :<C-u>CocList -I symbols<cr>
 " Show all vim commands
 nnoremap <silent> <space>p :<C-u>CocList vimcommands<cr>
 
+" Multiple cursors: add current word to cursors and find next
+highlight CocCursorRange guibg=#b16286 guifg=#ebdbb2 ctermfg=223 ctermbg=132
+nmap <silent> <leader>d <Plug>(coc-cursors-word)*
+
 " coc-highlight
 " Highlight symbol under cursor on CursorHold
 autocmd CursorHold * silent call CocActionAsync('highlight')
