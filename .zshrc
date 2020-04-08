@@ -77,8 +77,6 @@ alias doco="docker-compose"
 # kubectl completion & alias
 if which kubectl > /dev/null; then eval "$(source <(kubectl completion zsh))"; fi
 alias k="kubectl"
-alias ku="kubectl"
-alias kub="kubectl"
 
 # tmux
 export EDITOR='vim'
