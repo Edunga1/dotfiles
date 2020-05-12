@@ -81,6 +81,9 @@ alias k="kubectl"
 export EDITOR='vim'
 alias tmuxn="tmuxinator"
 
+# npm global packages
+export PATH="~/.npm-global/bin:$PATH"
+
 # python pyenv-virtualenv
 if [ -d $HOME/.pyenv ]; then
   export PATH="$HOME/.pyenv/bin:$PATH"
