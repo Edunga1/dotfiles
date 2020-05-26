@@ -56,7 +56,8 @@
                 "fontFace": "JetBrains Mono",
                 "fontSize": 10,
                 "colorScheme": "OneDark",
-                "backgroundImage": "https://loremflickr.com/1920/1080",
+                "background": "#0c0c0c",
+                "backgroundImage": "https://loremflickr.com/1920/1080/cosmos",
                 "backgroundImageOpacity": 0.05
             },
             {
@@ -232,23 +233,13 @@
     // To learn more about keybindings, visit https://aka.ms/terminal-keybindings
     "keybindings":
     [
-        // Copy and paste are bound to Ctrl+Shift+C and Ctrl+Shift+V in your defaults.json.
-        // These two lines additionally bind them to Ctrl+C and Ctrl+V.
-        // To learn more about selection, visit https://aka.ms/terminal-selection
-        { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
-        { "command": "paste", "keys": "ctrl+v" },
- 
         // Press Ctrl+Shift+F to open the search box
-        { "command": "find", "keys": "ctrl+f" },
+        { "command": "find", "keys": "ctrl+shift+f" },
  
         // Press Alt+Shift+D to open a new pane.
         // - "split": "auto" makes this pane open in the direction that provides the most surface area.
         // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
         // To learn more about panes, visit https://aka.ms/terminal-panes
-        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "ctrl+shift+t" },
- 
-        // Open New Tab
-        {"command":"newTab", "keys": "ctrl+t"}
+        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "ctrl+shift+t" }
     ]
 }
-
