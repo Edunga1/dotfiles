@@ -82,7 +82,9 @@ export EDITOR='vim'
 alias tmuxn="tmuxinator"
 
 # npm global packages
-export PATH="~/.npm-global/bin:$PATH"
+if [ -d $HOME/.npm-global ]; then
+  export PATH="$HOME/.npm-global/bin:$PATH"
+fi
 
 # python pyenv-virtualenv
 if [ -d $HOME/.pyenv ]; then
