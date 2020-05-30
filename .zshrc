@@ -36,6 +36,8 @@ source $ZSH/oh-my-zsh.sh
 autoload -U promptinit; promptinit
 prompt pure
 
+export EDITOR='vim'
+
 # built-in command aliases
 alias ll='ls -alh'
 
@@ -78,7 +80,6 @@ if which kubectl > /dev/null; then eval "$(source <(kubectl completion zsh))"; f
 alias k="kubectl"
 
 # tmux
-export EDITOR='vim'
 alias tmuxn="tmuxinator"
 
 # npm global packages
