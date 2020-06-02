@@ -48,8 +48,6 @@
                 "fontFace": "JetBrains Mono",
                 "fontSize": 10,
                 "colorScheme": "OneDark",
-                "background": "#0c0c0c",
-                "backgroundImage": "https://loremflickr.com/1920/1080/cosmos",
                 "backgroundImageOpacity": 0.05
             },
             {
@@ -176,7 +174,7 @@
         },
           {
             "name": "OneDark",
-            "black": "#1e2127",
+            "black": "#121212",
             "red": "#e06c75",
             "green": "#98c379",
             "yellow": "#d19a66",
@@ -192,7 +190,7 @@
             "brightPurple": "#c678dd",
             "brightCyan": "#56b6c2",
             "brightWhite": "#ffffff",
-            "background": "#1e2127",
+            "background": "#121212",
             "foreground": "#abb2bf",
             "cursorColor": "#aaaaaa"
           },
