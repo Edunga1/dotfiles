@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="/usr/local/sbin:$PATH"
+# export PATH=$HOME/bin:/usr/local/bin:$PATH export PATH="/usr/local/sbin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
@@ -94,4 +93,18 @@ if [ -d $HOME/.pyenv ]; then
   eval "$(pyenv virtualenv-init -)"
 fi
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+# JDK
+if [[ -e /usr/lib/jvm/java-8-openjdk-amd64 ]]; then
+  export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+  export PATH="$JAVA_HOME/bin:$PATH"
+fi
+
+# Android
+if [ -d $HOME/.android-sdk ]; then
+  export PATH="$HOME/.android-sdk/bin:$PATH"
+  export ANDROID_HOME="$HOME/.android"
+  export ANDROID_SDK_ROOT=$ANDROID_HOME
+  export PATH="$ANDROID_HOME/platform-tools:$PATH"
+fi
 
