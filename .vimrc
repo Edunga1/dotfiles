@@ -46,6 +46,7 @@ Plug 'plasticboy/vim-markdown'          " Syntax highlighting, matching rules an
 
 " Python
 Plug 'jeetsukumaran/vim-pythonsense'    " A Vim plugin that provides text objects
+Plug 'Vimjas/vim-python-pep8-indent'    " This modifies Vim’s indentation behavior to comply with PEP8
 
 " Utility
 Plug 'vim-scripts/AutoTag'              " Updates entries in a tags file automatically when saving
