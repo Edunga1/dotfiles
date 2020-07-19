@@ -108,3 +108,6 @@ if [ -d $HOME/.android-sdk ]; then
   export PATH="$ANDROID_HOME/platform-tools:$PATH"
 fi
 
+# User home bin
+export PATH="$HOME/bin:$PATH"
+
