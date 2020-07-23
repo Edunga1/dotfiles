@@ -11,11 +11,6 @@ Plug 'airblade/vim-gitgutter'           " shows a git diff in the gutter
 Plug 'ervandew/supertab'                " Perform all your vim insert mode completions with Tab
 Plug 'SirVer/ultisnips'                 " The ultimate snippet solution for Vim
 
-" Documentation
-" - Dash needs Dash.app (OSX Only)
-Plug 'rizzatti/dash.vim'                " search Dash.app from Vim
-Plug 'rizzatti/funcoo.vim'              " use by dash.vim
-
 " Navigation
 Plug 'scrooloose/nerdtree'              " a tree explorer
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
