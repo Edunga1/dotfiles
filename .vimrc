@@ -50,7 +50,7 @@ Plug 'vim-airline/vim-airline'          " lean & mean status/tabline for vim tha
 Plug 'vim-airline/vim-airline-themes'   " a collection of themes for vim-airline
 
 " Etc.
-Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
+Plug 'vimwiki/vimwiki', { 'branch': 'dev' } " Personal wiki for vim
 
 call plug#end()
 
