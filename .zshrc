@@ -67,7 +67,7 @@ export FZF_DEFAULT_COMMAND='
 
 export LC_ALL=en_US.UTF-8
 
-# gcloud completion
+# gcloud completion for osx homebrew
 include '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 include '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
