@@ -35,6 +35,15 @@ nmap <silent> ]c <Plug>(coc-diagnostic-next)
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
 
+" Add `:Format` command to format current buffer.
+command! -nargs=0 Format :call CocAction('format')
+
+" Add `:Fold` command to fold current buffer.
+command! -nargs=? Fold :call CocAction('fold', <f-args>)
+
+" Add `:OR` command for organize imports of the current buffer.
+command! -nargs=0 OR :call CocAction('runCommand', 'editor.action.organizeImport')
+
 " Using CocList
 " Show all diagnostics
 nnoremap <silent> <space>a :<C-u>CocList diagnostics<cr>
