@@ -1,1 +1,1 @@
-nnoremap <c-p> :FZF<cr>
+nnoremap <c-p> :GitFiles<cr>
