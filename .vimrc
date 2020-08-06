@@ -135,9 +135,8 @@ au BufRead,BufNewFile {COMMIT_EDITMSG}            set ft=gitcommit
 filetype plugin indent on   " required!
 
 " Key mappings
-set pastetoggle=<F2>
-
 let mapleader = ","
+set pastetoggle=<F2>
 
 " Clear last search highlighting
 nnoremap <Space> :noh<cr>
