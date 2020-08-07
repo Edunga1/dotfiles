@@ -57,7 +57,7 @@ pastefinish() {
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 
-# fzf(brew). Respecting git working tree if git project.
+# fzf. respecting git working tree if git project.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='
   (git ls-files --exclude-standard -c -o ||
