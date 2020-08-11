@@ -22,7 +22,7 @@ Plug 'mhinz/vim-startify'               " The fancy start screen for Vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " full language server protocol support as VSCode
 Plug 'tpope/vim-surround'               " quoting/parenthesizing made simple
 Plug 'groenewege/vim-less'              " vim syntax for LESS
-Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdcommenter'         " Comment functions so powerful—no comment necessary
 Plug 'tpope/vim-repeat'                 " repeat.vim: enable repeating supported plugin maps with dot operator
 Plug 'terryma/vim-expand-region'        " allows you to visually select increasingly larger regions of text
                                         " Press + to expand the visual selection and _ to shrink it.
@@ -72,6 +72,7 @@ set directory=/tmp//      " prepend(^=) $HOME/.tmp/ toA default path; use full p
 set hidden                " The current buffer can be put to the background without writing to disk
 set updatetime=300        " CursorHold evet waiting time.
 
+" Search
 set hlsearch              " highlight search
 set ignorecase            " Do case in sensitive matching with
 set smartcase             " be sensitive when there's a capital letter
