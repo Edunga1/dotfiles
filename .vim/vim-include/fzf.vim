@@ -6,4 +6,4 @@ let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %
 
 " Git diff
 command! -bang -complete=dir -nargs=* GDiff
-    \ call fzf#run({'source': 'git diff --name-only '.<q-args>, 'sink': 'e'}, <bang>0)
+    \ call fzf#run(fzf#vim#with_preview({'source': 'git diff --name-only '.<q-args>, 'sink': 'e'}), <bang>0)
