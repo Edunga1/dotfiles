@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 " Colorscheme
-Plug 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized' " vim color scheme
 
 " Git
 Plug 'tpope/vim-fugitive'               " a git wrapper
