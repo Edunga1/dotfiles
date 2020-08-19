@@ -13,7 +13,7 @@ ZSH_THEME="robbyrussell"
 # ref. https://github.com/robbyrussell/oh-my-zsh/issues/6835
 export ZSH_DISABLE_COMPFIX=true
 
-# completion
+# zsh completion
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # zsh theme pure-prompt
