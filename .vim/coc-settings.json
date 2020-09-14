@@ -1,6 +1,4 @@
 {
-    "diagnostic.messageTarget": "echo",
-
     "javascript.suggestionActions.enabled": false,
 
     "python.jediEnabled": false,
