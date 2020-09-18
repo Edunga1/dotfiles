@@ -55,6 +55,12 @@
                 "hidden": false,
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "hidden": false,
+                "name": "Ubuntu-20.04",
+                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
@@ -173,48 +179,48 @@
             "yellow" : "#FFCC00"
         },
         {
-          "name": "OneDark",
-          "black": "#121212",
-          "red": "#e06c75",
-          "green": "#98c379",
-          "yellow": "#d19a66",
-          "blue": "#61afef",
-          "purple": "#c678dd",
-          "cyan": "#56b6c2",
-          "white": "#abb2bf",
-          "brightBlack": "#5c6370",
-          "brightRed": "#e06c75",
-          "brightGreen": "#98c379",
-          "brightYellow": "#d19a66",
-          "brightBlue": "#61afef",
-          "brightPurple": "#c678dd",
-          "brightCyan": "#56b6c2",
-          "brightWhite": "#ffffff",
-          "background": "#121212",
-          "foreground": "#abb2bf",
-          "cursorColor": "#aaaaaa"
+            "name": "OneDark",
+            "black": "#121212",
+            "red": "#e06c75",
+            "green": "#98c379",
+            "yellow": "#d19a66",
+            "blue": "#61afef",
+            "purple": "#c678dd",
+            "cyan": "#56b6c2",
+            "white": "#abb2bf",
+            "brightBlack": "#5c6370",
+            "brightRed": "#e06c75",
+            "brightGreen": "#98c379",
+            "brightYellow": "#d19a66",
+            "brightBlue": "#61afef",
+            "brightPurple": "#c678dd",
+            "brightCyan": "#56b6c2",
+            "brightWhite": "#ffffff",
+            "background": "#121212",
+            "foreground": "#abb2bf",
+            "cursorColor": "#aaaaaa"
         },
         {
-          "name": "OneLight",
-          "black": "#000000",
-          "red": "#de3e35",
-          "green": "#3f953a",
-          "yellow": "#d2b67c",
-          "blue": "#2f5af3",
-          "purple": "#950095",
-          "cyan": "#3f953a",
-          "white": "#bbbbbb",
-          "brightBlack": "#000000",
-          "brightRed": "#de3e35",
-          "brightGreen": "#3f953a",
-          "brightYellow": "#44B4CC",
-          "brightBlue": "#2f5af3",
-          "brightPurple": "#a00095",
-          "brightCyan": "#3f953a",
-          "brightWhite": "#aaaaaa",
-          "background": "#f9f9f9",
-          "foreground": "#2a2c33",
-          "cursorColor": "#aaaaaa"
+            "name": "OneLight",
+            "black": "#000000",
+            "red": "#de3e35",
+            "green": "#3f953a",
+            "yellow": "#d2b67c",
+            "blue": "#2f5af3",
+            "purple": "#950095",
+            "cyan": "#3f953a",
+            "white": "#bbbbbb",
+            "brightBlack": "#000000",
+            "brightRed": "#de3e35",
+            "brightGreen": "#3f953a",
+            "brightYellow": "#44B4CC",
+            "brightBlue": "#2f5af3",
+            "brightPurple": "#a00095",
+            "brightCyan": "#3f953a",
+            "brightWhite": "#aaaaaa",
+            "background": "#f9f9f9",
+            "foreground": "#2a2c33",
+            "cursorColor": "#aaaaaa"
         }
     ],
  
@@ -230,6 +236,7 @@
         // - "split": "auto" makes this pane open in the direction that provides the most surface area.
         // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
         // To learn more about panes, visit https://aka.ms/terminal-panes
-        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "ctrl+shift+t" }
+        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "ctrl+shift+t" },
+        { "command" : null, "keys" : ["ctrl+shift+6"] }
     ]
 }
