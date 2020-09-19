@@ -237,6 +237,8 @@
         // - "splitMode": "duplicate" makes the new pane use the focused pane's profile.
         // To learn more about panes, visit https://aka.ms/terminal-panes
         { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "ctrl+shift+t" },
+
+        // Unbind sixth terminal shortcut
         { "command" : null, "keys" : ["ctrl+shift+6"] }
     ]
 }
