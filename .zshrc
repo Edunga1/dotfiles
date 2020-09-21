@@ -82,9 +82,8 @@ alias k="kubectl"
 alias tmuxn="tmuxinator"
 
 # npm global packages
-if [ -d $HOME/.npm-global ]; then
-  export PATH="$HOME/.npm-global/bin:$PATH"
-fi
+export PATH="$HOME/.node_modules/bin:$PATH"
+export npm_config_prefix=~/.node_modules
 
 # python pyenv-virtualenv
 if [ -d $HOME/.pyenv ]; then
