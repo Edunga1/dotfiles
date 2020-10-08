@@ -20,6 +20,7 @@ Plug 'mhinz/vim-startify'               " The fancy start screen for Vim
 
 " Programming
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " full language server protocol support as VSCode
+Plug 'antoinemadec/coc-fzf'             " fzf instead of coc.nvim built-in fuzzy finder
 Plug 'tpope/vim-surround'               " quoting/parenthesizing made simple
 Plug 'groenewege/vim-less'              " vim syntax for LESS
 Plug 'scrooloose/nerdcommenter'         " Comment functions so powerful—no comment necessary
