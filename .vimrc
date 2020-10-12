@@ -28,6 +28,7 @@ Plug 'tpope/vim-repeat'                 " repeat.vim: enable repeating supported
 Plug 'terryma/vim-expand-region'        " allows you to visually select increasingly larger regions of text
                                         " Press + to expand the visual selection and _ to shrink it.
 Plug 'nicwest/vim-camelsnek'            " Convert between camel and snek case
+Plug 'wellle/targets.vim'               " Adds various text objects to give you more targets to operate on
 
 " HTML
 Plug 'vim-scripts/matchit.zip'          " extended % matching for HTML, LaTeX, and many other languages
