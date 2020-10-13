@@ -8,6 +8,8 @@
 [pager]
   branch = false
   tag = false
+[pull]
+  ff = only
 [alias]
   lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold red)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(cyan)<%an>%C(reset)%C(bold yellow)%d%C(reset)' --all
   unstage = reset HEAD
