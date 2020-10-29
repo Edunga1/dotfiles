@@ -18,6 +18,7 @@
   dif = diff
   cached = diff --cached
   co = checkout
+  sw = switch
   ignored = !git ls-files -v | grep ^[a-z]
   amend = commit --amend
 
