@@ -29,6 +29,8 @@ Plug 'terryma/vim-expand-region'        " allows you to visually select increasi
                                         " Press + to expand the visual selection and _ to shrink it.
 Plug 'nicwest/vim-camelsnek'            " Convert between camel and snek case
 Plug 'wellle/targets.vim'               " Adds various text objects to give you more targets to operate on
+Plug 'sheerun/vim-polyglot'             " A collection of language packs for Vim. syntax highlighting and etc
+
 
 " HTML
 Plug 'vim-scripts/matchit.zip'          " extended % matching for HTML, LaTeX, and many other languages
