@@ -79,7 +79,7 @@ include '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion
 alias doco="docker-compose"
 
 # kubectl completion & alias
-if which kubectl > /dev/null; then eval "$(source <(kubectl completion zsh))"; fi
+if which kubectl > /dev/null; then eval $(source <(kubectl completion zsh)); fi
 alias k="kubectl"
 
 # tmux
@@ -114,4 +114,9 @@ fi
 
 # User home bin
 export PATH="$HOME/bin:$PATH"
+
+# Neovim
+if command -v nvim &> /dev/null; then
+  alias vi="nvim"
+fi
 
