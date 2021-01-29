@@ -1,0 +1,4 @@
+import rlcompleter
+if pdb:
+  pdb.Pdb.complete=rlcompleter.Completer(locals()).complete
+from pprint import pprint
