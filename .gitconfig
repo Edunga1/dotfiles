@@ -43,3 +43,5 @@
     && git status --short || git diff --name-status $args | sed 's/\t/  /') \
     | fzf --preview \"echo {} | cut -c 4- | xargs git diff --color=always $args \
     --\" --multi --height 90% | cut -c 4-; }; f"
+[core]
+	autocrlf = true
