@@ -127,3 +127,10 @@ if command -v nvim &> /dev/null; then
   alias vi="nvim"
 fi
 
+# Linuxbrew
+if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
+  export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+  export MANPATH=$(brew --prefix)/share/man:$MANPATH
+  export INFOPATH=$(brew --prefix)/share/info:$INFOPATH
+fi
+
