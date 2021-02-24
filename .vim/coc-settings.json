@@ -2,5 +2,8 @@
     "javascript.suggestionActions.enabled": false,
 
     "python.jediEnabled": false,
-    "python.linting.pylintEnabled": true
+    "python.linting.pylintEnabled": true,
+    "python.sortImports.args": [
+        "-w 140"
+    ]
 }
