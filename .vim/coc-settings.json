@@ -5,5 +5,8 @@
     "python.linting.pylintEnabled": true,
     "python.sortImports.args": [
         "-w 140"
-    ]
+    ],
+    "python.formatting.provider": "yapf",
+
+    "coc.preferences.formatOnSaveFiletypes": ["python"]
 }
