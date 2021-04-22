@@ -142,6 +142,9 @@ filetype plugin indent on   " required!
 let mapleader = ","
 set pastetoggle=<F2>
 
+" Bind W to writing
+command! W  write
+
 " Clear last search highlighting
 nnoremap <Space> :noh<cr>
 
