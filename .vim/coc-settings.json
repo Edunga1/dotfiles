@@ -6,7 +6,5 @@
     "python.sortImports.args": [
         "-w 140"
     ],
-    "python.formatting.provider": "autopep8",
-
-    "coc.preferences.formatOnSaveFiletypes": ["python"]
+    "python.formatting.provider": "autopep8"
 }
