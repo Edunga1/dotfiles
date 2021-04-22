@@ -61,6 +61,12 @@ pastefinish() {
 zstyle :bracketed-paste-magic paste-init pasteinit
 zstyle :bracketed-paste-magic paste-finish pastefinish
 
+# Marker
+if [[ -s "$HOME/.local/share/marker/marker.sh" ]]; then
+  source "$HOME/.local/share/marker/marker.sh"
+  export MARKER_KEY_NEXT_PLACEHOLDER=''
+fi
+
 # fzf. respecting git working tree if git project.
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='
