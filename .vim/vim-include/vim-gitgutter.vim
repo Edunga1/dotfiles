@@ -11,3 +11,6 @@ augroup git_gutter_config
   au VimEnter * highlight GitGutterDeleteLineNr ctermfg=lightred
   au VimEnter * highlight GitGutterChangeDeleteLineNr ctermfg=lightred
 augroup END
+
+nmap ]h <Plug>(GitGutterNextHunk)
+nmap [h <Plug>(GitGutterPrevHunk)
