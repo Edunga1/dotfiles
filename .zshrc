@@ -140,3 +140,6 @@ if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
   export INFOPATH=$(brew --prefix)/share/info:$INFOPATH
 fi
 
+# Atuin
+if which atuin > /dev/null; then eval "$(atuin init zsh)"; fi
+
