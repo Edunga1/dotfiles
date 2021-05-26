@@ -3,6 +3,7 @@
 
     "python.jediEnabled": false,
     "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": true,
     "python.sortImports.args": [
         "-w 140"
     ],
