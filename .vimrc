@@ -53,6 +53,9 @@ Plug 'vim-scripts/ZoomWin'              " zoom in/out of windows (<c-w>o to togg
 Plug 'vim-airline/vim-airline'          " lean & mean status/tabline for vim that's light as air
 Plug 'vim-airline/vim-airline-themes'   " a collection of themes for vim-airline
 
+" vim objects
+Plug 'michaeljsmith/vim-indent-object'  " This plugin defines a new text object, based on indentation levels.
+
 " Etc.
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' } " Personal wiki for vim
 
