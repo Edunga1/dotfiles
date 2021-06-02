@@ -28,7 +28,6 @@ Plug 'tpope/vim-repeat'                 " repeat.vim: enable repeating supported
 Plug 'terryma/vim-expand-region'        " allows you to visually select increasingly larger regions of text
                                         " Press + to expand the visual selection and _ to shrink it.
 Plug 'nicwest/vim-camelsnek'            " Convert between camel and snek case
-Plug 'wellle/targets.vim'               " Adds various text objects to give you more targets to operate on
 Plug 'sheerun/vim-polyglot'             " A collection of language packs for Vim. syntax highlighting and etc
 
 " HTML
@@ -44,7 +43,6 @@ Plug 'godlygeek/tabular'                " Vim script for text filtering and alig
 Plug 'plasticboy/vim-markdown'          " Syntax highlighting, matching rules and mappings
 
 " Python
-Plug 'jeetsukumaran/vim-pythonsense'    " A Vim plugin that provides text objects
 Plug 'Vimjas/vim-python-pep8-indent'    " This modifies Vim’s indentation behavior to comply with PEP8
 
 " Utility
@@ -55,6 +53,9 @@ Plug 'vim-airline/vim-airline-themes'   " a collection of themes for vim-airline
 
 " vim objects
 Plug 'michaeljsmith/vim-indent-object'  " This plugin defines a new text object, based on indentation levels.
+Plug 'wellle/targets.vim'               " Adds various text objects to give you more targets to operate on
+Plug 'jeetsukumaran/vim-pythonsense'    " Pythonsense is a Vim plugin that provides text objects and motions
+                                        " for Python classes, methods, functions, and doc strings.
 
 " Etc.
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' } " Personal wiki for vim
