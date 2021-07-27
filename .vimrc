@@ -126,15 +126,15 @@ set background=dark
 set list
 set listchars=tab:T>
 
-" Highlight SpecialKey guibg=red ctermbg=red
-highlight SpecialKey guibg=#424242 ctermfg=236 ctermbg=234
-" Highlight extra white spaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
-autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-autocmd BufWinLeave * call clearmatches()
+" Highlight special keys and extra white spaces
+autocmd ColorScheme *
+  \ highlight SpecialKey guibg=#424242 ctermfg=236 ctermbg=234 |
+  \ highlight ExtraWhitespace ctermbg=red guibg=red |
+  \ match ExtraWhitespace /\s\+$/ |
+  \ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/ |
+  \ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/ |
+  \ autocmd InsertLeave * match ExtraWhitespace /\s\+$/ |
+  \ autocmd BufWinLeave * call clearmatches()
 
 " Auto commands
 au BufRead,BufNewFile {Gemfile,config.ru,*.thor}  set ft=ruby
