@@ -5,7 +5,7 @@ nnoremap <expr> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles --excl
 let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
 
 " :GDiff <commit> to print names of changed files
-command! -bang -complete=dir -nargs=* GDiff
+command! -bang -complete=dir -nargs=* GDIff
   \ call fzf#run(
     \ fzf#vim#with_preview({
       \ 'source': 'git diff --name-only '.(<q-args> == '' ? 'HEAD~1' : <q-args>),
