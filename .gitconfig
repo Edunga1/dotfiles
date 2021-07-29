@@ -8,7 +8,6 @@
 [pager]
   branch = false
   tag = false
-  diff = false
 [pull]
   ff = only
 [alias]
