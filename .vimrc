@@ -17,6 +17,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                 " a fuzzy finder. requires fzf adove
 Plug 'majutsushi/tagbar'                " displays tags in a window. requires universal-ctags
 Plug 'mhinz/vim-startify'               " The fancy start screen for Vim
+Plug 'junegunn/goyo.vim'                " Distraction-free writing in Vim. :Goyo
 
 " Programming
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " full language server protocol support as VSCode
