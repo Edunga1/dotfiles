@@ -30,6 +30,7 @@ Plug 'terryma/vim-expand-region'        " allows you to visually select increasi
                                         " Press + to expand the visual selection and _ to shrink it.
 Plug 'nicwest/vim-camelsnek'            " Convert between camel and snek case
 Plug 'sheerun/vim-polyglot'             " A collection of language packs for Vim. syntax highlighting and etc
+Plug 'github/copilot.vim'               " code completion. :Copilot help. neovim >= 0.6
 
 " HTML
 Plug 'vim-scripts/matchit.zip'          " extended % matching for HTML, LaTeX, and many other languages
