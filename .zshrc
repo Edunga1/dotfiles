@@ -84,10 +84,6 @@ include '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion
 # docker
 alias doco="docker-compose"
 
-# kubectl completion & alias
-if which kubectl > /dev/null; then eval $(source <(kubectl completion zsh)); fi
-alias k="kubectl"
-
 # tmux
 alias tmuxn="tmuxinator"
 
