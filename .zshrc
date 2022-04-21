@@ -92,13 +92,12 @@ export PATH="$HOME/.node_modules/bin:$PATH"
 export npm_config_prefix=~/.node_modules
 
 # python pyenv-virtualenv
-if [ -d $HOME/.pyenv ]; then
+if command -v pyenv &> /dev/null; then
   export PATH="$HOME/.pyenv/bin:$PATH"
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
   alias ac="source activate"
 fi
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
 # JDK
 if [[ -e /usr/lib/jvm/java-8-openjdk-amd64 ]]; then
