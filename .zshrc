@@ -82,6 +82,12 @@ include '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.i
 include '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
 # docker
+# - podman integration
+if command -v podman &> /dev/null; then
+  export DOCKER_HOST='unix:///tmp/podman.sock'
+  alias docker="podman"
+  alias docker-compose="podman-compose"
+fi
 alias doco="docker-compose"
 
 # tmux
