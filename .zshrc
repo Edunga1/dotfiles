@@ -77,6 +77,13 @@ export FZF_DEFAULT_COMMAND='
 
 export LC_ALL=en_US.UTF-8
 
+# Linuxbrew
+if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
+  export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+  export MANPATH=$(brew --prefix)/share/man:$MANPATH
+  export INFOPATH=$(brew --prefix)/share/info:$INFOPATH
+fi
+
 # gcloud completion for osx homebrew
 include '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 include '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
@@ -95,7 +102,7 @@ export npm_config_prefix=~/.node_modules
 if command -v pyenv &> /dev/null; then
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init --path)"
+  eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
   alias ac="source activate"
 fi
@@ -127,12 +134,5 @@ export PATH="$HOME/bin:$PATH"
 # Neovim
 if command -v nvim &> /dev/null; then
   alias vi="nvim"
-fi
-
-# Linuxbrew
-if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
-  export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-  export MANPATH=$(brew --prefix)/share/man:$MANPATH
-  export INFOPATH=$(brew --prefix)/share/info:$INFOPATH
 fi
 
