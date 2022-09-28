@@ -1,5 +1,5 @@
 " vim-airline-themes
-let g:airline_theme = 'jellybeans'
+let g:airline_theme = 'solarized'
 
 " hide filetype (section x)
 let g:airline_section_x = ''
