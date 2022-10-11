@@ -125,7 +125,7 @@ set numberwidth=3         " gutter column width
 set splitbelow
 set splitright
 set shell=/bin/sh
-set background=light
+set background=dark
 set list
 set listchars=tab:T>
 
