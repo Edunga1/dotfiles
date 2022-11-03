@@ -20,6 +20,9 @@ Plug 'mhinz/vim-startify'               " The fancy start screen for Vim
 Plug 'itchyny/vim-gitbranch'            " - vim-startify requires
 Plug 'junegunn/goyo.vim'                " Distraction-free writing in Vim. :Goyo
 
+" Vim Improvements
+Plug 'unblevable/quick-scope'           " Lightning fast left-right movement in Vim
+
 " Programming
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " full language server protocol support as VSCode
 Plug 'antoinemadec/coc-fzf'             " fzf instead of coc.nvim built-in fuzzy finder
