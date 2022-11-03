@@ -22,14 +22,14 @@ Plug 'junegunn/goyo.vim'                " Distraction-free writing in Vim. :Goyo
 
 " Vim Improvements
 Plug 'unblevable/quick-scope'           " Lightning fast left-right movement in Vim
+Plug 'tpope/vim-surround'               " quoting/parenthesizing made simple
+Plug 'tpope/vim-repeat'                 " enable repeating supported plugin maps with dot operator
 
 " Programming
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " full language server protocol support as VSCode
 Plug 'antoinemadec/coc-fzf'             " fzf instead of coc.nvim built-in fuzzy finder
-Plug 'tpope/vim-surround'               " quoting/parenthesizing made simple
 Plug 'groenewege/vim-less'              " vim syntax for LESS
 Plug 'scrooloose/nerdcommenter'         " Comment functions so powerful—no comment necessary
-Plug 'tpope/vim-repeat'                 " repeat.vim: enable repeating supported plugin maps with dot operator
 Plug 'terryma/vim-expand-region'        " allows you to visually select increasingly larger regions of text
                                         " Press + to expand the visual selection and _ to shrink it.
 Plug 'nicwest/vim-camelsnek'            " Convert between camel and snek case
