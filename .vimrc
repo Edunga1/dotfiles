@@ -182,3 +182,12 @@ endif
 
 " Extend
 runtime! vim-include/*.vim
+
+" Call for profiling
+function! StartProfiling()
+  :profile start vim-profiling.log
+  :profile file *
+  :profile func *
+  echo 'profiling is started. log file: vim-profiling.log'
+endfunction
+
