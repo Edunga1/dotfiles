@@ -25,9 +25,12 @@ Plug 'unblevable/quick-scope'           " Lightning fast left-right movement in 
 Plug 'tpope/vim-surround'               " quoting/parenthesizing made simple
 Plug 'tpope/vim-repeat'                 " enable repeating supported plugin maps with dot operator
 
+" LSP
+Plug 'neovim/nvim-lspconfig'              " Quickstart configs for Nvim LSP
+Plug 'williamboman/mason.nvim'            " Portable package manager for Neovim
+Plug 'williamboman/mason-lspconfig.nvim'  " Extension to mason.nvim
+
 " Programming
-Plug 'neoclide/coc.nvim', {'branch': 'release'} " full language server protocol support as VSCode
-Plug 'antoinemadec/coc-fzf'             " fzf instead of coc.nvim built-in fuzzy finder
 Plug 'groenewege/vim-less'              " vim syntax for LESS
 Plug 'scrooloose/nerdcommenter'         " Comment functions so powerful—no comment necessary
 Plug 'terryma/vim-expand-region'        " allows you to visually select increasingly larger regions of text
