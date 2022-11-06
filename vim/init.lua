@@ -41,3 +41,15 @@ end
 require'lspconfig'.kotlin_language_server.setup{ on_attach = on_attach }
 require'lspconfig'.pyright.setup{ on_attach = on_attach }
 
+-- LSP null-ls
+local null_ls = require("null-ls")
+
+null_ls.setup({
+    sources = {
+        null_ls.builtins.diagnostics.ktlint,
+        null_ls.builtins.formatting.ktlint,
+        null_ls.builtins.formatting.autopep8,
+        null_ls.builtins.formatting.isort,
+    },
+})
+
