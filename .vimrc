@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 
 " Colorscheme
 Plug 'altercation/vim-colors-solarized' " vim color scheme
