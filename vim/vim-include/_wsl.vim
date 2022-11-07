@@ -1,8 +1,8 @@
 " setting for wsl2
 
 " === PASS IF SYSTEM IS NOT RUNNING ON WSL
-function! IsWSL()
-  if has("unix")
+function! s:IsWSL()
+  if has("unix") && filereadable("/proc/version")
     let lines = readfile("/proc/version")
     if lines[0] =~ "Microsoft"
       return 1
@@ -11,7 +11,7 @@ function! IsWSL()
   return 0
 endfunction
 
-if !IsWSL()
+if !s:IsWSL()
   finish
 endif
 " ===
