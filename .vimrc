@@ -21,7 +21,6 @@ Plug 'itchyny/vim-gitbranch'            " - vim-startify requires this
 Plug 'junegunn/goyo.vim'                " Distraction-free writing in Vim. :Goyo
 
 " Vim Improvements
-Plug 'unblevable/quick-scope'           " Lightning fast left-right movement in Vim
 Plug 'tpope/vim-surround'               " quoting/parenthesizing made simple
 Plug 'tpope/vim-repeat'                 " enable repeating supported plugin maps with dot operator
 
