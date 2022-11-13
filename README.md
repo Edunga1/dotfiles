@@ -7,15 +7,11 @@ Clone this repository to home directory.
 
 install tools step by step: neovim -> vim-plug -> vim plugins `PlugInstall`
 
-link my custom plugin scripts:
-```
-ln -s ~/dotfiles/vim/vim-include ~/.config/nvim
-```
+symlink commands:
 
-link `init.lua`:
+```bash
+ln -s ~/dotfiles/vim/init.lua ~/.config/nvim     # init.lua
+ln -s ~/dotfiles/vim/vim-include ~/.config/nvim  # my custom scripts
+ln -s ~/dotfiles/vim/UltiSnips ~/.config/nvim    # UltiSnips snippets
 ```
-ln -s ~/dotfiles/vim/init.lua ~/.config/nvim
-```
-
-`init.lua` runs my custom plugin scripts.
 
