@@ -81,6 +81,7 @@ set autowrite             " Writes on make/shell commands
 set autoread
 set timeoutlen=250        " Time to wait after ESC (default causes an annoying delay)
 set clipboard+=unnamed    " Yanks go on clipboard instead.
+set path+=**              " Search all subdirectories and recursively
 
 " Backup
 set nowritebackup
