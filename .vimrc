@@ -68,7 +68,6 @@ Plug 'jeetsukumaran/vim-pythonsense'    " Pythonsense is a Vim plugin that provi
                                         " for Python classes, methods, functions, and doc strings.
 
 " Etc.
-Plug 'vimwiki/vimwiki', { 'branch': 'dev' } " Personal wiki for vim
 Plug 'dhruvasagar/vim-table-mode'
 
 call plug#end()
