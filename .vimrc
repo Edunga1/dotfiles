@@ -175,6 +175,14 @@ nnoremap <c-t> :tabnew<cr>
 nnoremap [b :bp<cr>
 nnoremap ]b :bn<cr>
 
+" quickfix and location list
+nnoremap \q :copen<cr>
+nnoremap [q :cprevious<cr>
+nnoremap ]q :cnext<cr>
+nnoremap \w :lopen<cr>
+nnoremap [w :lprevious<cr>
+nnoremap ]w :lnext<cr>
+
 " Change tab size
 map <Leader>w4 :set tabstop=4<CR>:set softtabstop=4<CR>:set shiftwidth=4<CR>:set expandtab<CR>
 map <Leader>w2 :set tabstop=2<CR>:set softtabstop=2<CR>:set shiftwidth=2<CR>:set expandtab<CR>
