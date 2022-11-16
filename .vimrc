@@ -162,7 +162,7 @@ set pastetoggle=<F2>
 command! W  write
 
 " Clear last search highlighting
-nnoremap <Space> :noh<cr>
+nnoremap <space> <cmd>noh<cr>
 
 " Navigating between windows
 nnoremap <c-j> <c-w>j
@@ -172,20 +172,20 @@ nnoremap <c-l> <c-w>l
 nnoremap <s-h> gT
 nnoremap <s-l> gt
 nnoremap <c-t> :tabnew<cr>
-nnoremap [b :bp<cr>
-nnoremap ]b :bn<cr>
+nnoremap [b <cmd>bp<cr>
+nnoremap ]b <cmd>bn<cr>
 
 " quickfix and location list
-nnoremap \q :copen<cr>
-nnoremap [q :cprevious<cr>
-nnoremap ]q :cnext<cr>
-nnoremap \w :lopen<cr>
-nnoremap [w :lprevious<cr>
-nnoremap ]w :lnext<cr>
+nnoremap \q <cmd>copen<cr>
+nnoremap [q <cmd>cprevious<cr>
+nnoremap ]q <cmd>cnext<cr>
+nnoremap \w <cmd>lopen<cr>
+nnoremap [w <cmd>lprevious<cr>
+nnoremap ]w <cmd>lnext<cr>
 
 " Change tab size
-map <Leader>w4 :set tabstop=4<CR>:set softtabstop=4<CR>:set shiftwidth=4<CR>:set expandtab<CR>
-map <Leader>w2 :set tabstop=2<CR>:set softtabstop=2<CR>:set shiftwidth=2<CR>:set expandtab<CR>
+map <leader>w4 <cmd>set tabstop=4<cr><cmd>set softtabstop=4<cr><cmd>set shiftwidth=4<cr><cmd>set expandtab<cr>
+map <leader>w2 <cmd>set tabstop=2<cr><cmd>set softtabstop=2<cr><cmd>set shiftwidth=2<cr><cmd>set expandtab<cr>
 
 " Keep content after pasting
 vnoremap <leader>p "_dP
