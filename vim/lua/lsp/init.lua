@@ -11,7 +11,7 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '\\d', vim.diagnostic.setloclist, opts)
 
--- export setup for servers
+-- LSP setup
 local on_attach = function(client, bufnr)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
@@ -35,17 +35,24 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, bufopts)
 end
 
+-- completion setup
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 -- source servers
 local languages = {
-  require'lsp.python',
-  require'lsp.kotlin',
-  require'lsp.lua',
+  require 'lsp.python',
+  require 'lsp.kotlin',
+  require 'lsp.lua',
 }
 local sources = {}
 
-for _,v in pairs(languages) do
-  v.server.setup { on_attach=on_attach }
-  for _,source in pairs(v.sources) do
+for _, v in pairs(languages) do
+  v.server.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+  }
+
+  for _, source in pairs(v.sources) do
     table.insert(sources, source)
   end
 end

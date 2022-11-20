@@ -31,6 +31,10 @@ Plug 'williamboman/mason-lspconfig.nvim'  " Extension to mason.nvim
 Plug 'jose-elias-alvarez/null-ls.nvim'    " Inject LSP diagnostics, code actions, and more via Lua
 Plug 'nvim-telescope/telescope.nvim'      " a highly extendable fuzzy finder over lists
 Plug 'nvim-lua/plenary.nvim'              " - several nvim plugins require this
+" - completion
+Plug 'hrsh7th/cmp-nvim-lsp'                 " nvim-cmp source for neovim builtin LSP client.
+Plug 'hrsh7th/nvim-cmp'                     " A completion plugin for neovim.
+Plug 'quangnguyen30192/cmp-nvim-ultisnips'  " nvim-cmp source for SirVer/ultisnips.
 
 " Programming
 Plug 'groenewege/vim-less'              " vim syntax for LESS
