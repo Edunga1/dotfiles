@@ -6,5 +6,6 @@ iabbr <expr> __pwd expand('%:p:h')
 
 " python
 " - debugging
-iabbr __nose from pprint import pprint; import nose.tools; nose.tools.set_trace()
-iabbr __pdb from pprint import pprint; import pdb; pdb.set_trace()
+iabbr __nose import nose.tools; nose.tools.set_trace()
+iabbr __pdb import pdb; pdb.set_trace()
+iabbr __pprint from pprint import pprint
