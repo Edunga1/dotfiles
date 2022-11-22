@@ -29,7 +29,8 @@ Plug 'neovim/nvim-lspconfig'              " Quickstart configs for Nvim LSP
 Plug 'williamboman/mason.nvim'            " Portable package manager for Neovim
 Plug 'williamboman/mason-lspconfig.nvim'  " Extension to mason.nvim
 Plug 'jose-elias-alvarez/null-ls.nvim'    " Inject LSP diagnostics, code actions, and more via Lua
-Plug 'nvim-lua/plenary.nvim'              " - null-ls.nvim requires this
+Plug 'nvim-telescope/telescope.nvim'      " a highly extendable fuzzy finder over lists
+Plug 'nvim-lua/plenary.nvim'              " - several nvim plugins require this
 
 " Programming
 Plug 'groenewege/vim-less'              " vim syntax for LESS
