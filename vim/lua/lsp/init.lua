@@ -1,5 +1,7 @@
 -- package manager for lsp
-require 'mason'.setup()
+require 'mason'.setup{
+  PATH = 'append'
+}
 require 'mason-lspconfig'.setup()
 
 -- setup key mappings
