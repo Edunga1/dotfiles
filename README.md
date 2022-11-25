@@ -5,6 +5,11 @@ Clone this repository to home directory.
 
 # Neovim
 
+* [Prerequisite](#prerequisite)
+  * [python3 provider](#python3-provider)
+  * [(optional) ag _silver searcher_, rg _ripgrep_ for fzf.vim](#(optional)-ag-_silver-searcher_,-rg-_ripgrep_-for-fzf.vim)
+* [Setup](#setup)
+
 ## Prerequisite
 
 ### python3 provider
