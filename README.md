@@ -3,7 +3,26 @@
 Clone this repository to home directory.
 
 
-# neovim
+# Neovim
+
+## Prerequisite
+
+### python3 provider
+
+```bash
+pyenv virtualenv PYTHON_VERSION py3nvim
+```
+
+`py3nvim` virtualenv is used from [init.lua](./vim/init.lua).
+
+### (optional) ag _silver searcher_, rg _ripgrep_ for fzf.vim
+
+```bash
+brew install rg
+brew install ag
+```
+
+## Setup
 
 install tools step by step: neovim -> vim-plug -> vim plugins `PlugInstall`
 
