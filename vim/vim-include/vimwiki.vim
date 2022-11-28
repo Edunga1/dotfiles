@@ -1,7 +1,7 @@
 " My personal wiki list
 let g:vimwiki_list = [
     \{
-    \   'path': '~/workspace/cat-logic',
+    \   'path': '~/workspace/cat-logic/docs/wiki',
     \   'ext' : '.md',
     \   'diary_rel_path': '.',
     \}
