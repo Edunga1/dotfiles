@@ -1,8 +1,5 @@
 call plug#begin()
 
-" Colorscheme
-Plug 'altercation/vim-colors-solarized' " vim color scheme
-
 " Git
 Plug 'tpope/vim-fugitive'               " a git wrapper
 Plug 'airblade/vim-gitgutter'           " shows a git diff in the gutter
