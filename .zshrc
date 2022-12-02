@@ -136,3 +136,7 @@ if command -v nvim &> /dev/null; then
   alias vi="nvim"
 fi
 
+# Settings for WSL
+if grep -qi microsoft /proc/version; then
+  alias open=explorer.exe
+fi
