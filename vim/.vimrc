@@ -47,7 +47,6 @@ Plug 'vim-scripts/matchit.zip'          " extended % matching for HTML, LaTeX, a
 
 " Javascript & Typescript
 Plug 'pangloss/vim-javascript'          " Vastly improved Javascript indentation and syntax support in Vim
-Plug 'mxw/vim-jsx'                      " React JSX syntax highlighting and indenting for vim
 Plug 'leafgarland/typescript-vim'       " Typescript syntax files for Vim
 
 " Markdown
