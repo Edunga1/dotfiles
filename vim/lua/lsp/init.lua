@@ -43,6 +43,7 @@ local languages = {
   require 'lsp.python',
   require 'lsp.kotlin',
   require 'lsp.lua',
+  require 'lsp.typescript',
   require 'lsp.markdown',
 }
 local sources = {}
