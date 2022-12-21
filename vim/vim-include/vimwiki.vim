@@ -2,6 +2,7 @@
 let g:vimwiki_list = [
     \{
     \   'path': '~/workspace/cat-logic/docs/wiki',
+    \   'syntax': 'markdown',
     \   'ext' : '.md',
     \   'diary_rel_path': '.',
     \}
