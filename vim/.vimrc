@@ -192,7 +192,6 @@ map <leader>w2 <cmd>set tabstop=2<cr><cmd>set softtabstop=2<cr><cmd>set shiftwid
 vnoremap <leader>p "_dP
 
 " built-in terminal
-tnoremap <esc> <c-\><c-n>
 set shell=/bin/zsh
 
 " Neovim initialization
