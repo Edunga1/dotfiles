@@ -67,13 +67,8 @@ if [[ -s "$HOME/.local/share/marker/marker.sh" ]]; then
   export MARKER_KEY_NEXT_PLACEHOLDER=''
 fi
 
-# fzf. respecting git working tree if git project.
+# FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='
-  (git ls-files --exclude-standard -c -o ||
-   git ls-tree -r --name-only HEAD ||
-   find . -path "*/\.*" -prune -o -type f -print -o -type l -print |
-      sed s/^..//) 2> /dev/null'
 
 export LC_ALL=en_US.UTF-8
 
@@ -140,3 +135,7 @@ fi
 if grep -qi microsoft /proc/version &> /dev/null; then
   alias open=explorer.exe
 fi
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/alleb/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
