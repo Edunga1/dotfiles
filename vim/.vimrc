@@ -7,6 +7,7 @@ Plug 'airblade/vim-gitgutter'           " shows a git diff in the gutter
 " Completion
 Plug 'ervandew/supertab'                " Perform all your vim insert mode completions with Tab
 Plug 'SirVer/ultisnips'                 " The ultimate snippet solution for Vim
+Plug 'github/copilot.vim'               " Neovim plugin for GitHub Copilot
 
 " Navigation
 Plug 'scrooloose/nerdtree'              " a tree explorer
