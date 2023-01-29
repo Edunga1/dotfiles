@@ -134,6 +134,7 @@ fi
 # Settings for WSL
 if grep -qi microsoft /proc/version &> /dev/null; then
   alias open=explorer.exe
+  alias gw=git.exe
 fi
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
