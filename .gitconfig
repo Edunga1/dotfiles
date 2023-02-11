@@ -23,7 +23,7 @@
   ignored = !git ls-files -v | grep ^[a-z]
   amend = commit --amend
   pushu = push -u origin HEAD
-  pullp = pull --prune
+  pp = pull --prune
 
   # === Integrated with fzf ===============================================
   # = ref. http://www.mimul.com/pebble/default/2019/08/23/1566550403384.html
