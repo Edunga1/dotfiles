@@ -1,4 +1,4 @@
 return {
-    server = require 'lspconfig'.sumneko_lua,
+    server = require 'lspconfig'.lua_ls,
     sources = {},
 }
