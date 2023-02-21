@@ -5,4 +5,5 @@ let g:copilot_no_tab_map = v:true
 " copilot enabled status for specific filetypes
 let g:copilot_filetypes = {
   \ 'markdown': v:true,
+  \ 'yaml': v:true,
   \ }
