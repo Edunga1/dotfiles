@@ -153,6 +153,7 @@ autocmd ColorScheme *
 au BufRead,BufNewFile {Gemfile,config.ru,*.thor}  set ft=ruby
 au BufRead,BufNewFile {*.md,*.mkd,*.markdown}     set ft=markdown
 au BufRead,BufNewFile {COMMIT_EDITMSG}            set ft=gitcommit
+au BufRead,BufNewFile {*.tsx,*.jsx}               set ft=typescriptreact
 
 filetype plugin indent on   " required!
 
