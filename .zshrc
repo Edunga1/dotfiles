@@ -137,6 +137,11 @@ if grep -qi microsoft /proc/version &> /dev/null; then
   alias gw=git.exe
 fi
 
+# GitHub copilot cli
+if command -v github-copilot-cli &> /dev/null; then
+  eval "$(github-copilot-cli alias -- "$0")"
+fi
+
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/alleb/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
