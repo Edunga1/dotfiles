@@ -131,7 +131,6 @@ set showcmd               " Display an incomplete command in the lower right cor
 set equalalways
 set wildmenu              " command line completion
 set numberwidth=3         " gutter column width
-colorscheme habamax       " colorscheme
 
 set splitbelow
 set splitright
