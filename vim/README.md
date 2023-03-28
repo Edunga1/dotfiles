@@ -29,3 +29,9 @@ ln -s ~/dotfiles/vim/vim-include ~/.config/nvim  # my custom scripts
 ln -s ~/dotfiles/vim/lua/ ~/.config/nvim         # my custom lua scripts
 ln -s ~/dotfiles/vim/UltiSnips ~/.config/nvim    # UltiSnips snippets
 ```
+
+# Snapshots
+
+codes
+
+![codes](./docs/snapshot.png)
