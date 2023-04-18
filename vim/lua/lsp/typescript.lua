@@ -1,3 +1,4 @@
+local null_ls = require 'null-ls'
 local common = require 'lsp._common'
 
 local function rename_file()
@@ -48,8 +49,7 @@ require 'lspconfig'.tsserver.setup {
   },
 }
 
-local null_ls = require 'null-ls'
-null_ls.setup {
+return {
   sources = {
     null_ls.builtins.diagnostics.eslint,
   },

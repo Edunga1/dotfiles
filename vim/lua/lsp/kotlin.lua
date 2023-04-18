@@ -1,3 +1,4 @@
+local null_ls = require 'null-ls'
 local common = require 'lsp._common'
 
 require 'lspconfig'.kotlin_language_server.setup {
@@ -5,8 +6,7 @@ require 'lspconfig'.kotlin_language_server.setup {
   capabilities = common.capabilities,
 }
 
-local null_ls = require 'null-ls'
-null_ls.setup {
+return {
   sources = {
     null_ls.builtins.diagnostics.ktlint,
     null_ls.builtins.formatting.ktlint,
