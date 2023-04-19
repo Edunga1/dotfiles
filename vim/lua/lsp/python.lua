@@ -1,18 +1,15 @@
-local null_ls = require 'null-ls'
 local common = require 'lsp._common'
 
-require 'lspconfig'.pyright.setup {
-  on_attach = common.on_attach,
-  capabilities = common.capabilities,
-}
+return function(ns, lspconfig)
+  lspconfig.pyright.setup {
+    on_attach = common.on_attach,
+    capabilities = common.capabilities,
+  }
 
-return {
-  sources = {
-    null_ls.builtins.diagnostics.pylint,
-    null_ls.builtins.diagnostics.mypy.with {
-      extra_args = { '--ignore-missing-imports' }
-    },
-    null_ls.builtins.formatting.autopep8,
-    null_ls.builtins.formatting.isort,
-  },
-}
+  ns.register(ns.builtins.formatting.autopep8)
+  ns.register(ns.builtins.formatting.isort)
+  ns.register(ns.builtins.diagnostics.pylint)
+  ns.register(ns.builtins.diagnostics.mypy.with {
+    extra_args = { '--ignore-missing-imports' }
+  })
+end

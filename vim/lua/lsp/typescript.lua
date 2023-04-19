@@ -1,4 +1,3 @@
-local null_ls = require 'null-ls'
 local common = require 'lsp._common'
 
 local function rename_file()
@@ -38,19 +37,18 @@ local function rename_file()
   vim.lsp.buf.execute_command(params)
 end
 
-require 'lspconfig'.tsserver.setup {
-  on_attach = common.on_attach,
-  capabilities = common.capabilities,
-  commands = {
-    RenameFile = {
-      rename_file,
-      description = "Rename file",
+return function(ns, lspconfig)
+  lspconfig.tsserver.setup {
+    on_attach = common.on_attach,
+    capabilities = common.capabilities,
+    commands = {
+      RenameFile = {
+        rename_file,
+        description = "Rename file",
+      },
     },
-  },
-}
+  }
 
-return {
-  sources = {
-    null_ls.builtins.diagnostics.eslint,
-  },
-}
+  ns.register(ns.builtins.formatting.prettier)
+  ns.register(ns.builtins.diagnostics.eslint)
+end
