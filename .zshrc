@@ -24,6 +24,7 @@ export ZSH_DISABLE_COMPFIX=true
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 plugins=(
+  brew
   git
   zsh-syntax-highlighting
   zsh-autosuggestions
@@ -31,7 +32,6 @@ plugins=(
   tmuxinator
   docker
   docker-compose
-  brew
 )
 
 source $ZSH/oh-my-zsh.sh
