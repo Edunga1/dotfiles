@@ -7,10 +7,10 @@ I use [neovim](https://neovim.io/) as my main editor.
 ### python3 provider
 
 ```bash
-pyenv virtualenv PYTHON_VERSION py3nvim
+pip3 install pynvim
 ```
 
-`py3nvim` virtualenv is used from [init.lua](./vim/init.lua).
+UltiSnips needs python3 provider.
 
 ### (optional) ag _silver searcher_, rg _ripgrep_ for fzf.vim
 
