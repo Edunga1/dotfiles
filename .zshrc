@@ -27,7 +27,6 @@ plugins=(
   git
   zsh-syntax-highlighting
   zsh-autosuggestions
-  fasd
   tmux
   tmuxinator
   docker
@@ -136,6 +135,11 @@ fi
 if grep -qi microsoft /proc/version &> /dev/null; then
   alias open=explorer.exe
   alias gw=git.exe
+fi
+
+# fasd
+if command -v fasd &> /dev/null; then
+  eval "$(fasd --init auto)"
 fi
 
 # GitHub copilot cli
