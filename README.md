@@ -10,9 +10,20 @@ it mostly works on both macOS and WSL2.
 
 # Zsh
 
+```bash
+ln -s ~/dotfiles/.zshrc ~/.zshrc  # zsh
+cp ~/dotfiles/.gitconfig ~        # git. gitconfig contains email and name. so i don't make symbolic link
+```
+
 ## plugins and themes
 
-base on using oh-my-zsh.
+install oh-my-zsh:
+
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+and install oh-my-zsh plugins:
 
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
