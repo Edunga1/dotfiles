@@ -32,6 +32,7 @@ plugins=(
   tmuxinator
   docker
   docker-compose
+  brew
 )
 
 source $ZSH/oh-my-zsh.sh
