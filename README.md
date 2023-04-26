@@ -8,6 +8,14 @@ it mostly works on both macOS and WSL2.
 * [Hammerspoon](./hammerspoon/README.md)
 * [VIM](./vim/README.md)
 
+# Automatic Setup (WIP)
+
+```bash
+./setup.sh
+```
+
+above command will setup symblic links unless the file already exists.
+
 # Zsh
 
 ```bash
