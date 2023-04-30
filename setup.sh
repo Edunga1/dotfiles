@@ -8,7 +8,7 @@ step () {
 # $1: source of link
 # $2: destination of link
 link () {
-  if [ -h $2 ]; then
+  if [ -e $2 ]; then
     echo "$2 - skipping, already linked"
     return 0
   fi
@@ -17,8 +17,21 @@ link () {
   ln -sr $1 $2
 }
 
+# $1: source of link
+# $2: destination of link
+copy () {
+  if [ -e $2 ]; then
+    echo "$2 - skipping, already copied"
+    return 0
+  fi
+
+  echo "$2 - copying"
+  cp -r $1 $2
+}
+
 step "Setting up symlink for zsh"
 link ./.zshrc ~/.zshrc
+link ./p10k.zsh ~/.p10k.zsh
 
 step "Setting up symlink for vim"
 link ./vim/.vimrc ~/.vimrc
@@ -30,3 +43,9 @@ link ./vim/UltiSnips ~/.config/nvim/UltiSnips
 step "Setting up symlink for tmux"
 link ./tmux/.tmux.conf ~/.tmux.conf
 link ./tmux/.tmux.conf.local ~/.tmux.conf.local
+
+step "Setting up symlink for python"
+link ./pdbrc ~/.pdbrc
+
+step "Setting up copy for git"
+copy ./.gitconfig ~/.gitconfig
