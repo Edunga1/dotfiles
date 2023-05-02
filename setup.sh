@@ -29,6 +29,16 @@ copy () {
   cp -r $1 $2
 }
 
+check_osx () {
+  if [[ "$OSTYPE" != "darwin"* ]]; then
+    echo "Not on OSX, skipping"
+    return 1
+  fi
+}
+
+step "Setting up symlink for hammerspoon"
+check_osx && link ./hammerspoon/.hammerspoon ~/.hammerspoon
+
 step "Setting up symlink for zsh"
 link ./.zshrc ~/.zshrc
 link ./p10k.zsh ~/.p10k.zsh
