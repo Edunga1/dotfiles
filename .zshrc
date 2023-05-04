@@ -79,6 +79,12 @@ if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
   export INFOPATH=$(brew --prefix)/share/info:$INFOPATH
 fi
 
+# Macos Homebrew
+if [ -f /opt/homebrew/bin/brew ]; then
+  export PATH="/opt/homebrew/bin:$PATH"
+fi
+
+
 # gcloud completion for osx homebrew
 include '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 include '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'

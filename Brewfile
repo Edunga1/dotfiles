@@ -1,7 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
-brew "ctags"
+brew "universal-ctags/universal-ctags/universal-ctags"
 brew "fasd"
 brew "fzf"
 brew "git"
