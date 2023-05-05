@@ -2,7 +2,7 @@
 set -e
 
 step () {
-  printf "\n$1...\n"
+  printf "\nSetting up for $1...\n"
 }
 
 # $1: source of link
@@ -36,26 +36,26 @@ check_osx () {
   fi
 }
 
-step "Setting up symlink for hammerspoon"
+step "hammerspoon"
 check_osx && link ./hammerspoon/.hammerspoon ~/.hammerspoon
 
-step "Setting up symlink for zsh"
+step "zsh"
 link ./.zshrc ~/.zshrc
 link ./p10k.zsh ~/.p10k.zsh
 
-step "Setting up symlink for vim"
+step "vim"
 link ./vim/.vimrc ~/.vimrc
 link ./vim/init.lua ~/.config/nvim/init.lua
 link ./vim/vim-include ~/.config/nvim/vim-include
 link ./vim/lua/ ~/.config/nvim/lua
 link ./vim/UltiSnips ~/.config/nvim/UltiSnips
 
-step "Setting up symlink for tmux"
+step "tmux"
 link ./tmux/.tmux.conf ~/.tmux.conf
 link ./tmux/.tmux.conf.local ~/.tmux.conf.local
 
-step "Setting up symlink for python"
+step "python"
 link ./pdbrc ~/.pdbrc
 
-step "Setting up copy for git"
+step "git"
 copy ./.gitconfig ~/.gitconfig
