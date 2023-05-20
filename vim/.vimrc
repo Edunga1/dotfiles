@@ -155,6 +155,9 @@ au BufRead,BufNewFile {*.md,*.mkd,*.markdown}     set ft=markdown
 au BufRead,BufNewFile {COMMIT_EDITMSG}            set ft=gitcommit
 au BufRead,BufNewFile {*.tsx,*.jsx}               set ft=typescriptreact
 
+" Highlight PopUp menu
+highlight! link Pmenu Visual
+
 filetype plugin indent on   " required!
 
 " Key mappings
