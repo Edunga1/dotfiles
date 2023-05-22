@@ -55,7 +55,6 @@ Plug 'plasticboy/vim-markdown'          " Syntax highlighting, matching rules an
 Plug 'Vimjas/vim-python-pep8-indent'    " This modifies Vim’s indentation behavior to comply with PEP8
 
 " Utility
-Plug 'vim-scripts/AutoTag'              " Updates entries in a tags file automatically when saving
 Plug 'vim-scripts/ZoomWin'              " zoom in/out of windows (<c-w>o to toggle)
 Plug 'vim-airline/vim-airline'          " lean & mean status/tabline for vim that's light as air
 Plug 'vim-airline/vim-airline-themes'   " a collection of themes for vim-airline
