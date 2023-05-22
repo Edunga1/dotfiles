@@ -4,14 +4,6 @@ I use [neovim](https://neovim.io/) as my main editor.
 
 ## Prerequisite
 
-### python3 provider
-
-```bash
-pip3 install pynvim
-```
-
-UltiSnips needs python3 provider.
-
 ### (optional) ag _silver searcher_, rg _ripgrep_ for fzf.vim
 
 ```bash
@@ -27,7 +19,6 @@ ln -s ~/dotfiles/vim/.vimrc ~                    # .vimrc
 ln -s ~/dotfiles/vim/init.lua ~/.config/nvim     # init.lua
 ln -s ~/dotfiles/vim/vim-include ~/.config/nvim  # my custom scripts
 ln -s ~/dotfiles/vim/lua/ ~/.config/nvim         # my custom lua scripts
-ln -s ~/dotfiles/vim/UltiSnips ~/.config/nvim    # UltiSnips snippets
 ```
 
 # Snapshots

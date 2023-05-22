@@ -6,7 +6,6 @@ Plug 'airblade/vim-gitgutter'           " shows a git diff in the gutter
 
 " Completion
 Plug 'ervandew/supertab'                " Perform all your vim insert mode completions with Tab
-Plug 'SirVer/ultisnips'                 " The ultimate snippet solution for Vim
 Plug 'github/copilot.vim'               " Neovim plugin for GitHub Copilot
 
 " Navigation
@@ -31,7 +30,6 @@ Plug 'nvim-lua/plenary.nvim'              " - several nvim plugins require this
 " - completion
 Plug 'hrsh7th/cmp-nvim-lsp'                 " nvim-cmp source for neovim builtin LSP client.
 Plug 'hrsh7th/nvim-cmp'                     " A completion plugin for neovim.
-Plug 'quangnguyen30192/cmp-nvim-ultisnips'  " nvim-cmp source for SirVer/ultisnips.
 
 " Programming
 Plug 'groenewege/vim-less'              " vim syntax for LESS

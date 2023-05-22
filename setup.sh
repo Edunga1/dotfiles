@@ -48,7 +48,6 @@ link ./vim/.vimrc ~/.vimrc
 link ./vim/init.lua ~/.config/nvim/init.lua
 link ./vim/vim-include ~/.config/nvim/vim-include
 link ./vim/lua/ ~/.config/nvim/lua
-link ./vim/UltiSnips ~/.config/nvim/UltiSnips
 
 step "tmux"
 link ./tmux/.tmux.conf ~/.tmux.conf
