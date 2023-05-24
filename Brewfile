@@ -13,6 +13,7 @@ brew "tmux"
 brew "vim"
 brew "neovim"
 brew "ripgrep"
+brew "colima"                # docker-desktop alternative
 cask "drawio"
 cask "firefox"
 cask "google-chrome"
