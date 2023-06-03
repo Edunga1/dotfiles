@@ -1,3 +1,6 @@
+if empty(globpath(&runtimepath, 'autoload/plug.vim'))
+  echoerr "vim-plug is not found. so plugin is not loaded."
+else
 call plug#begin()
 
 " Git
@@ -70,6 +73,7 @@ Plug 'dhruvasagar/vim-table-mode'       " VIM Table Mode for instant table creat
 Plug 'vimwiki/vimwiki'                  " Personal Wiki for Vim
 
 call plug#end()
+endif
 
 " General
 set encoding=utf-8
