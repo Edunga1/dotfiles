@@ -9,7 +9,6 @@ return function(ns, lspconfig)
   ns.register(ns.builtins.formatting.autopep8)
   ns.register(ns.builtins.formatting.isort)
   ns.register(ns.builtins.formatting.ruff)
-  ns.register(ns.builtins.diagnostics.pylint)
   ns.register(ns.builtins.diagnostics.mypy.with {
     extra_args = { '--ignore-missing-imports' }
   })
