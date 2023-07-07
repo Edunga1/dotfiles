@@ -1,9 +1,6 @@
 " vim-airline-themes
 let g:airline_theme = 'simple'
 
-" hide filetype (section x)
-let g:airline_section_x = ''
-
-" shorten cursor info on file
-let g:airline_section_z = '%3p%% %l:%c'
-
+" Neovim LSP
+let g:airline#extensions#nvimlsp#enabled = 1
+let airline#extensions#nvimlsp#show_line_numbers = 0
