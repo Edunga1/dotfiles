@@ -6,14 +6,6 @@ let g:startify_bookmarks = systemlist("cut -sd' ' -f 2- ~/.NERDTreeBookmarks")
 " Save session automatically
 let g:startify_session_persistence = 1
 
-function! GetUniqueSessionName()
-  let path = fnamemodify(getcwd(), ':~:t')
-  let path = empty(path) ? 'no-project' : path
-  return substitute(path, '/', '-', 'g')
-endfunction
-
-autocmd VimLeavePre * execute 'SSave! ' . GetUniqueSessionName()
-
 " Rearrange lists
 let g:startify_lists = [
       \ { 'type': 'sessions',  'header': ['   Sessions']       },
