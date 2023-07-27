@@ -1,6 +1,7 @@
 if empty(globpath(&runtimepath, 'autoload/plug.vim'))
-  echoerr "vim-plug is not found. so plugin is not loaded."
+  echoerr "vim-plug is not found. plugins are not loaded."
 else
+
 call plug#begin()
 
 " Git
