@@ -58,6 +58,9 @@ Plug 'plasticboy/vim-markdown'          " Syntax highlighting, matching rules an
 " Python
 Plug 'Vimjas/vim-python-pep8-indent'    " This modifies Vim’s indentation behavior to comply with PEP8
 
+" Vimscript
+Plug 'junegunn/vader.vim'               " A simple Vimscript test framework
+
 " Utility
 Plug 'vim-scripts/ZoomWin'              " zoom in/out of windows (<c-w>o to toggle)
 Plug 'vim-airline/vim-airline'          " lean & mean status/tabline for vim that's light as air
