@@ -75,6 +75,7 @@ Plug 'jeetsukumaran/vim-pythonsense'    " Pythonsense is a Vim plugin that provi
 " Etc.
 Plug 'dhruvasagar/vim-table-mode'       " VIM Table Mode for instant table creation.
 Plug 'vimwiki/vimwiki'                  " Personal Wiki for Vim
+Plug 'edunga1/vimwiki-link'             " Experimental plugin for Vimwiki
 
 call plug#end()
 endif
