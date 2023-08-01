@@ -14,13 +14,13 @@ it mostly works on both macOS and WSL2.
 ./setup.sh
 ```
 
-above command will setup symblic links unless the file already exists.
+above command will create symblic links unless the file already exists.
 
 # Zsh
 
 ```bash
 ln -s ~/dotfiles/.zshrc ~/.zshrc  # zsh
-cp ~/dotfiles/.gitconfig ~        # git. gitconfig contains email and name. so i don't make symbolic link
+cp ~/dotfiles/.gitconfig ~        # git. gitconfig contains personal informations. so i don't make symbolic link
 ```
 
 ## plugins and themes
