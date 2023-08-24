@@ -1,8 +1,10 @@
 -- package manager for lsp
-require 'mason'.setup{
+require 'mason'.setup {
   PATH = 'append'
 }
-require 'mason-lspconfig'.setup()
+require 'mason-lspconfig'.setup {
+  automatic_installation = true,
+}
 
 -- setup key mappings
 vim.diagnostic.config({
