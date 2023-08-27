@@ -32,8 +32,8 @@ Plug 'jose-elias-alvarez/null-ls.nvim'    " Inject LSP diagnostics, code actions
 Plug 'nvim-telescope/telescope.nvim'      " a highly extendable fuzzy finder over lists
 Plug 'nvim-lua/plenary.nvim'              " - several nvim plugins require this
 " - completion
-Plug 'hrsh7th/cmp-nvim-lsp'                 " nvim-cmp source for neovim builtin LSP client.
-Plug 'hrsh7th/nvim-cmp'                     " A completion plugin for neovim.
+Plug 'hrsh7th/cmp-nvim-lsp'               " nvim-cmp source for neovim builtin LSP client.
+Plug 'hrsh7th/nvim-cmp'                   " A completion plugin for neovim.
 
 " Programming
 Plug 'groenewege/vim-less'              " vim syntax for LESS
@@ -203,6 +203,7 @@ map <leader>w2 <cmd>set tabstop=2<cr><cmd>set softtabstop=2<cr><cmd>set shiftwid
 vnoremap <leader>p "_dP
 
 " built-in terminal
+" - go back to normal mode with <leader><esc>
 tnoremap <leader><esc> <c-\><c-n>
 set shell=/bin/zsh
 
@@ -211,5 +212,5 @@ if has('nvim')
   set inccommand=nosplit  " highlights during a substitution in progress
 endif
 
-" Extend
+" Extend the runtimepath to include the vim-include directory
 runtime! vim-include/*.vim
