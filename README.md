@@ -3,8 +3,6 @@
 my dotfiles for macOS and WSL2(ubuntu).
 it mostly works on both macOS and WSL2.
 
-## Dot files
-
 * [Hammerspoon](./hammerspoon/README.md)
 * [VIM](./vim/README.md)
 
