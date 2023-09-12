@@ -24,6 +24,7 @@
   amend = commit --amend
   pu = push -u origin HEAD
   pp = pull --prune
+  fr = !git fetch --prune && git rebase
 
   # === Integrated with fzf ===============================================
   # = ref. http://www.mimul.com/pebble/default/2019/08/23/1566550403384.html
