@@ -40,8 +40,8 @@ step "hammerspoon"
 check_osx && link ./hammerspoon/.hammerspoon ~/.hammerspoon
 
 step "zsh"
-link ./.zshrc ~/.zshrc
-link ./p10k.zsh ~/.p10k.zsh
+link ./shell/.zshrc ~/.zshrc
+link ./shell/.p10k.zsh ~/.p10k.zsh
 
 step "vim"
 link ./vim/.vimrc ~/.vimrc

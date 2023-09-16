@@ -2,6 +2,8 @@
 
 Hammerspoon is a powerful automation tool for macOS. Only works on macOS.
 
+https://github.com/Hammerspoon/hammerspoon
+
 Setup:
 ```bash
 ln -s ~/dotfiles/hammerspoon/.hammerspoon ~/.hammerspoon
