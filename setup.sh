@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+CLRSKIP='\e[1;30m'
+CLRSUCC='\e[1;32m'
+NC='\e[0m'
+
 step () {
   printf "\nSetting up for $1...\n"
 }
@@ -9,11 +13,11 @@ step () {
 # $2: destination of link
 link () {
   if [ -e $2 ]; then
-    echo "$2 - skipping, already linked"
+    echo -e "$CLRSKIP$2 - skipping, already linked$NC"
     return 0
   fi
 
-  echo "$2 - linking"
+  echo -e "$CLRSUCC$2 - linking$NC"
   ln -sr $1 $2
 }
 
@@ -21,17 +25,17 @@ link () {
 # $2: destination of link
 copy () {
   if [ -e $2 ]; then
-    echo "$2 - skipping, already copied"
+    echo -e "$CLRSKIP$2 - skipping, already copied$NC"
     return 0
   fi
 
-  echo "$2 - copying"
+  echo -e "$CLRSUCC$2 - copying$NC"
   cp -r $1 $2
 }
 
 check_osx () {
   if [[ "$OSTYPE" != "darwin"* ]]; then
-    echo "Not on OSX, skipping"
+    echo -e "$CLRSKIPNot on OSX, skipping$NC"
     return 1
   fi
 }
@@ -54,7 +58,7 @@ link ./tmux/.tmux.conf ~/.tmux.conf
 link ./tmux/.tmux.conf.local ~/.tmux.conf.local
 
 step "python"
-link ./pdbrc ~/.pdbrc
+link ./.pdbrc ~/.pdbrc
 
 step "git"
 copy ./.gitconfig ~/.gitconfig
