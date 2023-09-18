@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
-CLRSKIP='\e[1;30m'
-CLRSUCC='\e[1;32m'
-NC='\e[0m'
+CLRSKIP='\033[1;30m'
+CLRSUCC='\033[1;32m'
+NC='\033[0m'
 
 step () {
   printf "\nSetting up for $1...\n"
