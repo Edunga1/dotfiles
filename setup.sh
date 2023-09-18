@@ -18,7 +18,7 @@ link () {
   fi
 
   echo -e "$CLRSUCC$2 - linking$NC"
-  ln -sr $1 $2
+  ln -s "$(pwd)/$1" $2
 }
 
 # $1: source of link
@@ -35,7 +35,7 @@ copy () {
 
 check_osx () {
   if [[ "$OSTYPE" != "darwin"* ]]; then
-    echo -e "$CLRSKIPNot on OSX, skipping$NC"
+    echo -e "${CLRSKIP}Not on OSX, skipping$NC"
     return 1
   fi
 }
@@ -44,21 +44,21 @@ step "hammerspoon"
 check_osx && link ./hammerspoon/.hammerspoon ~/.hammerspoon
 
 step "zsh"
-link ./shell/.zshrc ~/.zshrc
+link shell/.zshrc ~/.zshrc
 link ./shell/.p10k.zsh ~/.p10k.zsh
 
 step "vim"
-link ./vim/.vimrc ~/.vimrc
-link ./vim/init.lua ~/.config/nvim/init.lua
-link ./vim/vim-include ~/.config/nvim/vim-include
-link ./vim/lua/ ~/.config/nvim/lua
+link vim/.vimrc ~/.vimrc
+link vim/init.lua ~/.config/nvim/init.lua
+link vim/vim-include ~/.config/nvim/vim-include
+link vim/lua/ ~/.config/nvim/lua
 
 step "tmux"
-link ./tmux/.tmux.conf ~/.tmux.conf
-link ./tmux/.tmux.conf.local ~/.tmux.conf.local
+link tmux/.tmux.conf ~/.tmux.conf
+link tmux/.tmux.conf.local ~/.tmux.conf.local
 
 step "python"
-link ./.pdbrc ~/.pdbrc
+link .pdbrc ~/.pdbrc
 
 step "git"
-copy ./.gitconfig ~/.gitconfig
+copy shell/.gitconfig ~/.gitconfig
