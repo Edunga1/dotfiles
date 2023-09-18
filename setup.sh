@@ -58,7 +58,7 @@ link tmux/.tmux.conf ~/.tmux.conf
 link tmux/.tmux.conf.local ~/.tmux.conf.local
 
 step "python"
-link .pdbrc ~/.pdbrc
+link shell/.pdbrc ~/.pdbrc
 
 step "git"
 copy shell/.gitconfig ~/.gitconfig
