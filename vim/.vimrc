@@ -72,6 +72,9 @@ Plug 'wellle/targets.vim'               " Adds various text objects to give you 
 Plug 'jeetsukumaran/vim-pythonsense'    " Pythonsense is a Vim plugin that provides text objects and motions
                                         " for Python classes, methods, functions, and doc strings.
 
+" vim sessions
+Plug 'rmagatti/auto-session'
+
 " Etc.
 Plug 'dhruvasagar/vim-table-mode'       " VIM Table Mode for instant table creation.
 Plug 'vimwiki/vimwiki'                  " Personal Wiki for Vim
