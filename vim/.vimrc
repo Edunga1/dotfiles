@@ -23,6 +23,7 @@ Plug 'junegunn/goyo.vim'                " Distraction-free writing in Vim. :Goyo
 " Vim Improvements
 Plug 'tpope/vim-surround'               " quoting/parenthesizing made simple
 Plug 'tpope/vim-repeat'                 " enable repeating supported plugin maps with dot operator
+Plug 'rmagatti/auto-session'            " A small automated session manager for Neovim
 
 " LSP
 Plug 'neovim/nvim-lspconfig'              " Quickstart configs for Nvim LSP
@@ -35,8 +36,7 @@ Plug 'nvim-lua/plenary.nvim'              " - several nvim plugins require this
 Plug 'hrsh7th/cmp-nvim-lsp'               " nvim-cmp source for neovim builtin LSP client.
 Plug 'hrsh7th/nvim-cmp'                   " A completion plugin for neovim.
 
-" Programming
-Plug 'groenewege/vim-less'              " vim syntax for LESS
+" All languages
 Plug 'scrooloose/nerdcommenter'         " Comment functions so powerful—no comment necessary
 Plug 'terryma/vim-expand-region'        " allows you to visually select increasingly larger regions of text
                                         " Press + to expand the visual selection and _ to shrink it.
@@ -44,10 +44,11 @@ Plug 'nicwest/vim-camelsnek'            " Convert between camel and snek case
 Plug 'sheerun/vim-polyglot'             " A collection of language packs for Vim. syntax highlighting and etc.
                                         " - csv.vim
 
-" HTML
+" HTML/CSS
 Plug 'vim-scripts/matchit.zip'          " extended % matching for HTML, LaTeX, and many other languages
+Plug 'groenewege/vim-less'              " vim syntax for LESS
 
-" Javascript & Typescript
+" Javascript/Typescript
 Plug 'pangloss/vim-javascript'          " Vastly improved Javascript indentation and syntax support in Vim
 Plug 'leafgarland/typescript-vim'       " Typescript syntax files for Vim
 
@@ -66,14 +67,11 @@ Plug 'vim-scripts/ZoomWin'              " zoom in/out of windows (<c-w>o to togg
 Plug 'vim-airline/vim-airline'          " lean & mean status/tabline for vim that's light as air
 Plug 'vim-airline/vim-airline-themes'   " a collection of themes for vim-airline
 
-" vim objects
+" Vim objects
 Plug 'michaeljsmith/vim-indent-object'  " This plugin defines a new text object, based on indentation levels.
 Plug 'wellle/targets.vim'               " Adds various text objects to give you more targets to operate on
 Plug 'jeetsukumaran/vim-pythonsense'    " Pythonsense is a Vim plugin that provides text objects and motions
                                         " for Python classes, methods, functions, and doc strings.
-
-" vim sessions
-Plug 'rmagatti/auto-session'            " A small automated session manager for Neovim
 
 " Etc.
 Plug 'dhruvasagar/vim-table-mode'       " VIM Table Mode for instant table creation.
