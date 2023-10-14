@@ -54,6 +54,7 @@ Plug 'leafgarland/typescript-vim'       " Typescript syntax files for Vim
 " Markdown
 Plug 'godlygeek/tabular'                " Vim script for text filtering and alignment. vim-markdown uses this.
 Plug 'plasticboy/vim-markdown'          " Syntax highlighting, matching rules and mappings
+Plug 'img-paste-devs/img-paste.vim'     " paste image to markdown
 
 " Python
 Plug 'Vimjas/vim-python-pep8-indent'    " This modifies Vim’s indentation behavior to comply with PEP8
@@ -73,7 +74,7 @@ Plug 'jeetsukumaran/vim-pythonsense'    " Pythonsense is a Vim plugin that provi
                                         " for Python classes, methods, functions, and doc strings.
 
 " vim sessions
-Plug 'rmagatti/auto-session'
+Plug 'rmagatti/auto-session'            " A small automated session manager for Neovim
 
 " Etc.
 Plug 'dhruvasagar/vim-table-mode'       " VIM Table Mode for instant table creation.
