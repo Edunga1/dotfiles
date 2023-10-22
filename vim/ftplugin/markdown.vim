@@ -1,5 +1,3 @@
-" TODO: move this features to a plugin
-
 function! s:GetFrontmatterEndLineNum(...) abort
   let max_lines = a:0 ? a:0 : 20
   let lines = getline(1, max_lines)

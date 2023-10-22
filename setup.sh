@@ -50,6 +50,7 @@ link shell/.p10k.zsh ~/.p10k.zsh
 step "vim"
 link vim/.vimrc ~/.vimrc
 link vim/init.lua ~/.config/nvim/init.lua
+link vim/ftplugin ~/.config/nvim/ftplugin
 link vim/vim-include ~/.config/nvim/vim-include
 link vim/lua/ ~/.config/nvim/lua
 
