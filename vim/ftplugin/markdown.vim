@@ -1,3 +1,8 @@
+if exists('g:loaded_ftplugin_markdown')
+  finish
+endif
+let g:loaded_ftplugin_markdown = 1
+
 function! s:GetFrontmatterEndLineNum(...) abort
   let max_lines = a:0 ? a:0 : 20
   let lines = getline(1, max_lines)
@@ -36,5 +41,5 @@ function! s:AddFrontmatter(key)
   startinsert!
 endfunction
 
-command! CreateFrontmatter call s:CreateFrontmatter()
-command! -nargs=1 AddFrontmatter call s:AddFrontmatter(<f-args>)
+command! FrontmatterCreate call s:CreateFrontmatter()
+command! -nargs=1 FrontmatterAdd call s:AddFrontmatter(<f-args>)
