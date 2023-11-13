@@ -4,8 +4,8 @@ I use tmux as a terminal multiplexer and a tmux-resurrect plugin to save and res
 it need to install below items.
 
 - tmux: https://github.com/tmux/tmux
-- tmux plugin(TPM): https://github.com/tmux-plugins/tpm 
-- tmux-resurrect: https://github.com/tmux-plugins/tmux-resurrect
+- tmux plugin Manager(TPM): https://github.com/tmux-plugins/tpm 
+- tmux-resurrect plugin: https://github.com/tmux-plugins/tmux-resurrect
 
 **Installtion summary**
 
@@ -15,15 +15,15 @@ Tmux:
 brew install tmux
 ```
 
-TPM:
+Tmux Plugin Manager:
 
 ```bash
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 
-Tmux configurations for TPM and tmux-resurrect are in `.tmux.conf` file.
+Configurations for TPM and tmux-resurrect are in the `.tmux.conf` file.
 
-After re-source `.tmux.conf` file, you can install plugins by `prefix + I`.
+After re-source `.tmux.conf` file(`prefix + ctrl + r`), you can install plugins by `prefix + I`.
 
 ## Features
 
