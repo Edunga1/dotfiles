@@ -8,7 +8,7 @@ function s:sessions()
   let path = stdpath('data').."/sessions/"
   let sessions = systemlist('ls '.path)
   return map(sessions, '{
-        \ "line": v:val,
+        \ "line": substitute(v:val, "%", "/", "g"),
         \ "cmd": "SessionRestoreFromFile ".path.v:val
         \ }')
 endfunction
