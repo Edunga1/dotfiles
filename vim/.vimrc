@@ -42,6 +42,7 @@ Plug 'terryma/vim-expand-region'        " allows you to visually select increasi
                                         " Press + to expand the visual selection and _ to shrink it.
 Plug 'nicwest/vim-camelsnek'            " Convert between camel and snek case
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " Nvim Treesitter configurations and abstraction layer
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'           " Syntax aware text-objects, select, move, swap, and peek support.
 
 " HTML/CSS
 Plug 'vim-scripts/matchit.zip'          " extended % matching for HTML, LaTeX, and many other languages
@@ -53,7 +54,7 @@ Plug 'leafgarland/typescript-vim'       " Typescript syntax files for Vim
 
 " Markdown
 Plug 'godlygeek/tabular'                " Vim script for text filtering and alignment. vim-markdown uses this.
-Plug 'preservim/vim-markdown'          " Syntax highlighting, matching rules and mappings
+Plug 'preservim/vim-markdown'           " Syntax highlighting, matching rules and mappings
 Plug 'img-paste-devs/img-paste.vim'     " paste image to markdown
 
 " Python
@@ -70,8 +71,6 @@ Plug 'vim-airline/vim-airline-themes'   " a collection of themes for vim-airline
 " Vim objects
 Plug 'michaeljsmith/vim-indent-object'  " This plugin defines a new text object, based on indentation levels.
 Plug 'wellle/targets.vim'               " Adds various text objects to give you more targets to operate on
-Plug 'jeetsukumaran/vim-pythonsense'    " Pythonsense is a Vim plugin that provides text objects and motions
-                                        " for Python classes, methods, functions, and doc strings.
 
 " Etc.
 Plug 'dhruvasagar/vim-table-mode'       " VIM Table Mode for instant table creation.
