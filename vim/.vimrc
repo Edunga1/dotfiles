@@ -41,8 +41,7 @@ Plug 'scrooloose/nerdcommenter'         " Comment functions so powerful—no com
 Plug 'terryma/vim-expand-region'        " allows you to visually select increasingly larger regions of text
                                         " Press + to expand the visual selection and _ to shrink it.
 Plug 'nicwest/vim-camelsnek'            " Convert between camel and snek case
-Plug 'sheerun/vim-polyglot'             " A collection of language packs for Vim. syntax highlighting and etc.
-                                        " - csv.vim
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " Nvim Treesitter configurations and abstraction layer
 
 " HTML/CSS
 Plug 'vim-scripts/matchit.zip'          " extended % matching for HTML, LaTeX, and many other languages
