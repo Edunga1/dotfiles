@@ -5,7 +5,7 @@ require'nvim-treesitter.configs'.setup {
     "gitcommit",  -- looks not good. diff is not highlighted
   },
   highlight = {
-    enable = true,
+    enable = false,
   },
 
   -- nvim-treesitter-textobjects
