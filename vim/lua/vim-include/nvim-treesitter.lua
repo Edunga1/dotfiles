@@ -29,6 +29,9 @@ require'nvim-treesitter.configs'.setup {
     },
     move = {
       enable = true,
+      disable = {
+        "markdown",  -- vim-markdown is better
+      },
       set_jumps = true,
       goto_next_start = {
         ["]m"] = "@function.outer",
