@@ -45,7 +45,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " Nvim Treesitter c
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'           " Syntax aware text-objects, select, move, swap, and peek support.
 
 " HTML/CSS
-Plug 'vim-scripts/matchit.zip'          " extended % matching for HTML, LaTeX, and many other languages
 Plug 'groenewege/vim-less'              " vim syntax for LESS
 
 " Javascript/Typescript
