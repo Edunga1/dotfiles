@@ -23,6 +23,7 @@ export ZSH_DISABLE_COMPFIX=true
 # zsh completion
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+# zsh plugins
 plugins=(
   brew
   git
@@ -33,6 +34,9 @@ plugins=(
   docker
   docker-compose
 )
+
+# zsh autoupdate
+zstyle ':omz:update' mode auto
 
 source $ZSH/oh-my-zsh.sh
 
