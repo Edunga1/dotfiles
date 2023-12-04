@@ -1,4 +1,4 @@
-if match(&runtimepath, '/sonokai') == -1
+if !has_key(plugs, 'sonokai')
   finish
 endif
 
