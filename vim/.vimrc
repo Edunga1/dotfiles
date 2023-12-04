@@ -75,6 +75,7 @@ Plug 'wellle/targets.vim'               " Adds various text objects to give you 
 Plug 'dhruvasagar/vim-table-mode'       " VIM Table Mode for instant table creation.
 Plug 'vimwiki/vimwiki'                  " Personal Wiki for Vim
 Plug 'edunga1/vimwiki-link'             " Experimental plugin for Vimwiki
+Plug 'sainnhe/sonokai'
 
 call plug#end()
 endif
