@@ -13,6 +13,7 @@ brew "tmux"
 brew "vim"
 brew "neovim"
 brew "ripgrep"
+brew "jq"
 brew "colima"                # docker-desktop alternative
 cask "hammerspoon"
 cask "iterm2"
