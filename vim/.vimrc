@@ -62,6 +62,9 @@ Plug 'Vimjas/vim-python-pep8-indent'    " This modifies Vim’s indentation beha
 " Vimscript
 Plug 'junegunn/vader.vim'               " A simple Vimscript test framework
 
+" csv
+Plug 'chrisbra/csv.vim'                 " A Filetype plugin for csv files
+
 " Utility
 Plug 'vim-scripts/ZoomWin'              " zoom in/out of windows (<c-w>o to toggle)
 Plug 'vim-airline/vim-airline'          " lean & mean status/tabline for vim that's light as air
