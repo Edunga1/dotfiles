@@ -1,8 +1,19 @@
 require'nvim-treesitter.configs'.setup {
   sync_install = false,
   auto_install = false,
+
   highlight = {
     enable = true,
+  },
+
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "+",
+      node_incremental = "+",
+      scope_incremental = "false",
+      node_decremental = "_",
+    },
   },
 
   -- nvim-treesitter-textobjects
@@ -24,6 +35,7 @@ require'nvim-treesitter.configs'.setup {
       },
       include_surrounding_whitespace = true,
     },
+
     move = {
       enable = true,
       disable = {

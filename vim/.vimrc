@@ -38,8 +38,6 @@ Plug 'hrsh7th/nvim-cmp'                   " A completion plugin for neovim.
 
 " All languages
 Plug 'scrooloose/nerdcommenter'         " Comment functions so powerful—no comment necessary
-Plug 'terryma/vim-expand-region'        " allows you to visually select increasingly larger regions of text
-                                        " Press + to expand the visual selection and _ to shrink it.
 Plug 'nicwest/vim-camelsnek'            " Convert between camel and snek case
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " Nvim Treesitter configurations and abstraction layer
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'           " Syntax aware text-objects, select, move, swap, and peek support.
