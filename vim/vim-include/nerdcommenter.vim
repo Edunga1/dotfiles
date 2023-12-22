@@ -1,3 +1,7 @@
+if !has_key(plugs, 'nerdcommenter')
+  finish
+endif
+
 " Disable default mappings
 let g:NERDCreateDefaultMappings = 0
 

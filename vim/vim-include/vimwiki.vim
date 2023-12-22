@@ -1,3 +1,7 @@
+if !has_key(plugs, 'vimwiki')
+  finish
+endif
+
 " My personal wiki list
 let g:vimwiki_list = [
     \{

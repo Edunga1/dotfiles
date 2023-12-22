@@ -1,3 +1,7 @@
+if !has_key(plugs, 'nerdtree')
+  finish
+endif
+
 let NERDTreeShowHidden = 1
 
 " find this file in nerdtree

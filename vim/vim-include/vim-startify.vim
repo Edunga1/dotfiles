@@ -1,3 +1,7 @@
+if !has_key(plugs, 'vim-startify')
+  finish
+endif
+
 let g:startify_change_to_vcs_root = 1
 
 " Use NERDTree bookmarks

@@ -1,3 +1,7 @@
+if !has_key(plugs, 'vim-airline')
+  finish
+endif
+
 " vim-airline-themes
 let g:airline_theme = 'simple'
 
