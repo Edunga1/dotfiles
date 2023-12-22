@@ -11,6 +11,6 @@ iabbr __pdb import pdb; pdb.set_trace()
 iabbr __pprint from pprint import pprint
 
 " vimscript
-iabbr __ifdef if !has_key(plugs, 'PLUGIN NAME')<cr>
-\  finish<cr>
-\<bs>endif
+iabbr __ifdef if !has_key(plugs, 'PLUGIN_NAME')<cr>
+\finish<cr>
+\<bs>endif<cr>
