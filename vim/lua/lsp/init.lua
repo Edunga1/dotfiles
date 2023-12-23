@@ -3,7 +3,7 @@ require 'mason'.setup {
   PATH = 'append'
 }
 require 'mason-lspconfig'.setup {
-  automatic_installation = true,
+  automatic_installation = false,
 }
 
 -- setup key mappings
