@@ -8,7 +8,7 @@ function! s:GetFrontmatterEndLineNum(...) abort
   let lines = getline(1, max_lines)
   let i = 1
   let found = 0
-  for line in lines 
+  for line in lines
     if line =~ '^---'
       if found
         return i
