@@ -33,13 +33,15 @@ function! s:CreateFrontmatter()
   call append(1, "---")
 endfunction
 
-function! s:AddFrontmatter(key)
+function! s:AddFrontmatter(...)
+  let key = get(a:, 1, '')
+  let value = get(a:, 2, '')
   call s:CreateFrontmatter()
   let line_num = s:GetFrontmatterEndLineNum() - 1
-  call append(line_num, a:key . ": ")
-  call cursor(line_num + 1, 0)
+  call append(line_num, key . ": " . value)
+  call cursor(line_num + 1, col('$'))
   startinsert!
 endfunction
 
 command! FrontmatterCreate call s:CreateFrontmatter()
-command! -nargs=1 FrontmatterAdd call s:AddFrontmatter(<f-args>)
+command! -nargs=* FrontmatterAdd call s:AddFrontmatter(<f-args>)
