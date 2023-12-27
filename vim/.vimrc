@@ -82,24 +82,24 @@ endif
 
 " General
 set encoding=utf-8
-set nocompatible          " disable vi compatibility.
+set nocompatible          " Disable vi compatibility.
 set history=256           " Number of things to remember in history.
 set autowrite             " Writes on make/shell commands
 set autoread
 set timeoutlen=250        " Time to wait after ESC (default causes an annoying delay)
-set clipboard+=unnamed    " Yanks go on clipboard instead.
+set clipboard+=unnamed    " Yanking goes on the clipboard instead.
 set path+=**              " Search all subdirectories and recursively
 
 " Backup
 set nowritebackup
 set nobackup
-set directory=/tmp//      " prepend(^=) $HOME/.tmp/ toA default path; use full path as backup filename(//)
+set directory=/tmp//      " Prepend(^=) $HOME/.tmp/ to a default path; use full path as backup filename(//)
 
 set hidden                " The current buffer can be put to the background without writing to disk
-set updatetime=300        " CursorHold evet waiting time.
+set updatetime=300        " CursorHold event waiting time.
 
 " Search
-set hlsearch              " highlight search
+set hlsearch              " Highlight search results
 set ignorecase            " Do case in sensitive matching with
 set smartcase             " be sensitive when there's a capital letter
 set incsearch
@@ -121,7 +121,7 @@ set expandtab             " Make tabs into spaces (set by tabstop)
 set shiftwidth=2          " Set the default shift width for indents
 set softtabstop=2
 
-syntax on                 " enable syntax
+syntax on                 " Enable syntax highlighting
 
 " Visual
 set wrap
@@ -131,7 +131,7 @@ set matchtime=5           " Bracket blinking.
 set novisualbell          " No blinking
 set noerrorbells          " No noise.
 set laststatus=2          " Always show status line.
-set vb t_vb=              " disable any beeps or flashes on error
+set vb t_vb=              " Disable any beeps or flashes on error
 set ruler                 " Show ruler
 set showcmd               " Display an incomplete command in the lower right corner of the Vim window
 set equalalways
