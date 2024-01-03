@@ -47,6 +47,11 @@ return function(ns, lspconfig)
         description = "Rename file",
       },
     },
+    init_options = {
+      preferences = {
+        disableSuggestions = true,
+      },
+    },
   }
 
   ns.register(ns.builtins.formatting.prettier)
