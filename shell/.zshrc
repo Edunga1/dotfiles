@@ -147,6 +147,11 @@ if command -v fasd &> /dev/null; then
   eval "$(fasd --init auto)"
 fi
 
+# GitHub cli
+if command -v gh &> /dev/null; then
+  eval "$(gh completion -s zsh)"
+fi
+
 # GitHub copilot cli
 if command -v github-copilot-cli &> /dev/null; then
   eval "$(github-copilot-cli alias -- "$0")"
