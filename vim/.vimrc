@@ -171,7 +171,7 @@ let mapleader = ","
 set pastetoggle=<F2>
 
 " Bind W to writing
-command! W  write
+command! W write
 
 " Clear last search highlighting
 nnoremap <space> <cmd>noh<cr>
