@@ -16,8 +16,8 @@
 # -- adjustment ----------------------------------------------------------------
 
 # move window to the left/right
-bind -n C-S-Left swap-window -t -1 -d
-bind -n C-S-Right swap-window -t +1 -d
+bind -r Left swap-window -t -1 -d
+bind -r Right swap-window -t +1 -d
 
 # -- windows & pane creation ---------------------------------------------------
 
