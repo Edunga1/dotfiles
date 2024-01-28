@@ -26,7 +26,7 @@ Plug 'tpope/vim-repeat'                 " enable repeating supported plugin maps
 Plug 'tpope/vim-abolish'                " Work with several variants of a word at once
 Plug 'rmagatti/auto-session'            " A small automated session manager for Neovim
 
-" LSP
+" Language Server Protocol
 Plug 'neovim/nvim-lspconfig'              " Quickstart configs for Nvim LSP
 Plug 'williamboman/mason.nvim'            " Portable package manager for Neovim
 Plug 'williamboman/mason-lspconfig.nvim'  " Extension to mason.nvim
@@ -167,11 +167,13 @@ highlight! link Pmenu Visual
 
 filetype plugin indent on   " required!
 
-" Key mappings
+" Leader Key
 let mapleader = ","
+
+" Toggle paste mode
 set pastetoggle=<F2>
 
-" Bind W to writing
+" Now :W is equivalent to :w
 command! W write
 
 " Clear last search highlighting
