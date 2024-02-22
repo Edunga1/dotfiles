@@ -18,5 +18,3 @@ augroup SonokaiCustom
   autocmd!
   autocmd ColorScheme sonokai call s:sonokai_custom()
 augroup END
-
-colo sonokai

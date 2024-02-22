@@ -82,6 +82,7 @@ call plug#end()
 endif
 
 " General
+colorscheme sonokai
 set encoding=utf-8
 set nocompatible          " Disable vi compatibility.
 set history=256           " Number of things to remember in history.
