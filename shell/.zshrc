@@ -107,12 +107,6 @@ if command -v pyenv &> /dev/null; then
   alias ac="source activate"
 fi
 
-# JDK
-if [[ -e /usr/lib/jvm/java-8-openjdk-amd64 ]]; then
-  export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
-  export PATH="$JAVA_HOME/bin:$PATH"
-fi
-
 # Android
 if [ -d $HOME/.android-sdk ]; then
   export PATH="$HOME/.android-sdk/bin:$PATH"
