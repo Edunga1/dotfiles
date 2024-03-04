@@ -152,7 +152,7 @@ if command -v github-copilot-cli &> /dev/null; then
 fi
 
 # Goolge Cloud SDK
-if command -v gcloud &> /dev/null; then
+if [ command -v gcloud &> /dev/null -a -f "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc" ]; then
   source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
   source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 fi
