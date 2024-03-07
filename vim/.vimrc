@@ -206,9 +206,6 @@ map <leader>w2 <cmd>set tabstop=2<cr><cmd>set softtabstop=2<cr><cmd>set shiftwid
 " Keep content after pasting
 vnoremap <leader>p "_dP
 
-" Disable matchparen for large files(100KB). the command applies globally
-autocmd BufReadPre * if getfsize(expand('%')) > 100000 | execute 'NoMatchParen' | endif
-
 " built-in terminal
 " - go back to normal mode with <leader><esc>
 tnoremap <leader><esc> <c-\><c-n>
