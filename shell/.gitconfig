@@ -13,9 +13,10 @@
   ff = only
 [merge]
   conflictStyle = zdiff3
+[pretty]
+  one = %C(bold red)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(cyan)<%an>%C(reset)%C(bold yellow)%d%C(reset)
 [alias]
-  lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold red)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(cyan)<%an>%C(reset)%C(bold yellow)%d%C(reset)' --all --date-order
-  compare = log --pretty=oneline --no-merges --first-parent
+  lg = log --graph --abbrev-commit --decorate --date=relative --format=one --all --date-order
   b = branch
   df = diff
   st = status
