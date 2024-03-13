@@ -1,4 +1,4 @@
-local common = require 'lsp._common'
+local common = require 'lsp.servers.utils.common'
 
 return function(ns, lspconfig)
   lspconfig.pyright.setup {

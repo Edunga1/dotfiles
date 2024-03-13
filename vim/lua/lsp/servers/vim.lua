@@ -1,7 +1,7 @@
-local common = require 'lsp._common'
+local common = require 'lsp.servers.utils.common'
 
 return function(_, lspconfig)
-  lspconfig.bashls.setup {
+  lspconfig.vimls.setup {
     on_attach = common.on_attach,
     capabilities = common.capabilities,
   }

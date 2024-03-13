@@ -1,4 +1,4 @@
-local common = require 'lsp._common'
+local common = require 'lsp.servers.utils.common'
 
 local function rename_file()
   local source_file, target_file
