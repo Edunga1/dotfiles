@@ -156,3 +156,8 @@ if [ command -v gcloud &> /dev/null -a -f "$(brew --prefix)/share/google-cloud-s
   source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
   source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 fi
+
+# GPG
+if command -v gpg &> /dev/null; then
+  export GPG_TTY=$(tty)
+fi
