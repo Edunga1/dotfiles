@@ -1,3 +1,9 @@
+# GPG
+export GPG_TTY=$(tty)
+
+# BEFORE INSTANT PROMPT
+# ref. https://github.com/romkatv/powerlevel10k/?tab=readme-ov-file#instant-prompt
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -153,9 +159,4 @@ fi
 if [ command -v gcloud &> /dev/null -a -f "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc" ]; then
   source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
   source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-fi
-
-# GPG
-if command -v gpg &> /dev/null; then
-  export GPG_TTY=$(tty)
 fi
