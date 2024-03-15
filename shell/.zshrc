@@ -40,6 +40,9 @@ zstyle ':omz:update' mode auto
 
 source $ZSH/oh-my-zsh.sh
 
+# zsh completions
+autoload -U compinit && compinit
+
 # zsh theme. To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
