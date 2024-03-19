@@ -36,6 +36,8 @@ Plug 'nvim-lua/plenary.nvim'              " - several nvim plugins require this
 " - completion
 Plug 'hrsh7th/cmp-nvim-lsp'               " nvim-cmp source for neovim builtin LSP client.
 Plug 'hrsh7th/nvim-cmp'                   " A completion plugin for neovim.
+Plug 'hrsh7th/vim-vsnip'                  " Snippet plugin for vim/nvim that supports LSP/VSCode's snippet format
+Plug 'hrsh7th/cmp-vsnip'                  " nvim-cmp source for vsnip
 
 " All languages
 Plug 'scrooloose/nerdcommenter'         " Comment functions so powerful—no comment necessary
