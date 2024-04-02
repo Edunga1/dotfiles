@@ -1,7 +1,10 @@
 # Introduction
 
-my dotfiles for macOS and WSL2(ubuntu).
-it mostly works on both macOS and WSL2.
+My dotfiles for macOS and WSL2(ubuntu).
+
+It mostly works on both macOS and WSL2.
+
+Contents:
 
 * [Hammerspoon](./hammerspoon/README.md)
 * [VIM](./vim/README.md)
@@ -12,7 +15,7 @@ it mostly works on both macOS and WSL2.
 ./setup.sh
 ```
 
-above command will create symblic links unless the file already exists.
+`setup.sh` creates symbolic links and copies files. but not all configurations are included. check the code in `setup.sh`. there is no any magic.
 
 ## Zsh
 
