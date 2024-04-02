@@ -1,18 +1,23 @@
 # VIM
 
-I use [neovim](https://neovim.io/) as my main editor.
+Based on neovim.
 
 ## Prerequisite
 
-### (optional) ag _silver searcher_, rg _ripgrep_ for fzf.vim
+### (optional) ag for _silver searcher_ and rg _ripgrep_ for searching files
+
+I use the silver searcher and ripgrep to search files in vim. You can install them using Homebrew.
 
 ```bash
-brew install rg
-brew install ag
+brew install rg  # ripgrep
+brew install ag  # silver searcher
+```
 
-install tools step by step: neovim -> vim-plug -> vim plugins `PlugInstall`
+Now you can use `:Ag` and `:Rg`(or `:FZF`) in vim.
 
-symlink commands:
+### Vim Configuration
+
+To load `.vimrc` and some scripts, you need to create symlink to the vim configuration files.
 
 ```bash
 ln -s ~/dotfiles/vim/.vimrc ~                    # .vimrc
@@ -22,8 +27,8 @@ ln -s ~/dotfiles/vim/vim-include ~/.config/nvim  # my custom scripts
 ln -s ~/dotfiles/vim/lua/ ~/.config/nvim         # my custom lua scripts
 ```
 
-# Snapshots
+# Preview
 
-codes
+Vim layout:
 
 ![codes](./docs/snapshot.png)
