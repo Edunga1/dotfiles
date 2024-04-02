@@ -4,7 +4,7 @@ Based on neovim.
 
 ## Prerequisite
 
-### (optional) ag for _silver searcher_ and rg _ripgrep_ for searching files
+### (optional) ag _silver searcher_ and rg _ripgrep_ for searching files
 
 I use the silver searcher and ripgrep to search files in vim. You can install them using Homebrew.
 
