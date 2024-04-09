@@ -155,6 +155,11 @@ if command -v github-copilot-cli &> /dev/null; then
   eval "$(github-copilot-cli alias -- "$0")"
 fi
 
+# GitHub
+if command -v gh &> /dev/null; then
+  alias exp="gh copilot explain"
+fi
+
 # Goolge Cloud SDK
 if [ command -v gcloud &> /dev/null -a -f "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc" ]; then
   source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
