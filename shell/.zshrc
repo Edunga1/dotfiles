@@ -105,7 +105,7 @@ alias tmuxn="tmuxinator"
 
 # npm global packages
 export PATH="$HOME/.node_modules/bin:$PATH"
-export npm_config_prefix=~/.node_modules
+export NPM_CONFIG_PREFIX=~/.node_modules
 
 # python pyenv-virtualenv
 if command -v pyenv &> /dev/null; then
