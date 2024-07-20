@@ -49,6 +49,6 @@ return function(ns, lspconfig)
     },
   }
 
-  ns.register(ns.builtins.formatting.prettier)
+  ns.register(ns.builtins.formatting.prettierd)
   ns.register(ns.builtins.diagnostics.eslint)
 end
