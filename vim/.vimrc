@@ -78,7 +78,7 @@ Plug 'wellle/targets.vim'               " Adds various text objects to give you 
 " Etc.
 Plug 'dhruvasagar/vim-table-mode'       " VIM Table Mode for instant table creation.
 Plug 'vimwiki/vimwiki'                  " Personal Wiki for Vim
-Plug 'sainnhe/sonokai'
+Plug 'sainnhe/sonokai'                  " High Contrast Color Scheme
 
 call plug#end()
 endif
