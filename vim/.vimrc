@@ -45,9 +45,6 @@ Plug 'nicwest/vim-camelsnek'            " Convert between camel and snek case
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " Nvim Treesitter configurations and abstraction layer
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'           " Syntax aware text-objects, select, move, swap, and peek support.
 
-" HTML/CSS
-Plug 'groenewege/vim-less'              " vim syntax for LESS
-
 " Javascript/Typescript
 Plug 'pangloss/vim-javascript'          " Vastly improved Javascript indentation and syntax support in Vim
 Plug 'leafgarland/typescript-vim'       " Typescript syntax files for Vim
