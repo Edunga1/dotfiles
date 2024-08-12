@@ -42,7 +42,7 @@ plugins=(
 )
 
 # zsh autoupdate
-zstyle ':omz:update' mode auto
+zstyle ':omz:update' mode reminder
 
 source $ZSH/oh-my-zsh.sh
 
