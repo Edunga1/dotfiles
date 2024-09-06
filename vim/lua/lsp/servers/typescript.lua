@@ -38,7 +38,7 @@ local function rename_file()
 end
 
 return function(ns, lspconfig)
-  lspconfig.tsserver.setup {
+  lspconfig.ts_ls.setup {
     on_attach = common.on_attach,
     capabilities = common.capabilities,
     commands = {
