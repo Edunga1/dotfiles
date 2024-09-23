@@ -29,6 +29,8 @@ require'nvim-treesitter.configs'.setup {
         ["af"] = "@function.outer",
         ["if"] = "@function.inner",
         ["ac"] = "@class.outer",
+        ["al"] = "@assignment.lhs",
+        ["ar"] = "@assignment.rhs",
         ["ic"] = { query = "@class.inner", desc = "Select inner part of a class region" },
         ["as"] = { query = "@scope", query_group = "locals", desc = "Select language scope" },
       },
