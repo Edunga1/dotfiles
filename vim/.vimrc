@@ -210,6 +210,9 @@ vnoremap <leader>p "_dP
 tnoremap <leader><esc> <c-\><c-n>
 set shell=/bin/zsh
 
+" Copy filep path to clipboard
+nnoremap <leader><c-g> :let @+=expand('%')<cr>
+
 " Neovim initialization
 if has('nvim')
   set inccommand=nosplit  " highlights during a substitution in progress
