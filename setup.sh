@@ -48,6 +48,7 @@ link shell/.zshrc ~/.zshrc
 link shell/.p10k.zsh ~/.p10k.zsh
 
 step "vim"
+mkdir -p ~/.config/nvim 2> /dev/null
 link vim/.vimrc ~/.vimrc
 link vim/init.lua ~/.config/nvim/init.lua
 link vim/ftplugin ~/.config/nvim/ftplugin
