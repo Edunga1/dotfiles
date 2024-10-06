@@ -1,0 +1,9 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+brew "colima"                # docker-desktop alternative
+cask "hammerspoon"
+cask "iterm2"
+cask "karabiner-elements"
+cask "visual-studio-code"
+cask "maccy"
