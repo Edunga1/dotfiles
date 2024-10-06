@@ -145,9 +145,9 @@ if grep -qi microsoft /proc/version &> /dev/null; then
   alias gw=git.exe
 fi
 
-# fasd
-if command -v fasd &> /dev/null; then
-  eval "$(fasd --init auto)"
+# zoxide(z jump, alternative to fasd)
+if command -v zoxide  &> /dev/null; then
+  eval "$(zoxide init zsh)"
 fi
 
 # GitHub copilot cli

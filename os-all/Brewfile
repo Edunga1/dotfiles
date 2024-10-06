@@ -1,5 +1,5 @@
 brew "universal-ctags/universal-ctags/universal-ctags"
-brew "fasd"
+brew "zoxide"
 brew "fzf"
 brew "git"
 brew "mdcat"
