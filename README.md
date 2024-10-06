@@ -40,6 +40,24 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
+## Homebrew
+
+```bash
+brew bundle --file os-all/Brewfile  # for all
+brew bundle --file osx/Brewfile  # for macOS
+```
+
+## For WSL
+
+win32yank.exe is required for vim clipboard integration.
+
+```bash
+curl -sLo/tmp/win32yank.zip https://github.com/equalsraf/win32yank/releases/download/v0.0.4/win32yank-x64.zip
+unzip -p /tmp/win32yank.zip win32yank.exe > /tmp/win32yank.exe
+chmod +x /tmp/win32yank.exe
+mv /tmp/win32yank.exe ~/bin/win32yank.exe
+```
+
 ## Preview
 
 ### Git
