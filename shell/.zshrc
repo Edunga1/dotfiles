@@ -78,12 +78,6 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 # If error 'locale: Cannot set LC_ALL to default locale: No such file or directory' occurs, run `sudo locale-gen en_US.UTF-8`
 export LC_ALL=en_US.UTF-8
 
-# Marker
-if [[ -s "$HOME/.local/share/marker/marker.sh" ]]; then
-  source "$HOME/.local/share/marker/marker.sh"
-  export MARKER_KEY_NEXT_PLACEHOLDER=''
-fi
-
 # FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
