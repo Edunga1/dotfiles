@@ -9,11 +9,11 @@ let g:startify_bookmarks = systemlist("cut -sd' ' -f 2- ~/.NERDTreeBookmarks")
 
 " Rearrange lists
 function s:sessions()
-  let path = stdpath('data').."/sessions/"
+  let path = stdpath('data') . "/sessions/"
   let sessions = systemlist('ls '.path)
   return map(sessions, '{
-        \ "line": substitute(v:val, "%", "/", "g"),
-        \ "cmd": "SessionRestoreFromFile ".path.v:val
+        \ "line": substitute(v:val, "%2F", "/", "g"),
+        \ "cmd": "SessionRestore " . substitute(v:val, ".vim$", "", "")
         \ }')
 endfunction
 
