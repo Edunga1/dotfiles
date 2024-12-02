@@ -15,3 +15,5 @@ command! -bang -complete=dir -nargs=* GDIff
       \ 'source': 'git diff --name-only '.(<q-args> == '' ? 'HEAD~1' : <q-args>),
       \ 'sink': 'e'
     \ }), <bang>0)
+
+vnoremap <leader>s "ty:Ag <C-r>t<CR>
