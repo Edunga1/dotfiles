@@ -73,7 +73,7 @@ Plug 'michaeljsmith/vim-indent-object'  " This plugin defines a new text object,
 Plug 'wellle/targets.vim'               " Adds various text objects to give you more targets to operate on
 
 " Etc.
-Plug 'dhruvasagar/vim-table-mode'       " VIM Table Mode for instant table creation.
+Plug 'dhruvasagar/vim-table-mode'       " VIM Table Mode for instant table creation. <leader>tm to toggle table mode
 Plug 'vimwiki/vimwiki'                  " Personal Wiki for Vim
 Plug 'sainnhe/sonokai'                  " High Contrast Color Scheme
 
