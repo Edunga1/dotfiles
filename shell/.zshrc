@@ -79,7 +79,10 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 export LC_ALL=en_US.UTF-8
 
 # FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+if [ -f ~/.fzf.zsh ]; then
+  source ~/.fzf.zsh
+  export FZF_DEFAULT_OPTS='--bind shift-up:preview-half-page-up,shift-down:preview-half-page-down'
+fi
 
 # Linuxbrew
 if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
