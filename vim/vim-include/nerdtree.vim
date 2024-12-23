@@ -4,8 +4,15 @@ endif
 
 let NERDTreeShowHidden = 1
 
-" find this file in nerdtree
-nnoremap <leader>f :NERDTreeFind<CR>
+" Point current file in NERDTree
+function! s:NERDTreeFindOrClose()
+  if &filetype ==# 'nerdtree'
+    :NERDTreeClose
+  else
+    :NERDTreeFind
+  endif
+endfunction
+nnoremap <leader>f :call <SID>NERDTreeFindOrClose()<CR>
 
 " toggle nerdtree
 nnoremap <leader>e :NERDTreeToggle<CR>
