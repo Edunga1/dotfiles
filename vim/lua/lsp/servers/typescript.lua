@@ -38,6 +38,7 @@ local function rename_file()
 end
 
 return function(ns, lspconfig)
+  lspconfig.eslint.setup {}
   lspconfig.ts_ls.setup {
     on_attach = common.on_attach,
     capabilities = common.capabilities,
@@ -50,5 +51,4 @@ return function(ns, lspconfig)
   }
 
   ns.register(ns.builtins.formatting.prettierd)
-  ns.register(ns.builtins.diagnostics.eslint)
 end
