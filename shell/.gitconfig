@@ -7,7 +7,6 @@
   defaultBranch = main
 [commit]
   verbose = true
-  gpgSign = true
 [push]
   default = simple
 [pull]
