@@ -165,7 +165,8 @@ au BufRead,BufNewFile {*.tsx,*.jsx}               set ft=typescriptreact
 " Highlight PopUp menu
 highlight! link Pmenu Visual
 
-filetype plugin indent on   " required!
+" :h :filetype-overview
+filetype plugin indent on
 
 " Leader Key
 let mapleader = ","
@@ -190,7 +191,7 @@ nnoremap <c-t> :tabnew<cr>
 nnoremap [b <cmd>bp<cr>
 nnoremap ]b <cmd>bn<cr>
 
-" quickfix and location list
+" Quickfix and Location List
 nnoremap \q <cmd>copen<cr>
 nnoremap [q <cmd>cprevious<cr>
 nnoremap ]q <cmd>cnext<cr>
@@ -205,9 +206,10 @@ map <leader>w2 <cmd>set tabstop=2<cr><cmd>set softtabstop=2<cr><cmd>set shiftwid
 " Keep content after pasting
 vnoremap <leader>p "_dP
 
-" built-in terminal
+" terminal mode
 " - go back to normal mode with <leader><esc>
 tnoremap <leader><esc> <c-\><c-n>
+" - use zsh
 set shell=/bin/zsh
 
 " Copy filep path to clipboard
