@@ -164,3 +164,17 @@ if [ command -v gcloud &> /dev/null -a -f "$(brew --prefix)/share/google-cloud-s
   source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
   source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 fi
+
+# atlassian api token (~1/31/2025)
+if command -v jira &> /dev/null; then
+  # Show jira issue summary by branch name (e.g. feature/ABC-123 -> ABC-123)
+  function jiras() {
+    local issuenum=${1:-$(git branch --show-current | grep -o '\b[[:upper:]]\+-\d\+\b')}
+    if [[ -n $issuenum ]]; then
+      jira issue view --raw "$issuenum" | jq '.fields.summary'
+    else
+      echo "No JIRA issue found in the current branch" >&2
+      return 1
+    fi
+  }
+fi
