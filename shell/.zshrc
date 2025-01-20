@@ -167,13 +167,28 @@ fi
 
 # atlassian api token (~1/31/2025)
 if command -v jira &> /dev/null; then
-  # Show jira issue summary by branch name (e.g. feature/ABC-123 -> ABC-123)
+  # e.g. feature/ABC-123 -> ABC-123
+  alias jira-issue="git branch --show-current | grep -o '\b[[:upper:]]\+-\d\+\b'"
+
+  # Show jira issue summary by issue number in the current branch
   function jiras() {
-    local issuenum=${1:-$(git branch --show-current | grep -o '\b[[:upper:]]\+-\d\+\b')}
+    local issuenum=${1:-$(jira-issue)}
     if [[ -n $issuenum ]]; then
       jira issue view --raw "$issuenum" | jq '.fields.summary'
     else
       echo "No JIRA issue found in the current branch" >&2
+      return 1
+    fi
+  }
+
+  # Open jira issue in the browser
+  function jira-open() {
+    local issuenum=${1:-$(jira-issue)}
+    local jirahost=$(cat ~/.config/.jira/.config.yml | grep '^server:' | awk -F' ' '{print $2}')
+    if [[ -n $jirahost && -n $issuenum ]]; then
+      open "$jirahost/browse/$issuenum"
+    else
+      echo "No JIRA issue or JIRA host found in the current branch" >&2
       return 1
     fi
   }
