@@ -165,7 +165,7 @@ if [ command -v gcloud &> /dev/null -a -f "$(brew --prefix)/share/google-cloud-s
   source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 fi
 
-# atlassian api token (~1/31/2025)
+# Jira CLI
 if command -v jira &> /dev/null; then
   # e.g. feature/ABC-123 -> ABC-123
   alias jira-issue="git branch --show-current | grep -o '\b[[:upper:]]\+-\d\+\b'"
