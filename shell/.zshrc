@@ -174,7 +174,7 @@ if command -v jira &> /dev/null; then
   function jiras() {
     local issuenum=${1:-$(jira-issue)}
     if [[ -n $issuenum ]]; then
-      jira issue view --raw "$issuenum" | jq '.fields.summary'
+      jira issue view --raw "$issuenum" | jq -r '.fields.summary'
     else
       echo "No JIRA issue found in the current branch" >&2
       return 1
