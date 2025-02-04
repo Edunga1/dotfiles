@@ -167,12 +167,10 @@ fi
 
 # Jira CLI
 if command -v jira &> /dev/null; then
-  # e.g. feature/ABC-123 -> ABC-123
-  alias jira-issue="git branch --show-current | grep -o '\b[[:upper:]]\+-\d\+\b'"
-
-  # Show jira issue summary by issue number in the current branch
+  # Show jira issue summary
   function jiras() {
-    local issuenum=${1:-$(jira-issue)}
+    local branch=${1:-$(git branch --show-current)}
+    local issuenum=$(echo $branch | grep -o '\b[[:upper:]]\+-\d\+\b')
     if [[ -n $issuenum ]]; then
       jira issue view --raw "$issuenum" | jq -r '.fields.summary'
     else
@@ -183,7 +181,8 @@ if command -v jira &> /dev/null; then
 
   # Open jira issue in the browser
   function jira-open() {
-    local issuenum=${1:-$(jira-issue)}
+    local branch=${1:-$(git branch --show-current)}
+    local issuenum=$(echo $branch | grep -o '\b[[:upper:]]\+-\d\+\b')
     local jirahost=$(cat ~/.config/.jira/.config.yml | grep '^server:' | awk -F' ' '{print $2}')
     if [[ -n $jirahost && -n $issuenum ]]; then
       open "$jirahost/browse/$issuenum"
