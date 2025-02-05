@@ -32,7 +32,6 @@ Plug 'williamboman/mason.nvim'            " Portable package manager for Neovim
 Plug 'williamboman/mason-lspconfig.nvim'  " Extension to mason.nvim
 Plug 'jose-elias-alvarez/null-ls.nvim'    " Inject LSP diagnostics, code actions, and more via Lua
 Plug 'nvim-telescope/telescope.nvim'      " a highly extendable fuzzy finder over lists
-Plug 'nvim-lua/plenary.nvim'              " - several nvim plugins require this
 " - completion
 Plug 'hrsh7th/cmp-nvim-lsp'               " nvim-cmp source for neovim builtin LSP client.
 Plug 'hrsh7th/nvim-cmp'                   " A completion plugin for neovim.
@@ -76,6 +75,9 @@ Plug 'wellle/targets.vim'               " Adds various text objects to give you 
 Plug 'dhruvasagar/vim-table-mode'       " VIM Table Mode for instant table creation. <leader>tm to toggle table mode
 Plug 'vimwiki/vimwiki'                  " Personal Wiki for Vim
 Plug 'sainnhe/sonokai'                  " High Contrast Color Scheme
+
+" Dependencies
+Plug 'nvim-lua/plenary.nvim'            " required by: telescope.nvim
 
 call plug#end()
 endif
