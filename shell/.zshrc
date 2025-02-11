@@ -170,7 +170,7 @@ if command -v jira &> /dev/null; then
   # Show jira issue summary
   function jiras() {
     local branch=${1:-$(git branch --show-current)}
-    local issuenum=$(echo $branch | grep -o '\b[[:upper:]]\+-\d\+\b')
+    local issuenum=$(echo $branch | grep -o '\b\w\+-\d\+\b')
     if [[ -n $issuenum ]]; then
       jira issue view --raw "$issuenum" | jq -r '.fields.summary'
     else
@@ -182,7 +182,7 @@ if command -v jira &> /dev/null; then
   # Open jira issue in the browser
   function jira-open() {
     local branch=${1:-$(git branch --show-current)}
-    local issuenum=$(echo $branch | grep -o '\b[[:upper:]]\+-\d\+\b')
+    local issuenum=$(echo $branch | grep -o '\b\w\+-\d\+\b')
     local jirahost=$(cat ~/.config/.jira/.config.yml | grep '^server:' | awk -F' ' '{print $2}')
     if [[ -n $jirahost && -n $issuenum ]]; then
       open "$jirahost/browse/$issuenum"
