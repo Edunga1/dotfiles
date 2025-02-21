@@ -6,6 +6,11 @@ return function(_, lspconfig)
     capabilities = common.capabilities,
     settings = {
       Lua = {
+        diagnostics = {
+          globals = {
+            'vim',
+          },
+        },
         workspace = {
           library = {
             -- HammerSpoon annotations that are automatically generated
