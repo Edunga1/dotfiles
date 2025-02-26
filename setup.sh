@@ -63,4 +63,4 @@ step "python"
 link shell/.pdbrc ~/.pdbrc
 
 step "git"
-copy shell/.gitconfig ~/.gitconfig
+link shell/.gitconfig ~/.gitconfig
