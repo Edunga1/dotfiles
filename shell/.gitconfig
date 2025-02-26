@@ -9,6 +9,10 @@
   verbose = true
 [push]
   default = simple
+[fetch]
+  prune = true
+  pruneTags = true
+  all = true
 [pull]
   ff = only
 [merge]
@@ -58,3 +62,5 @@
 [include]
   # for local settings. don't track this file.
   path = ~/.gitconfig.local
+[branch]
+  sort = -committerdate
