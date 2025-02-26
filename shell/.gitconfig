@@ -55,3 +55,6 @@
   lsb = !git branch \
     | fzf --preview 'echo {} | cut -c3- | xargs git show --color=always' --height 90% \
     | cut -c3-
+[include]
+  # for local settings. don't track this file.
+  path = ~/.gitconfig.local
