@@ -75,6 +75,7 @@ Plug 'wellle/targets.vim'               " Adds various text objects to give you 
 Plug 'dhruvasagar/vim-table-mode'       " VIM Table Mode for instant table creation. <leader>tm to toggle table mode
 Plug 'vimwiki/vimwiki'                  " Personal Wiki for Vim
 Plug 'sainnhe/sonokai'                  " High Contrast Color Scheme
+Plug 'karb94/neoscroll.nvim'            " Smooth scrolling for neovim
 
 " Dependencies
 Plug 'nvim-lua/plenary.nvim'            " required by: telescope.nvim
