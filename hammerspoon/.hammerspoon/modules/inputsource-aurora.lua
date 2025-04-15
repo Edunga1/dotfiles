@@ -2,9 +2,15 @@
 
 local boxes = {}
 local inputEnglish = "com.apple.keylayout.ABC"
-local box_height = 25
 local box_alpha = 0.35
 local GREEN = hs.drawing.color.osx_green
+
+-- TODO: Cache this value
+local function get_menubar_height(screen)
+  local fullFrame = screen:fullFrame()
+  local usableFrame = screen:frame()
+  return usableFrame.y - fullFrame.y
+end
 
 local function draw_rectangle(target_draw, x, y, width, height, fill_color)
   target_draw:setSize(hs.geometry.rect(x, y, width, height))
@@ -21,7 +27,7 @@ end
 local function create_box(screen)
   local frame = screen:fullFrame()
   local box = hs.drawing.rectangle(hs.geometry.rect(0,0,0,0))
-  draw_rectangle(box, frame.x, frame.y, frame.w, box_height, GREEN)
+  draw_rectangle(box, frame.x, frame.y, frame.w, get_menubar_height(screen), GREEN)
   table.insert(boxes, box)
 end
 
