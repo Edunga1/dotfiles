@@ -30,6 +30,8 @@ Plug 'rmagatti/auto-session'            " A small automated session manager for 
 Plug 'neovim/nvim-lspconfig'              " Quickstart configs for Nvim LSP
 Plug 'williamboman/mason.nvim'            " Portable package manager for Neovim
 Plug 'williamboman/mason-lspconfig.nvim'  " Extension to mason.nvim
+Plug 'nvimtools/none-ls.nvim'             " Inject LSP diagnostics, code actions, and more via Lua
+Plug 'nvimtools/none-ls-extras.nvim'      " Additional sources for none-ls.nvim
 Plug 'nvim-telescope/telescope.nvim'      " a highly extendable fuzzy finder over lists
 " - completion
 Plug 'hrsh7th/cmp-nvim-lsp'               " nvim-cmp source for neovim builtin LSP client.
