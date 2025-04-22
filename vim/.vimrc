@@ -174,9 +174,6 @@ filetype plugin indent on
 " Leader Key
 let mapleader = ","
 
-" Toggle paste mode
-set pastetoggle=<F2>
-
 " Now :W is equivalent to :w
 command! W write
 
