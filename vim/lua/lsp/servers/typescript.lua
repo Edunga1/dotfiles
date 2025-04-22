@@ -37,7 +37,7 @@ local function rename_file()
   vim.lsp.buf.execute_command(params)
 end
 
-return function(ns, lspconfig)
+return function(lspconfig)
   lspconfig.eslint.setup {}
   lspconfig.ts_ls.setup {
     on_attach = common.on_attach,
@@ -49,6 +49,5 @@ return function(ns, lspconfig)
       },
     },
   }
-
-  ns.register(ns.builtins.formatting.prettierd)
+  -- TODO: prettierd
 end

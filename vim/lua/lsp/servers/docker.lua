@@ -1,6 +1,6 @@
 local common = require 'lsp.servers.utils.common'
 
-return function(_, lspconfig)
+return function(lspconfig)
   -- dockerfile
   lspconfig.dockerls.setup {
     on_attach = common.on_attach,
