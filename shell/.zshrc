@@ -85,6 +85,9 @@ if [ -f /opt/homebrew/bin/brew ]; then
   export PATH="/opt/homebrew/bin:$PATH"
 fi
 
+# git
+alias g="git"
+
 # docker
 alias doco="docker-compose"
 
