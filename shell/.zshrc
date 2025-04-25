@@ -26,28 +26,17 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # ref. https://github.com/robbyrussell/oh-my-zsh/issues/6835
 export ZSH_DISABLE_COMPFIX=true
 
-# zsh completion
-fpath=(/usr/local/share/zsh-completions $fpath)
-
 # zsh plugins
 plugins=(
-  brew
-  git
   zsh-syntax-highlighting
   zsh-autosuggestions
-  tmux
-  tmuxinator
-  docker
-  docker-compose
 )
+
+# oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 
 # zsh autoupdate
 zstyle ':omz:update' mode reminder
-
-source $ZSH/oh-my-zsh.sh
-
-# zsh completions
-autoload -U compinit && compinit
 
 # zsh theme. To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -192,3 +181,4 @@ if command -v jira &> /dev/null; then
     fi
   }
 fi
+
