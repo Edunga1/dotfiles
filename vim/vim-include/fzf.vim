@@ -16,4 +16,6 @@ command! -bang -complete=dir -nargs=* GDIff
       \ 'sink': 'e'
     \ }), <bang>0)
 
-vnoremap <leader>s "ty:Ag <C-r>t<CR>
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
+
+vnoremap <leader>s "ty:Rg <C-r>t<CR>
