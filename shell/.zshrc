@@ -32,7 +32,24 @@ plugins=(
   zsh-autosuggestions
 )
 
-# oh-my-zsh
+# Macos Homebrew
+if [ -f /opt/homebrew/bin/brew ]; then
+  export PATH="/opt/homebrew/bin:$PATH"
+fi
+
+# Linuxbrew
+if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
+  export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+  export MANPATH=$(brew --prefix)/share/man:$MANPATH
+  export INFOPATH=$(brew --prefix)/share/info:$INFOPATH
+fi
+
+# Homebrew
+if command -v brew &> /dev/null; then
+  eval "$(brew shellenv)"
+fi
+
+# oh-my-zsh. it calls `compinit` internally
 source $ZSH/oh-my-zsh.sh
 
 # zsh autoupdate
@@ -71,18 +88,6 @@ export LC_ALL=en_US.UTF-8
 if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
   export FZF_DEFAULT_OPTS='--bind shift-up:preview-half-page-up,shift-down:preview-half-page-down'
-fi
-
-# Linuxbrew
-if [ -d "/home/linuxbrew/.linuxbrew/bin" ]; then
-  export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-  export MANPATH=$(brew --prefix)/share/man:$MANPATH
-  export INFOPATH=$(brew --prefix)/share/info:$INFOPATH
-fi
-
-# Macos Homebrew
-if [ -f /opt/homebrew/bin/brew ]; then
-  export PATH="/opt/homebrew/bin:$PATH"
 fi
 
 # git
