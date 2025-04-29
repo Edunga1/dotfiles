@@ -58,8 +58,6 @@ zstyle ':omz:update' mode reminder
 # zsh theme. To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export EDITOR='nvim'
-
 # built-in command aliases
 alias ll='ls -alh'
 
@@ -132,6 +130,7 @@ export PATH="$HOME/bin:$PATH"
 
 # Neovim
 if command -v nvim &> /dev/null; then
+  export EDITOR='nvim'
   alias vi="nvim"
 fi
 
