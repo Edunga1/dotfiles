@@ -99,6 +99,7 @@ set path+=**              " Search all subdirectories and recursively
 set nowritebackup
 set nobackup
 set directory=/tmp//      " Prepend(^=) $HOME/.tmp/ to a default path; use full path as backup filename(//)
+set undofile              " Enable persistent undo
 
 set hidden                " The current buffer can be put to the background without writing to disk
 set updatetime=300        " CursorHold event waiting time.
