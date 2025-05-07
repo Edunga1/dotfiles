@@ -61,23 +61,6 @@ zstyle ':omz:update' mode reminder
 # built-in command aliases
 alias ll='ls -alh'
 
-# util function for include a file
-include () {
-    [[ -f "$1" ]] && source "$1"
-}
-
-# This speeds up pasting w/ autosuggest
-# https://github.com/zsh-users/zsh-autosuggestions/issues/238
-pasteinit() {
-  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
-  zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
-}
-pastefinish() {
-  zle -N self-insert $OLD_SELF_INSERT
-}
-zstyle :bracketed-paste-magic paste-init pasteinit
-zstyle :bracketed-paste-magic paste-finish pastefinish
-
 # Set locale.
 # If error 'locale: Cannot set LC_ALL to default locale: No such file or directory' occurs, run `sudo locale-gen en_US.UTF-8`
 export LC_ALL=en_US.UTF-8
