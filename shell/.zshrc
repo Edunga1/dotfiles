@@ -82,7 +82,18 @@ alias g="git"
 alias doco="docker-compose"
 
 # tmux
-alias tmuxn="tmuxinator"
+if command -v tmux &> /dev/null; then
+  function _tmux_run() {
+    if [[ -n "$@" ]]; then
+      command tmux "$@"
+    else
+      tmux attach
+    fi
+  }
+  compdef _tmux _tmux_run
+  alias tmux=_tmux_run
+  alias tmuxn="tmuxinator"
+fi
 
 # npm global packages
 export PATH="$HOME/.node_modules/bin:$PATH"
