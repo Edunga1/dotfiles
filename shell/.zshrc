@@ -47,10 +47,10 @@ fi
 # Homebrew
 if command -v brew &> /dev/null; then
   eval "$(brew shellenv)"
- # Place Homebrew's site-functions after zsh's default functions in $fpath
- # to prioritize zsh's built-in completion over Homebrew's completions.
- # Note. Remove this line if you find a git completion that supports substring matching for branch names.
- fpath=("${fpath[@]:1}" "${fpath[1]}")
+  # Place Homebrew's site-functions after zsh's default functions in $fpath
+  # to prioritize zsh's built-in completion over Homebrew's completions.
+  # Note. Remove this line if you find a git completion that supports substring matching for branch names.
+  fpath=("${fpath[@]:1}" "${fpath[1]}")
 fi
 
 # oh-my-zsh. it calls `compinit` internally
