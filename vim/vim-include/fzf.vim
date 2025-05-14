@@ -19,3 +19,4 @@ command! -bang -complete=dir -nargs=* GDIff
 command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 vnoremap <leader>s "ty:Rg <C-r>t<CR>
+nnoremap <M-p> :Commands<CR>
