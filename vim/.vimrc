@@ -25,6 +25,7 @@ Plug 'junegunn/goyo.vim'                " Distraction-free writing in Vim. :Goyo
 Plug 'tpope/vim-surround'               " quoting/parenthesizing made simple
 Plug 'tpope/vim-repeat'                 " enable repeating supported plugin maps with dot operator
 Plug 'tpope/vim-abolish'                " Work with several variants of a word at once
+Plug 'tpope/vim-sleuth'                 " Heuristically set buffer options
 Plug 'rmagatti/auto-session'            " A small automated session manager for Neovim
 
 " Language Server Protocol
