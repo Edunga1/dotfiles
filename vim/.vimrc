@@ -16,7 +16,7 @@ Plug 'CopilotC-Nvim/CopilotChat.nvim'   " Chat with GitHub Copilot in Neovim. re
 " Navigation
 Plug 'scrooloose/nerdtree'              " a tree explorer
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'                 " a fuzzy finder. requires fzf adove
+Plug 'junegunn/fzf.vim'                 " a fuzzy finder. requires fzf above
 Plug 'majutsushi/tagbar'                " displays tags in a window. requires universal-ctags
 Plug 'mhinz/vim-startify'               " The fancy start screen for Vim
 Plug 'junegunn/goyo.vim'                " Distraction-free writing in Vim. :Goyo
@@ -216,7 +216,7 @@ tnoremap <leader><esc> <c-\><c-n>
 " - use zsh
 set shell=/bin/zsh
 
-" Copy filep path to clipboard
+" Copy file path to clipboard
 nnoremap <leader><c-g> :let @+=expand('%')<cr>
 
 " Neovim initialization
