@@ -37,18 +37,16 @@ local function rename_file()
   vim.lsp.buf.execute_command(params)
 end
 
-return function(ns, lspconfig)
-  lspconfig.eslint.setup {}
-  lspconfig.ts_ls.setup {
-    on_attach = common.on_attach,
-    capabilities = common.capabilities,
-    commands = {
-      RenameFile = {
-        rename_file,
-        description = "Rename file",
-      },
-    },
-  }
-
+return function(ns)
+  vim.lsp.enable('eslint')
+  vim.lsp.enable('ts_ls')
+  vim.lsp.config('ts_ls', {
+    on_attach = function(client, buffer)
+      common.on_attach(client, buffer)
+      vim.api.nvim_buf_create_user_command(buffer, 'RenameFile', rename_file, {
+        desc = "Rename file",
+      })
+    end,
+  })
   ns.register(ns.builtins.formatting.prettierd)
 end
