@@ -20,11 +20,6 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '\\d', vim.diagnostic.setloclist, opts)
 
 
-vim.lsp.config('*', {
-  on_attach = function(client, bufnr)
-    print("LSP attached")
-  end,
-})
 -- setup language servers
 local ns = require 'null-ls'
 local lspconfig = require 'lspconfig'
