@@ -41,20 +41,33 @@ local modules = {
 }
 
 for _, module in ipairs(modules) do
-  local servers = require(module)
-  for _, server in ipairs(servers) do
-    -- enable the server
-    vim.lsp.enable(server.name)
-    -- configure the server
+  local server_module = require(module)
+
+  -- Enable nvim-lspconfig servers
+  for i, server in ipairs(server_module.servers or {}) do
     local config_table = {
       capabilities = common.capabilities,
     }
-    if type(server.on_attach) == 'function' then
+
+    if i == 1 then
+      -- Attach common on_attach function
       config_table.on_attach = function(client, bufnr)
         common.on_attach(client, bufnr)
-        server.on_attach(client, bufnr)
+        if type(server.on_attach) == 'function' then
+          server.on_attach(client, bufnr)
+        end
       end
+    elseif type(server.on_attach) == 'function' then
+      -- Otherwise, use the server's own on_attach function
+      config_table.on_attach = server.on_attach
     end
-    vim.lsp.config(server.name, config_table)
+
+    vim.lsp.enable(server[1])
+    vim.lsp.config(server[1], config_table)
+  end
+
+  -- Register none-ls sources
+  if type(server_module.get_sources) == 'function' then
+    ns.register(server_module.get_sources(ns))
   end
 end

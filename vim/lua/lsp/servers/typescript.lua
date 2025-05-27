@@ -39,16 +39,25 @@ local function rename_file()
   vim.lsp.buf.execute_command(params)
 end
 
-M[1] = {
-  name = 'ts_ls',
-  on_attach = function(_, buffer)
-    vim.api.nvim_buf_create_user_command(buffer, 'RenameFile', rename_file, {
-      desc = "Rename file",
-    })
-  end,
+M.servers = {
+  {
+    'ts_ls',
+    on_attach = function(_, buffer)
+      -- Enable file renaming command
+      vim.api.nvim_buf_create_user_command(buffer, 'RenameFile', rename_file, {
+        desc = "Rename file",
+      })
+    end,
+  },
+  {
+    'eslint',
+  },
 }
-M[2] = {
-  name = 'eslint',
-}
+
+M.get_sources = function(ns)
+  return {
+    ns.builtins.formatting.prettierd,
+  }
+end
 
 return M
