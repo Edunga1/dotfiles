@@ -1,11 +1,14 @@
-local common = require 'lsp.servers.utils.common'
+local M = {}
 
-return function(ns, lspconfig)
-  lspconfig.kotlin_language_server.setup {
-    on_attach = common.on_attach,
-    capabilities = common.capabilities,
+M.servers = {
+  { 'kotlin_lsp' },
+}
+
+M.get_sources = function(ns)
+  return {
+    ns.builtins.diagnostics.ktlint,
+    ns.builtins.formatting.ktlint,
   }
-
-  ns.register(ns.builtins.diagnostics.ktlint)
-  ns.register(ns.builtins.formatting.ktlint)
 end
+
+return M

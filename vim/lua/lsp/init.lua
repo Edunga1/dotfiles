@@ -26,7 +26,6 @@ local lspconfig = require 'lspconfig'
 ns.setup()
 require 'lsp.servers.lua'(ns, lspconfig)
 require 'lsp.servers.markdown'(ns, lspconfig)
-require 'lsp.servers.kotlin'(ns, lspconfig)
 require 'lsp.servers.python'(ns, lspconfig)
 require 'lsp.servers.vim'(ns, lspconfig)
 require 'lsp.servers.docker'(ns, lspconfig)
@@ -38,6 +37,7 @@ require 'lsp.servers.gdscript'(ns, lspconfig)
 local common = require 'lsp.servers.utils.common'
 local modules = {
   'lsp.servers.typescript',
+  'lsp.servers.kotlin',
 }
 
 for _, module in ipairs(modules) do
