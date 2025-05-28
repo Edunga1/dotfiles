@@ -1,16 +1,8 @@
-local common = require 'lsp.servers.utils.common'
+local M = {}
 
-return function(_, lspconfig)
-  -- dockerfile
-  lspconfig.dockerls.setup {
-    on_attach = common.on_attach,
-    capabilities = common.capabilities,
-  }
+M.servers = {
+  { 'dockerls' },
+  { 'docker_compose_language_service' },
+}
 
-  -- docker compose
-  lspconfig.docker_compose_language_service.setup {
-    on_attach = common.on_attach,
-    capabilities = common.capabilities,
-  }
-end
-
+return M

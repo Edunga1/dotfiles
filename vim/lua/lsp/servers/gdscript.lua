@@ -1,8 +1,7 @@
-local common = require 'lsp.servers.utils.common'
+local M = {}
 
-return function(_, lspconfig)
-  lspconfig.gdscript.setup {
-    on_attach = common.on_attach,
-    capabilities = common.capabilities,
-  }
-end
+M.servers = {
+  { 'gdscript' },
+}
+
+return M

@@ -25,19 +25,18 @@ local ns = require 'null-ls'
 local lspconfig = require 'lspconfig'
 ns.setup()
 require 'lsp.servers.lua'(ns, lspconfig)
-require 'lsp.servers.markdown'(ns, lspconfig)
-require 'lsp.servers.python'(ns, lspconfig)
-require 'lsp.servers.vim'(ns, lspconfig)
-require 'lsp.servers.docker'(ns, lspconfig)
-require 'lsp.servers.json'(ns, lspconfig)
-require 'lsp.servers.bash'(ns, lspconfig)
-require 'lsp.servers.rust'(ns, lspconfig)
-require 'lsp.servers.gdscript'(ns, lspconfig)
 
 local common = require 'lsp.servers.utils.common'
 local modules = {
+  'lsp.servers.markdown',
+  'lsp.servers.python',
+  'lsp.servers.vim',
+  'lsp.servers.json',
+  'lsp.servers.docker',
+  'lsp.servers.rust',
   'lsp.servers.typescript',
   'lsp.servers.kotlin',
+  'lsp.servers.gdscript',
 }
 
 for _, module in ipairs(modules) do

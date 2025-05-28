@@ -1,8 +1,7 @@
-local common = require 'lsp.servers.utils.common'
+local M = {}
 
-return function(_, lspconfig)
-  lspconfig.rust_analyzer.setup {
-    on_attach = common.on_attach,
-    capabilities = common.capabilities,
-  }
-end
+M.servers = {
+  { 'rust_analyzer' },
+}
+
+return M
