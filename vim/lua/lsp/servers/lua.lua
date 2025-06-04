@@ -1,23 +1,21 @@
-local common = require 'lsp.servers.utils.common'
+local M = {}
 
-return function(_, lspconfig)
-  lspconfig.lua_ls.setup {
-    on_attach = common.on_attach,
-    capabilities = common.capabilities,
+M.servers = {
+  {
+    'lua_ls',
     settings = {
       Lua = {
         diagnostics = {
-          globals = {
-            'vim',
-          },
+          globals = { 'vim' },
         },
         workspace = {
           library = {
-            -- HammerSpoon annotations that are automatically generated
             vim.env.HOME .. '/.hammerspoon/Spoons/EmmyLua.spoon/annotations',
           },
         },
       },
     },
-  }
-end
+  },
+}
+
+return M

@@ -22,10 +22,7 @@ vim.keymap.set('n', '\\d', vim.diagnostic.setloclist, opts)
 
 -- setup language servers
 local ns = require 'null-ls'
-local lspconfig = require 'lspconfig'
 ns.setup()
-require 'lsp.servers.lua'(ns, lspconfig)
-
 local common = require 'lsp.servers.utils.common'
 local modules = {
   'lsp.servers.markdown',
@@ -37,6 +34,7 @@ local modules = {
   'lsp.servers.typescript',
   'lsp.servers.kotlin',
   'lsp.servers.gdscript',
+  'lsp.servers.lua',
 }
 
 for _, module in ipairs(modules) do
@@ -48,6 +46,7 @@ for _, module in ipairs(modules) do
       capabilities = common.capabilities,
     }
 
+    -- on_attach function
     if i == 1 then
       -- Attach common on_attach function
       config_table.on_attach = function(client, bufnr)
@@ -59,6 +58,11 @@ for _, module in ipairs(modules) do
     elseif type(server.on_attach) == 'function' then
       -- Otherwise, use the server's own on_attach function
       config_table.on_attach = server.on_attach
+    end
+
+    -- settings
+    if server.settings then
+      config_table.settings = server.settings
     end
 
     vim.lsp.enable(server[1])
