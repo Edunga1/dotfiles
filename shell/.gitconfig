@@ -62,6 +62,8 @@
     | fzf --preview 'echo {} | cut -c3- | xargs git show --color=always' --height 90% \
     | cut -c3-
 	bb = "!git branch | while read line; do branch=$(echo \"$line\"); issue=$(echo \"$branch\" | awk -F\"[/-]\" \"{print \\$2 \\\"-\\\" \\$3}\"); if [ -n \"$issue\" ]; then summary=$(jira issue view \"$issue\" --raw 2>/dev/null | jq -r \".fields.summary\"); printf \"%-30s %s\\n\" \"$branch\" \"$summary\"; else printf \"%-30s %s\\n\" \"$branch\" \"\"; fi; done"
+  # create branch with prefix
+  swc = "!f() { git switch -c \"$(git symbolic-ref --short HEAD)-$1\"; }; f"
 
 [include]
   # for local settings. don't track this file.
