@@ -2,8 +2,8 @@ if !has_key(plugs, 'fzf.vim')
   finish
 endif
 
-" List git files if git project. or just list files
-nnoremap <expr> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
+" <c-p> to search git files in the current directory(pwd)
+nnoremap <c-p> :call fzf#vim#gitfiles('', {'dir': getcwd()})<CR>
 
 " [[B]Commits] Customize the options used by 'git log':
 let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
