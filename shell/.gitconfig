@@ -35,6 +35,8 @@
   fr = !git fetch --prune && git rebase
   # print remote repository url. improve this to support various remote names.
   go = !echo `git remote get-url origin | sed -e 's|git@github.com:|https://github.com/|' -e 's|\\.git$||'`
+  # git commit with editor without any changes. Useful for TODO List.
+  empty = commit --allow-empty -v
 
   # === Integrated with fzf ===============================================
   # = ref. http://www.mimul.com/pebble/default/2019/08/23/1566550403384.html
