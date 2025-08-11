@@ -18,7 +18,7 @@ function s:sessions()
 endfunction
 
 let g:startify_lists = [
-  \ { 'type': function('s:sessions'), 'header': ['   Sessions'] },
+  \ { 'type': function('s:sessions'), 'header': ['   Sessions - '.stdpath('data').'/sessions'] },
   \ { 'type': 'files',     'header': ['   MRU']            },
   \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
   \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
