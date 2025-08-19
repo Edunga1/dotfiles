@@ -227,6 +227,7 @@ endif
 
 " Extend the runtimepath to include the vim-include directory
 runtime! vim-include/*.vim
+runtime! lua/vim-include/**/*.lua
 
 " Extend local vimrc
 if filereadable(expand("~/.vimrc.local"))
