@@ -1,4 +1,4 @@
-local M = {}
+local ns = require 'null-ls'
 
 local function rename_file()
   local source_file, target_file
@@ -39,25 +39,19 @@ local function rename_file()
   vim.lsp.buf.execute_command(params)
 end
 
-M.servers = {
+vim.lsp.enable('ts_ls')
+vim.lsp.config(
+  'ts_ls',
   {
-    'ts_ls',
     on_attach = function(_, buffer)
       -- Enable file renaming command
       vim.api.nvim_buf_create_user_command(buffer, 'RenameFile', rename_file, {
         desc = "Rename file",
       })
     end,
-  },
-  {
-    'eslint',
-  },
-}
-
-M.get_sources = function(ns)
-  return {
-    ns.builtins.formatting.prettierd,
   }
-end
+)
 
-return M
+ns.register(
+  ns.builtins.formatting.prettierd
+)
