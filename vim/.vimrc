@@ -225,7 +225,7 @@ if has('nvim')
   set inccommand=nosplit  " highlights during a substitution in progress
 endif
 
-" Extend the runtimepath to include the vim-include directory
+" Source custom vim scripts
 runtime! vim-include/*.vim
 runtime! lua/vim-include/**/*.lua
 
