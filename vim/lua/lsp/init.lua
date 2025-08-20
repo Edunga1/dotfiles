@@ -31,6 +31,7 @@ local modules = {
   'lsp.servers.json',
   'lsp.servers.docker',
   'lsp.servers.rust',
+  'lsp.servers.typescript',
   'lsp.servers.kotlin',
   'lsp.servers.gdscript',
   'lsp.servers.lua',
