@@ -30,6 +30,7 @@ export ZSH_DISABLE_COMPFIX=true
 plugins=(
   zsh-syntax-highlighting
   zsh-autosuggestions
+  zsh-hangul
 )
 
 # Macos Homebrew
