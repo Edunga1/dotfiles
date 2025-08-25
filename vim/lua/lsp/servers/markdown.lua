@@ -1,7 +1,10 @@
 local M = {}
 
 M.servers = {
-  { 'marksman' },
+  {
+    'marksman',
+    filetypes = { 'markdown', 'markdown.mdx', 'vimwiki' },
+  },
 }
 
 return M

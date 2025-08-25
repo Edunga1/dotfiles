@@ -65,6 +65,11 @@ for _, module in ipairs(modules) do
       config_table.settings = server.settings
     end
 
+    -- filetypes
+    if server.filetypes then
+      config_table.filetypes = server.filetypes
+    end
+
     vim.lsp.enable(server[1])
     vim.lsp.config(server[1], config_table)
   end
