@@ -1,7 +1,7 @@
-if exists('g:loaded_ftplugin_markdown')
+if exists('b:loaded_ftplugin_markdown')
   finish
 endif
-let g:loaded_ftplugin_markdown = 1
+let b:loaded_ftplugin_markdown = 1
 
 function! s:GetFrontmatterEndLineNum(...) abort
   let max_lines = a:0 ? a:0 : 20
