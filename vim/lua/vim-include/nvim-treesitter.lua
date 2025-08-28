@@ -70,3 +70,6 @@ require'nvim-treesitter.configs'.setup {
     },
   },
 }
+
+-- vimwiki is markdown, too
+vim.treesitter.language.register('markdown', 'vimwiki')
