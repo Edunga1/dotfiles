@@ -43,5 +43,5 @@ function! s:AddFrontmatter(...)
   startinsert!
 endfunction
 
-command! FrontmatterCreate call s:CreateFrontmatter()
-command! -nargs=* FrontmatterAdd call s:AddFrontmatter(<f-args>)
+command! -buffer FrontmatterCreate call s:CreateFrontmatter()
+command! -buffer -nargs=* FrontmatterAdd call s:AddFrontmatter(<f-args>)
