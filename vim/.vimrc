@@ -70,6 +70,7 @@ Plug 'chrisbra/csv.vim'                 " A Filetype plugin for csv files
 Plug 'vim-scripts/ZoomWin'              " zoom in/out of windows (<c-w>o to toggle)
 Plug 'vim-airline/vim-airline'          " lean & mean status/tabline for vim that's light as air
 Plug 'vim-airline/vim-airline-themes'   " a collection of themes for vim-airline
+Plug 'mbbill/undotree'                  " The undo history visualizer for VIM
 
 " Vim objects
 Plug 'michaeljsmith/vim-indent-object'  " This plugin defines a new text object, based on indentation levels.
