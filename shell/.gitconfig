@@ -37,6 +37,8 @@
   go = !echo `git remote get-url origin | sed -e 's|git@github.com:|https://github.com/|' -e 's|\\.git$||'`
   # git commit with editor without any changes. Useful for TODO List.
   empty = commit --allow-empty -v
+  # delete local branches which are already removed from remote
+  gone = "!git fetch -p && for branch in $(git branch -vv | grep ': gone]' | awk '{print $1}'); do git branch -D $branch; done"
 
   # === Integrated with fzf ===============================================
   # = ref. http://www.mimul.com/pebble/default/2019/08/23/1566550403384.html
