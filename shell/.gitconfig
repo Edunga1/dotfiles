@@ -38,7 +38,7 @@
   # git commit with editor without any changes. Useful for TODO List.
   empty = commit --allow-empty -v
   # delete local branches which are already removed from remote
-  gone = "!git fetch -p && for branch in $(git branch -vv | grep ': gone]' | awk '{print $1}'); do git branch -D $branch; done"
+  gone = "!for branch in $(git branch -vv | grep '^[^*].*: gone]' | awk '{print $1}'); do git branch -D $branch; done"
   mergemsg = !git --no-pager log -n 1 --pretty=format:"%s" --merges
 
   # === Integrated with fzf ===============================================
