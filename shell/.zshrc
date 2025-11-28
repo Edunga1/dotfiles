@@ -187,3 +187,20 @@ if command -v jira &> /dev/null; then
   }
 fi
 
+# Commit with GitHub Copilot
+if command -v copilot &> /dev/null; then
+  copilot-commit() {
+    local history=$(git log -n 5 --pretty=format:"%s")
+    local diff=$(git diff --cached)
+    local prompt="# Generate a git commit message. Only output the commit message without any additional text.
+## Commit Messages for the following recent commits:
+
+$history
+
+## Changes:
+
+$diff"
+    local msg=$(copilot -p "$prompt")
+    git commit -e -m "$msg"
+  }
+fi
