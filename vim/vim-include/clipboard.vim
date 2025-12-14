@@ -9,6 +9,7 @@ function! PasteImagePrompt(...) abort
     return WSLSaveImageFromClipboard(l:img_path)
   endif
 
+  " TODO: Add support for macOS
   echoerr "No clipboard function for non-WSL environment."
   return 0
 endfunction
