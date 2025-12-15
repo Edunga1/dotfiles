@@ -1,5 +1,5 @@
 function! PasteImagePrompt(...) abort
-  let l:img_path = a:0 > 0 ? a:1 : input('path? ', 'sample.png')
+  let l:img_path = a:0 > 0 ? join(a:000) : input('path? ', 'sample.png')
 
   if l:img_path !~ '\.png$'
     let l:img_path .= '.png'
@@ -14,4 +14,4 @@ function! PasteImagePrompt(...) abort
   return 0
 endfunction
 
-command! -range PasteImage call PasteImagePrompt()
+command! -nargs=? PasteImage call PasteImagePrompt(<f-args>)

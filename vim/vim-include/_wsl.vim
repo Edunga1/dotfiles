@@ -35,7 +35,7 @@ let g:clipboard = {
 
 " Clipboard image pasting
 " Usage: :call WSLSaveImageFromClipboard('sample.png')
-let s:img_paste_cmd = 'powershell.exe -NoProfile -Command "(Get-Clipboard -Format Image).Save(' . "'$(wslpath -w %s)'" . ')"'
+let s:img_paste_cmd = 'powershell.exe -NoProfile -Command "(Get-Clipboard -Format Image).Save(' . "'$(wslpath -w \"%s\")'" . ')"'
 function! WSLSaveImageFromClipboard(img_path) abort
   let l:cmd = printf(s:img_paste_cmd, a:img_path)
   call system(l:cmd)
