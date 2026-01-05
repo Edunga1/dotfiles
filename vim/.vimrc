@@ -18,7 +18,7 @@ Plug 'ravitemer/mcphub.nvim', { 'do': 'npm install -g mcp-hub@latest' }  " An MC
 Plug 'scrooloose/nerdtree'              " a tree explorer
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                 " a fuzzy finder. requires fzf above
-Plug 'majutsushi/tagbar'                " displays tags in a window. requires universal-ctags
+Plug 'preservim/tagbar'                " displays tags in a window. requires universal-ctags
 Plug 'mhinz/vim-startify'               " The fancy start screen for Vim
 Plug 'junegunn/goyo.vim'                " Distraction-free writing in Vim. :Goyo
 
