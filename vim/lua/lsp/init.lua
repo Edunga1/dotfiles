@@ -25,6 +25,7 @@ local ns = require 'null-ls'
 ns.setup()
 local common = require 'lsp.servers.utils.common'
 local modules = {
+  'lsp.servers.bash',
   'lsp.servers.markdown',
   'lsp.servers.python',
   'lsp.servers.vim',
