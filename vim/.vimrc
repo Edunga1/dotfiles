@@ -146,6 +146,7 @@ set ruler                 " Show ruler
 set showcmd               " Display an incomplete command in the lower right corner of the Vim window
 set equalalways
 set wildmenu              " command line completion
+set wildoptions+=fuzzy    " fuzzy matching in wildmenu
 set numberwidth=3         " gutter column width
 
 set splitbelow
