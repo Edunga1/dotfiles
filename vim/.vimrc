@@ -78,7 +78,7 @@ Plug 'wellle/targets.vim'               " Adds various text objects to give you 
 
 " Etc.
 Plug 'dhruvasagar/vim-table-mode'       " VIM Table Mode for instant table creation. <leader>tm to toggle table mode
-Plug 'vimwiki/vimwiki'                  " Personal Wiki for Vim
+Plug 'lervag/wiki.vim'                  " A wiki plugin for Vim. Alternative to vimwiki
 Plug 'sainnhe/sonokai'                  " High Contrast Color Scheme
 Plug 'karb94/neoscroll.nvim'            " Smooth scrolling for neovim
 
