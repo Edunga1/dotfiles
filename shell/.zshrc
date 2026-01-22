@@ -53,11 +53,11 @@ if command -v brew &> /dev/null; then
   fpath=("${fpath[@]:1}" "${fpath[1]}")
 fi
 
-# oh-my-zsh. it calls `compinit` internally
-source $ZSH/oh-my-zsh.sh
-
 # zsh autoupdate
 zstyle ':omz:update' mode disabled
+
+# oh-my-zsh. it calls `compinit` internally
+source $ZSH/oh-my-zsh.sh
 
 # zsh theme. To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
