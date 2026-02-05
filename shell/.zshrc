@@ -72,6 +72,7 @@ export LC_ALL=en_US.UTF-8
 # FZF
 if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
+  export FZF_DEFAULT_COMMAND='rg --files --hidden'
   export FZF_DEFAULT_OPTS='--bind shift-up:preview-half-page-up,shift-down:preview-half-page-down'
 fi
 
