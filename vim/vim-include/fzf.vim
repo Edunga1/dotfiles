@@ -2,8 +2,11 @@ if !has_key(plugs, 'fzf.vim')
   finish
 endif
 
-" <c-p> to search files in the current directory(pwd)
-nnoremap <c-p> :call fzf#vim#files('', {'dir': getcwd()})<CR>
+" ctrl-p: gitignore respected
+nnoremap <silent> <C-p> :call fzf#vim#files('', {'dir': getcwd(), 'source': 'rg --files --hidden'})<CR>
+
+" ctrl-\: gitignore not respected
+nnoremap <silent> <C-\> :call fzf#vim#files('', {'dir': getcwd(), 'source': 'rg --files --hidden --no-ignore-vcs'})<CR>
 
 " [[B]Commits] Customize the options used by 'git log':
 let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
