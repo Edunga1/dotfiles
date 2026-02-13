@@ -61,7 +61,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- setup language servers
 local ns = require 'null-ls'
 ns.setup()
-local common = require 'lsp.servers.utils.common'
+local capabilities = require 'cmp_nvim_lsp'.default_capabilities()
 local modules = {
   'lsp.servers.bash',
   'lsp.servers.markdown',
@@ -83,7 +83,7 @@ for _, module in ipairs(modules) do
   -- Enable nvim-lspconfig servers
   for _, server in ipairs(server_module.servers or {}) do
     local config_table = {
-      capabilities = common.capabilities,
+      capabilities = capabilities,
     }
 
     -- on_attach function (server-specific only)
