@@ -36,6 +36,7 @@ local modules = {
   'lsp.servers.kotlin',
   'lsp.servers.gdscript',
   'lsp.servers.lua',
+  'lsp.servers.html',
 }
 
 for _, module in ipairs(modules) do
