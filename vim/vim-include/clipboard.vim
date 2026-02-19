@@ -1,14 +1,16 @@
 function! PasteImagePrompt(...) abort
-  let l:img_path = a:0 > 0 ? join(a:000) : input('path? ', 'sample.png')
+  let l:default = expand('%:.:h') . '/sample.png'
+  let l:img_path = a:0 > 0 ? join(a:000) : input('path? ', l:default)
+
+  if empty(l:img_path)
+    return ''
+  endif
 
   if l:img_path !~ '\.png$'
     let l:img_path .= '.png'
   endif
 
-  " Resolve relative path from current file's directory
-  if l:img_path !~ '^/'
-    let l:img_path = expand('%:p:h') . '/' . l:img_path
-  endif
+  let l:img_path = fnamemodify(l:img_path, ':p')
 
   if IsMac()
     let l:result = MacSaveImageFromClipboard(l:img_path)
@@ -16,10 +18,13 @@ function! PasteImagePrompt(...) abort
     let l:result = WSLSaveImageFromClipboard(l:img_path)
   else
     echoerr 'No clipboard function for this environment.'
-    return 0
+    return ''
   endif
 
-  return l:result
+  if l:result
+    return l:img_path
+  endif
+  return ''
 endfunction
 
 command! -nargs=? PasteImage call PasteImagePrompt(<f-args>)

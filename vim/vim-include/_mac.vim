@@ -17,6 +17,9 @@ function! MacSaveImageFromClipboard(img_path) abort
   let l:cmd = "osascript -e 'the clipboard as «class PNGf»'"
         \ . " | sed 's/«data PNGf//;s/»//'"
         \ . ' | xxd -r -p > ' . shellescape(a:img_path)
-  call system(l:cmd)
+  let l:output = system(l:cmd)
+  if v:shell_error
+    echoerr 'MacSaveImageFromClipboard failed: ' . l:output
+  endif
   return v:shell_error == 0
 endfunction
