@@ -5,13 +5,21 @@ function! PasteImagePrompt(...) abort
     let l:img_path .= '.png'
   endif
 
-  if IsWSL()
-    return WSLSaveImageFromClipboard(l:img_path)
+  " Resolve relative path from current file's directory
+  if l:img_path !~ '^/'
+    let l:img_path = expand('%:p:h') . '/' . l:img_path
   endif
 
-  " TODO: Add support for macOS
-  echoerr "No clipboard function for non-WSL environment."
-  return 0
+  if IsMac()
+    let l:result = MacSaveImageFromClipboard(l:img_path)
+  elseif IsWSL()
+    let l:result = WSLSaveImageFromClipboard(l:img_path)
+  else
+    echoerr 'No clipboard function for this environment.'
+    return 0
+  endif
+
+  return l:result
 endfunction
 
 command! -nargs=? PasteImage call PasteImagePrompt(<f-args>)
