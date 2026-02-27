@@ -62,5 +62,8 @@ link tmux/.tmux.conf.local ~/.tmux.conf.local
 step "python"
 link shell/.pdbrc ~/.pdbrc
 
+step "wezterm"
+link shell/.wezterm.lua ~/.wezterm.lua
+
 step "git"
 link shell/.gitconfig ~/.gitconfig
