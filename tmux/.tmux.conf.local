@@ -13,6 +13,9 @@
 # then uncomment the following line to make Meta + arrow keys mapping work
 #set -ga terminal-overrides "*:kUP3=\e[1;9A,*:kDN3=\e[1;9B,*:kRIT3=\e[1;9C,*:kLFT3=\e[1;9D"
 
+# open pane history in vim popup
+bind ] run-shell "tmux capture-pane -pS - > /tmp/tmux-pane-buffer && tmux display-popup -w 90% -h 90% -E '$SHELL -ic \"vi +\\$ /tmp/tmux-pane-buffer\"'"
+
 # -- adjustment ----------------------------------------------------------------
 
 # move window to the left/right
