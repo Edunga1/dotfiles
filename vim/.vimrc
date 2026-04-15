@@ -67,7 +67,6 @@ Plug 'junegunn/vader.vim'               " A simple Vimscript test framework
 Plug 'chrisbra/csv.vim'                 " A Filetype plugin for csv files
 
 " Utility
-Plug 'vim-scripts/ZoomWin'              " zoom in/out of windows (<c-w>o to toggle)
 Plug 'vim-airline/vim-airline'          " lean & mean status/tabline for vim that's light as air
 Plug 'vim-airline/vim-airline-themes'   " a collection of themes for vim-airline
 Plug 'mbbill/undotree'                  " The undo history visualizer for VIM
