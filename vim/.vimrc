@@ -45,8 +45,6 @@ Plug 'hrsh7th/cmp-vsnip'                  " nvim-cmp source for vsnip
 " All languages
 Plug 'scrooloose/nerdcommenter'         " Comment functions so powerful—no comment necessary
 Plug 'nicwest/vim-camelsnek'            " Convert between camel and snek case
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " Nvim Treesitter configurations and abstraction layer
-Plug 'nvim-treesitter/nvim-treesitter-textobjects'           " Syntax aware text-objects, select, move, swap, and peek support.
 
 " Javascript/Typescript
 Plug 'pangloss/vim-javascript'          " Vastly improved Javascript indentation and syntax support in Vim
