@@ -145,6 +145,7 @@ set equalalways
 set wildmenu              " command line completion
 set wildoptions+=fuzzy    " fuzzy matching in wildmenu
 set numberwidth=3         " gutter column width
+set signcolumn=yes        " always show the sign column to prevent text shifting
 
 set splitbelow
 set splitright
