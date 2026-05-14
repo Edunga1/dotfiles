@@ -226,8 +226,7 @@ if has('nvim')
 endif
 
 " Source custom vim scripts
-runtime! vim-include/*.vim
-runtime! lua/vim-include/**/*.lua
+runtime! vim-include/*.{vim,lua}
 
 " Extend local vimrc
 if filereadable(expand("~/.vimrc.local"))
