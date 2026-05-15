@@ -144,6 +144,7 @@ set showcmd               " Display an incomplete command in the lower right cor
 set equalalways
 set wildmenu              " command line completion
 set wildoptions+=fuzzy    " fuzzy matching in wildmenu
+set completeopt+=fuzzy,noselect  " fuzzy matching in insert mode completion
 set numberwidth=3         " gutter column width
 set signcolumn=yes        " always show the sign column to prevent text shifting
 
