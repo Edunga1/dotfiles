@@ -8,8 +8,7 @@ call plug#begin()
 Plug 'tpope/vim-fugitive'               " a git wrapper
 Plug 'airblade/vim-gitgutter'           " shows a git diff in the gutter
 
-" Completion
-Plug 'ervandew/supertab'                " Perform all your vim insert mode completions with Tab
+" AI
 Plug 'github/copilot.vim'               " Neovim plugin for GitHub Copilot
 Plug 'CopilotC-Nvim/CopilotChat.nvim'   " Chat with GitHub Copilot in Neovim. requires plenary.nvim, copilot.vim
 Plug 'ravitemer/mcphub.nvim', { 'do': 'npm install -g mcp-hub@latest' }  " An MCP client for Neovim
@@ -36,11 +35,6 @@ Plug 'mason-org/mason-lspconfig.nvim'     " Extension to mason.nvim
 Plug 'nvimtools/none-ls.nvim'             " Inject LSP diagnostics, code actions, and more via Lua
 Plug 'nvimtools/none-ls-extras.nvim'      " Additional sources for none-ls.nvim
 Plug 'nvim-telescope/telescope.nvim'      " a highly extendable fuzzy finder over lists
-" - completion
-Plug 'hrsh7th/cmp-nvim-lsp'               " nvim-cmp source for neovim builtin LSP client.
-Plug 'hrsh7th/nvim-cmp'                   " A completion plugin for neovim.
-Plug 'hrsh7th/vim-vsnip'                  " Snippet plugin for vim/nvim that supports LSP/VSCode's snippet format
-Plug 'hrsh7th/cmp-vsnip'                  " nvim-cmp source for vsnip
 
 " All languages
 Plug 'scrooloose/nerdcommenter'         " Comment functions so powerful—no comment necessary
@@ -220,6 +214,14 @@ set shell=/bin/zsh
 
 " Copy file path to clipboard
 nnoremap <leader><c-g> :let @+=expand('%')<cr>
+
+" <c-space> to trigger completion
+inoremap <c-space> <c-x><c-o>
+
+" Completion improvements
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Neovim initialization
 if has('nvim')

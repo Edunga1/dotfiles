@@ -19,12 +19,26 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '\\d', vim.diagnostic.setloclist, opts)
 
+-- Trigger completion on every character
+vim.api.nvim_create_autocmd('InsertCharPre', {
+  callback = function()
+    if vim.fn.pumvisible() == 0 then
+      vim.lsp.completion.get()
+    end
+  end,
+})
+
 -- Setup common LSP keymaps via LspAttach autocmd
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     local bufnr = args.buf
     -- Enable completion triggered by <c-x><c-o>
     vim.bo[bufnr].omnifunc = 'v:lua.vim.lsp.omnifunc'
+
+    -- Enable LSP-based completion
+    vim.lsp.completion.enable(true, args.data.client_id, bufnr, {
+      autotrigger = true,
+    })
 
     -- Mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
@@ -61,7 +75,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- setup language servers
 local ns = require 'null-ls'
 ns.setup()
-local capabilities = require 'cmp_nvim_lsp'.default_capabilities()
 local modules = {
   'lsp.servers.bash',
   'lsp.servers.markdown',
@@ -82,9 +95,7 @@ for _, module in ipairs(modules) do
 
   -- Enable nvim-lspconfig servers
   for _, server in ipairs(server_module.servers or {}) do
-    local config_table = {
-      capabilities = capabilities,
-    }
+    local config_table = {}
 
     -- on_attach function (server-specific only)
     if type(server.on_attach) == 'function' then
