@@ -94,7 +94,8 @@ set path+=**              " Search all subdirectories and recursively
 set nowritebackup
 set nobackup
 set directory=/tmp//      " Prepend(^=) $HOME/.tmp/ to a default path; use full path as backup filename(//)
-set undofile              " Enable persistent undo
+set undofile              " Enable persistent undo but not for large files(>10MB)
+autocmd BufReadPre * if getfsize(expand('<afile>')) > 10*1024*1024 | setlocal noundofile | endif
 
 set hidden                " The current buffer can be put to the background without writing to disk
 set updatetime=300        " CursorHold event waiting time.
