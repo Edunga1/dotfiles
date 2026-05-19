@@ -19,5 +19,5 @@ command! -bang -complete=dir -nargs=* GDIff
       \ 'sink': 'e'
     \ }), <bang>0)
 
-vnoremap <leader>s "ty:Rg <C-r>t<CR>
+vnoremap <leader>s "ty:RG <C-r>t<CR>
 nnoremap <M-p> :Commands<CR>
