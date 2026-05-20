@@ -10,5 +10,6 @@ config.keys = {
   { key = 'RightArrow', mods = 'OPT', action = wezterm.action.SendKey { key = 'f', mods = 'ALT' } },
 }
 
+config.window_background_opacity = 0.5
 
 return config
