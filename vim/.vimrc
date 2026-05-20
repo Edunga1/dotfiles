@@ -80,6 +80,15 @@ call plug#end()
 endif
 
 " General
+augroup TransparentBG
+  autocmd!
+  autocmd ColorScheme * highlight Normal       ctermbg=NONE guibg=NONE
+  autocmd ColorScheme * highlight NormalNC     ctermbg=NONE guibg=NONE
+  autocmd ColorScheme * highlight SignColumn   ctermbg=NONE guibg=NONE
+  autocmd ColorScheme * highlight EndOfBuffer  ctermbg=NONE guibg=NONE
+  " floating windows
+  "autocmd ColorScheme * highlight NormalFloat  ctermbg=NONE guibg=NONE
+augroup END
 colorscheme sonokai
 set encoding=utf-8
 set nocompatible          " Disable vi compatibility.
