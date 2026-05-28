@@ -25,6 +25,7 @@ endfunction
 " :Sh        - run current line (joining \ continuations)
 " :5,10Sh    - run lines 5~10
 " :'<,'>Sh   - run visual selection
+" output saved to /tmp/run_*.out, path appended to the paragraph
 function! s:Run(range_count, line1, line2) abort
   let l:script = a:range_count == 0
         \ ? s:CurrentLineExpanded()
