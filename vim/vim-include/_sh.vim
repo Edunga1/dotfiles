@@ -22,17 +22,12 @@ function! s:FindParagraphEnd(row) abort
   return line('$')
 endfunction
 
-" :Sh        - run current line (joining \ continuations)
-" :5,10Sh    - run lines 5~10
-" :'<,'>Sh   - run visual selection
-" output saved to /tmp/run_*.out, path appended to the paragraph
 function! s:Run(range_count, line1, line2) abort
   let l:script = a:range_count == 0
         \ ? s:CurrentLineExpanded()
         \ : join(getline(a:line1, a:line2), "\n")
   let l:anchor = a:range_count > 0 ? a:line2 : line('.')
   let l:para_end = s:FindParagraphEnd(l:anchor)
-  let l:path = printf('/tmp/run_%s.out', strftime('%Y%m%d_%H%M%S'))
 
   let l:output = system(['bash', '-c', "(\n" . l:script . "\n) 2>&1"])
 
@@ -42,6 +37,7 @@ function! s:Run(range_count, line1, line2) abort
     return
   endif
 
+  let l:path = printf('/tmp/run_%s.%d.out', strftime('%Y%m%d_%H%M%S'), v:shell_error)
   let l:lines = split(l:output, "\n", 1)
   if !empty(l:lines) && l:lines[-1] ==# ''
     call remove(l:lines, -1)
@@ -58,4 +54,8 @@ function! s:Run(range_count, line1, line2) abort
   echom printf('exit %d → %s', v:shell_error, l:path)
 endfunction
 
+" :Sh        - run current line (joining \ continuations)
+" :5,10Sh    - run lines 5~10
+" :'<,'>Sh   - run visual selection
+" output saved to /tmp/run_<timestamp>.<exit>.out, path appended to the paragraph
 command! -range Sh call <SID>Run(<range>, <line1>, <line2>)
