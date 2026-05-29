@@ -19,8 +19,16 @@ vim.diagnostic.config({
 })
 local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
+local function diagnostic_jump(count)
+  return function()
+    vim.diagnostic.jump({
+      count = count,
+      on_jump = function() vim.diagnostic.open_float() end,
+    })
+  end
+end
+vim.keymap.set('n', '[d', diagnostic_jump(-1), opts)
+vim.keymap.set('n', ']d', diagnostic_jump(1), opts)
 vim.keymap.set('n', '\\d', vim.diagnostic.setloclist, opts)
 
 -- Trigger completion on every character
