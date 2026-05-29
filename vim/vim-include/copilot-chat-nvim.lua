@@ -11,3 +11,4 @@ require("CopilotChat").setup {
 }
 
 vim.keymap.set('n', '<M-a>', ':CopilotChatToggle<CR>', { noremap = true })
+vim.keymap.set('x', '<M-a>', ':<C-u>CopilotChatToggle<CR>', { noremap = true })
