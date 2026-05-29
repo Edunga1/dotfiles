@@ -17,7 +17,7 @@ Plug 'ravitemer/mcphub.nvim', { 'do': 'npm install -g mcp-hub@latest' }  " An MC
 Plug 'scrooloose/nerdtree'              " a tree explorer
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                 " a fuzzy finder. requires fzf above
-Plug 'preservim/tagbar'                " displays tags in a window. requires universal-ctags
+Plug 'preservim/tagbar'                 " displays tags in a window. requires universal-ctags
 Plug 'mhinz/vim-startify'               " The fancy start screen for Vim
 Plug 'junegunn/goyo.vim'                " Distraction-free writing in Vim. :Goyo
 
@@ -31,6 +31,7 @@ Plug 'rmagatti/auto-session'            " A small automated session manager for 
 " Language Server Protocol
 Plug 'neovim/nvim-lspconfig'              " Quickstart configs for Nvim LSP
 Plug 'mason-org/mason.nvim'               " Portable package manager for Neovim
+Plug 'mason-org/mason-lspconfig.nvim'     " Extension to mason.nvim that makes it easier to use lspconfig with mason.nvim
 Plug 'nvimtools/none-ls.nvim'             " Inject LSP diagnostics, code actions, and more via Lua
 Plug 'nvimtools/none-ls-extras.nvim'      " Additional sources for none-ls.nvim
 Plug 'jay-babu/mason-null-ls.nvim'        " bridges mason.nvim with the null-ls plugin - making it easier to use both plugins together.

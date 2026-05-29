@@ -2,6 +2,8 @@
 require 'mason'.setup {
   PATH = 'append'
 }
+-- automatically enable installed servers
+require("mason-lspconfig").setup()
 local ns = require 'null-ls'
 ns.setup()
 require("mason-null-ls").setup({
@@ -112,7 +114,6 @@ for _, module in ipairs(modules) do
       config_table.filetypes = server.filetypes
     end
 
-    vim.lsp.enable(server[1])
     vim.lsp.config(server[1], config_table)
   end
 
