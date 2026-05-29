@@ -54,10 +54,4 @@ M.servers = {
   },
 }
 
-M.get_sources = function(ns)
-  return {
-    ns.builtins.formatting.prettierd,
-  }
-end
-
 return M

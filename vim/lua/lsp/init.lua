@@ -2,10 +2,12 @@
 require 'mason'.setup {
   PATH = 'append'
 }
-require 'mason-lspconfig'.setup {
-  automatic_installation = false,
-  automatic_enable = false,
-}
+local ns = require 'null-ls'
+ns.setup()
+require("mason-null-ls").setup({
+    automatic_installation = false,
+    handlers = {},  -- automatically register all available null-ls sources
+})
 
 -- setup key mappings
 vim.diagnostic.config({
@@ -73,8 +75,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 -- setup language servers
-local ns = require 'null-ls'
-ns.setup()
 local modules = {
   'lsp.servers.bash',
   'lsp.servers.markdown',
@@ -118,6 +118,6 @@ for _, module in ipairs(modules) do
 
   -- Register none-ls sources
   if type(server_module.get_sources) == 'function' then
-    ns.register(server_module.get_sources(ns))
+    ns.register(server_module.get_sources())
   end
 end
