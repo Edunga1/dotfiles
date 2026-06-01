@@ -29,7 +29,9 @@ function! s:Run(range_count, line1, line2) abort
   let l:anchor = a:range_count > 0 ? a:line2 : line('.')
   let l:para_end = s:FindParagraphEnd(l:anchor)
 
+  let l:t0 = reltime()
   let l:output = system(['bash', '-c', "(\n" . l:script . "\n) 2>&1"])
+  let l:elapsed = reltimefloat(reltime(l:t0))
 
   " exit if command not found
   if v:shell_error == 127
@@ -45,10 +47,13 @@ function! s:Run(range_count, line1, line2) abort
   call writefile(l:lines, l:path)
 
   " append result file path to the end of the paragraph
+  let l:summary = v:shell_error == 0
+        \ ? printf('>> %s (%.2fs)', l:path, l:elapsed)
+        \ : printf('>> %s', l:path)
   if l:para_end == line('$')
-    call append(l:para_end, ['', '>> ' . l:path])
+    call append(l:para_end, ['', l:summary])
   else
-    call append(l:para_end + 1, ['>> ' . l:path])
+    call append(l:para_end + 1, [l:summary])
   endif
   call cursor(l:para_end + 2, 4)
   echom printf('exit %d → %s', v:shell_error, l:path)
