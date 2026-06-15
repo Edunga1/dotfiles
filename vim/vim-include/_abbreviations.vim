@@ -15,3 +15,15 @@ iabbr __pprint from pprint import pprint
 iabbr __ifdef if !has_key(plugs, 'PLUGIN_NAME')<cr>
 \finish<cr>
 \<bs>endif<cr>
+
+" yaml
+iabbr <buffer> __compose <C-o>:set paste<cr>services:<cr>
+\  app:<cr>
+\    image: alpine:latest<cr>
+\    command: ls -al<cr>
+\    ports:<cr>
+\      - "3000:3000"<cr>
+\    volumes:<cr>
+\      - ./:/app<cr>
+\    environment:<cr>
+\      APP_ENV: development<C-o>:set nopaste<cr>

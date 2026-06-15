@@ -234,6 +234,9 @@ inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
+" Filetype specific
+autocmd BufNewFile,BufRead docker-compose*.yml,docker-compose*.yaml,compose*.yml,compose*.yaml set filetype=yaml.docker-compose
+
 " Neovim initialization
 if has('nvim')
   set inccommand=nosplit  " highlights during a substitution in progress
