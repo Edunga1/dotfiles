@@ -102,9 +102,7 @@ export NPM_CONFIG_PREFIX=~/.node_modules
 # python pyenv-virtualenv
 if command -v pyenv &> /dev/null; then
   export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
+  export PATH="$PYENV_ROOT/shims:$PYENV_ROOT/bin:$PATH"
   alias ac="source activate"
 fi
 
