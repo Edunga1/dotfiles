@@ -24,13 +24,11 @@ endfunction
 
 function! s:Run(bang, range_count, line1, line2) abort
   if a:bang
-    let [l:line1, l:line2] = [line("'<"), line("'>")]
-    if l:line1 == 0
-      echom 'Sh: no previous selection'
+    if !exists('s:last')
+      echom 'Sh: no previous run'
       return
     endif
-    let l:script = join(getline(l:line1, l:line2), "\n")
-    let l:anchor = l:line2
+    let [l:script, l:anchor] = [s:last.script, s:last.anchor]
   elseif a:range_count == 0
     let l:script = s:CurrentLineExpanded()
     let l:anchor = line('.')
@@ -38,6 +36,7 @@ function! s:Run(bang, range_count, line1, line2) abort
     let l:script = join(getline(a:line1, a:line2), "\n")
     let l:anchor = a:line2
   endif
+  let s:last = {'script': l:script, 'anchor': l:anchor}
   let l:para_end = s:FindParagraphEnd(l:anchor)
 
   let l:t0 = reltime()
@@ -73,6 +72,6 @@ endfunction
 " :Sh        - run current line (joining \ continuations)
 " :5,10Sh    - run lines 5~10
 " :'<,'>Sh   - run visual selection
-" :Sh!       - re-run the previous visual selection
+" :Sh!       - re-run the last execution
 " output saved to /tmp/run_<timestamp>.<exit>.out, path appended to the paragraph
 command! -range -bang Sh call <SID>Run(<bang>0, <range>, <line1>, <line2>)
