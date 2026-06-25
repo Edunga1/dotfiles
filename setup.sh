@@ -54,6 +54,7 @@ link vim/init.lua ~/.config/nvim/init.lua
 link vim/ftplugin ~/.config/nvim/ftplugin
 link vim/vim-include ~/.config/nvim/vim-include
 link vim/lua/ ~/.config/nvim/lua
+link vim/after ~/.config/nvim/after
 
 step "tmux"
 link tmux/.tmux.conf ~/.tmux.conf

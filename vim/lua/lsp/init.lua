@@ -61,49 +61,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
--- setup language servers
-local modules = {
-  'lsp.servers.bash',
-  'lsp.servers.markdown',
-  'lsp.servers.python',
-  'lsp.servers.vim',
-  'lsp.servers.json',
-  'lsp.servers.docker',
-  'lsp.servers.rust',
-  'lsp.servers.typescript',
-  'lsp.servers.kotlin',
-  'lsp.servers.gdscript',
-  'lsp.servers.lua',
-  'lsp.servers.html',
-}
-
-for _, module in ipairs(modules) do
-  local server_module = require(module)
-
-  -- Enable nvim-lspconfig servers
-  for _, server in ipairs(server_module.servers or {}) do
-    local config_table = {}
-
-    -- on_attach function (server-specific only)
-    if type(server.on_attach) == 'function' then
-      config_table.on_attach = server.on_attach
-    end
-
-    -- settings
-    if server.settings then
-      config_table.settings = server.settings
-    end
-
-    -- filetypes
-    if server.filetypes then
-      config_table.filetypes = server.filetypes
-    end
-
-    vim.lsp.config(server[1], config_table)
-  end
-
-  -- Register none-ls sources
-  if type(server_module.get_sources) == 'function' then
-    ns.register(server_module.get_sources())
-  end
-end
+-- python tooling via none-ls (tool names, not an LSP server)
+ns.register({
+  require('none-ls.formatting.autopep8'),
+  require('none-ls.formatting.ruff'),
+  require('none-ls.diagnostics.ruff'),
+})
