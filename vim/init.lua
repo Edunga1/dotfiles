@@ -12,4 +12,4 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 -- source a LSP initial script.
-vim.cmd('runtime ' .. 'lua/lsp/init.lua')
+vim.cmd('runtime ' .. 'lua/lsp.lua')
