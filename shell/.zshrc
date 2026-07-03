@@ -130,12 +130,6 @@ if command -v nvim &> /dev/null; then
   alias vi="nvim"
 fi
 
-# Settings for WSL
-if grep -qi microsoft /proc/version &> /dev/null; then
-  alias open=explorer.exe
-  alias gw=git.exe
-fi
-
 # zoxide(z jump, alternative to fasd)
 if command -v zoxide  &> /dev/null; then
   eval "$(zoxide init zsh)"
