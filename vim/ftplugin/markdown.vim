@@ -43,5 +43,52 @@ function! s:AddFrontmatter(...)
   startinsert!
 endfunction
 
+function! s:ApplyTitle(bufnr, url, job_id, data, event) abort
+  let html = join(a:data, "\n")
+  let m = matchlist(html, '<meta[^>]\{-}property=["'']og:title["''][^>]\{-}content=["'']\([^"'']\+\)')
+  if empty(m)
+    let m = matchlist(html, '<meta[^>]\{-}content=["'']\([^"'']\+\)["''][^>]\{-}property=["'']og:title')
+  endif
+  if empty(m)
+    let m = matchlist(html, '<title[^>]*>\s*\(\_.\{-}\)\s*</title>')
+  endif
+  let title = empty(m) ? '' : substitute(m[1], '\s\+', ' ', 'g')
+  if title ==# '' || !bufloaded(a:bufnr)
+    return
+  endif
+  for [entity, char] in [['&lt;', '<'], ['&gt;', '>'], ['&quot;', '"'], ['&#39;', "'"], ['&nbsp;', ' '], ['&amp;', '\&']]
+    let title = substitute(title, entity, char, 'g')
+  endfor
+  let title = substitute(title, '[\[\]]', '\\&', 'g')
+  let lines = getbufline(a:bufnr, 1, '$')
+  for lnum in range(1, len(lines))
+    let idx = stridx(lines[lnum - 1], a:url)
+    " skip urls already inside a markdown link
+    if idx >= 0 && strpart(lines[lnum - 1], idx - 1, 1) !=# '('
+      let link = '[' . title . '](' . a:url . ')'
+      let pattern = '\V' . escape(a:url, '\')
+      call setbufline(a:bufnr, lnum, substitute(lines[lnum - 1], pattern, escape(link, '&\'), ''))
+      return
+    endif
+  endfor
+endfunction
+
+function! s:PasteUrl() abort
+  let text = trim(getreg('+'))
+  if text !~? '^https\?://\S\+$' || !exists('*jobstart')
+    normal! "+p
+    return
+  endif
+  call nvim_put([text], 'c', v:true, v:true)
+  call jobstart(
+        \ ['curl', '-sL', '--max-time', '3', '-A', 'Mozilla/5.0', text],
+        \ {'stdout_buffered': v:true, 'on_stdout': function('s:ApplyTitle', [bufnr(), text])},
+        \ )
+endfunction
+
 command! -buffer FrontmatterCreate call s:CreateFrontmatter()
 command! -buffer -nargs=* FrontmatterAdd call s:AddFrontmatter(<f-args>)
+
+" URL pasting with title from meta tags
+command! -buffer PasteUrl call s:PasteUrl()
+nnoremap <buffer><silent> <leader>p :call <SID>PasteUrl()<CR>
