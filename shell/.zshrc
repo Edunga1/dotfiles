@@ -115,9 +115,7 @@ if [ -d $HOME/.android-sdk ]; then
 fi
 
 # Ruby
-if [ -d $HOME/.rbenv ]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+if command -v rbenv &> /dev/null; then
   eval "$(rbenv init -)"
 fi
 
