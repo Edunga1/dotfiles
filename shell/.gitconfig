@@ -68,6 +68,8 @@
     | cut -c3-
   # create branch with suffix
   swc = "!f() { git switch -c \"$(git symbolic-ref --short HEAD)-$1\"; }; f"
+  # add to .git/info/exclude
+  exclude = "!f() { echo \"$(git rev-parse --show-prefix)$1\" >> \"$(git rev-parse --git-dir)/info/exclude\"; }; f"
 
 [include]
   # for local settings. don't track this file.
