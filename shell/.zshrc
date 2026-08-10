@@ -93,6 +93,10 @@ if command -v tmux &> /dev/null; then
   compdef _tmux _tmux_run
   alias tmux=_tmux_run
   alias tmuxn="tmuxinator"
+  function tmuxnn() {
+    local s="${1:-$(tmux display-message -p '#S')}"
+    tmuxinator new --local "$s" "$s"
+  }
 fi
 
 # npm global packages
