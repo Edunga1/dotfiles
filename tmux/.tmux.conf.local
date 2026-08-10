@@ -474,6 +474,9 @@ set-option -g repeat-time 250
 # mouse mode enabled
 set -g mouse on
 
+# enable clickable hyperlinks
+set -ga terminal-features "*:hyperlinks"
+
 # keep selection on mouse drag release (no auto-copy)
 bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X stop-selection
 bind-key -T copy-mode    MouseDragEnd1Pane send-keys -X stop-selection
