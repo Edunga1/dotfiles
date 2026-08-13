@@ -403,7 +403,7 @@ tmux_conf_urlscan_options="--compact --dedupe"
 #set -g history-limit 10000
 
 # start with mouse mode enabled
-#set -g mouse on
+set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
@@ -470,9 +470,6 @@ set -sg escape-time 10
 
 # shorter time to wait for a key sequence to complete
 set-option -g repeat-time 250
-
-# mouse mode enabled
-set -g mouse on
 
 # enable clickable hyperlinks
 set -ga terminal-features "*:hyperlinks"
