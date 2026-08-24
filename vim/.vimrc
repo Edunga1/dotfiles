@@ -48,6 +48,7 @@ Plug 'leafgarland/typescript-vim'       " Typescript syntax files for Vim
 Plug 'godlygeek/tabular'                " Vim script for text filtering and alignment. vim-markdown uses this.
 Plug 'preservim/vim-markdown'           " Syntax highlighting, matching rules and mappings
 Plug 'img-paste-devs/img-paste.vim'     " paste image to markdown
+Plug 'ntk148v/yankdown.nvim'            " Smart paste for Markdown in Neovim
 
 " Python
 Plug 'Vimjas/vim-python-pep8-indent'    " This modifies Vim’s indentation behavior to comply with PEP8
