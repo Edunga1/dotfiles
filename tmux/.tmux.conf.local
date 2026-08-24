@@ -536,6 +536,9 @@ tmux_conf_uninstall_plugins_on_reload=false
 #set -g @plugin 'tmux-plugins/tmux-continuum'
 #set -g @continuum-restore 'on'
 
+# Tmux pane tree with live agent badges. <prefix>t to toggle the tree view
+set -g @plugin 'sandudorogan/tmux-pane-tree'
+set -g @tmux_pane_tree_install_agent_hooks 1
 
 # -- custom variables ----------------------------------------------------------
 
