@@ -1,5 +1,4 @@
 require("CopilotChat").setup {
-  model = "gpt-5.4",
   language = "korean",
   sticky = {
     "#buffer:active",
