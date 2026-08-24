@@ -1,0 +1,3 @@
+#!/bin/sh
+
+pbpaste | FORCE_COLOR=1 hanspell-cli | tee /dev/tty | perl -pe 's/\e\[[0-9;]*m//g' | pbcopy

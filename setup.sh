@@ -68,3 +68,6 @@ link shell/.wezterm.lua ~/.wezterm.lua
 
 step "git"
 link shell/.gitconfig ~/.gitconfig
+
+step "~/bin"
+link shell/bin/hanspell ~/bin/hanspell
