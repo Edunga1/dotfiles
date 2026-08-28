@@ -67,6 +67,7 @@ Plug 'mbbill/undotree'                  " The undo history visualizer for VIM
 " Vim objects
 Plug 'michaeljsmith/vim-indent-object'  " This plugin defines a new text object, based on indentation levels.
 Plug 'wellle/targets.vim'               " Adds various text objects to give you more targets to operate on
+Plug 'nvim-treesitter/nvim-treesitter'  " Nvim Treesitter configurations and abstraction layer
 
 " Etc.
 Plug 'dhruvasagar/vim-table-mode'       " VIM Table Mode for instant table creation. <leader>tm to toggle table mode
