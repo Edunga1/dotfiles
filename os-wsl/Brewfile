@@ -1,0 +1,1 @@
+brew "wl-clipboard"  # Clipboard utilities for WSLg. e.g. wl-paste, wl-copy
