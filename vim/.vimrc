@@ -212,9 +212,9 @@ nnoremap [w <cmd>lprevious<cr>
 nnoremap ]w <cmd>lnext<cr>
 
 " Expand/shrink selection (treesitter/LSP incremental selection, nvim 0.12+)
-nmap <M-Up> van
-xmap <M-Up> an
-xmap <M-Down> in
+nmap + van
+xmap + an
+xmap _ in
 
 " Change tab size
 map <leader>w4 <cmd>set tabstop=4<cr><cmd>set softtabstop=4<cr><cmd>set shiftwidth=4<cr><cmd>set expandtab<cr>
