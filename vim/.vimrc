@@ -11,7 +11,6 @@ Plug 'airblade/vim-gitgutter'           " shows a git diff in the gutter
 " AI
 Plug 'github/copilot.vim'               " Neovim plugin for GitHub Copilot
 Plug 'CopilotC-Nvim/CopilotChat.nvim'   " Chat with GitHub Copilot in Neovim. requires plenary.nvim, copilot.vim
-Plug 'ravitemer/mcphub.nvim', { 'do': 'npm install -g mcp-hub@latest' }  " An MCP client for Neovim
 
 " Navigation
 Plug 'scrooloose/nerdtree'              " a tree explorer
