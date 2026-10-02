@@ -1,3 +1,7 @@
+if vim.g.plugs["nvim-treesitter"] == nil then
+  return
+end
+
 vim.api.nvim_create_autocmd('FileType', {
   pattern = { 'typescriptreact', 'javascriptreact' },
   callback = function()
