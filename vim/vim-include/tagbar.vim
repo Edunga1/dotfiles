@@ -5,6 +5,9 @@ endif
 " keep orderding
 let g:tagbar_sort = 0
 
+" skip auto update for files over 100KB (parsing large json takes seconds)
+let g:tagbar_file_size_limit = 100000
+
 " toggle tagbar
 nmap <leader>t :TagbarToggle<cr>
 
