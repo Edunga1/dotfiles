@@ -73,9 +73,13 @@ function! s:ApplyTitle(bufnr, url, job_id, data, event) abort
   endfor
 endfunction
 
+function! s:IsUrl(text) abort
+  return a:text =~? '^https\?://\S\+$'
+endfunction
+
 function! s:PasteUrl() abort
   let text = trim(getreg('+'))
-  if text !~? '^https\?://\S\+$' || !exists('*jobstart')
+  if !s:IsUrl(text) || !exists('*jobstart')
     normal! "+p
     return
   endif
@@ -86,9 +90,25 @@ function! s:PasteUrl() abort
         \ )
 endfunction
 
+function! s:HasClipboardImage() abort
+  return IsMac() && system("osascript -e 'clipboard info'") =~# 'PNGf'
+endfunction
+
+function! s:SmartPaste() abort
+  let clip = getreg('+')
+  if v:count || index(['"', '*', '+'], v:register) < 0 || clip ==# getreg('0')
+    execute 'normal! "' . v:register . v:count1 . 'p'
+  elseif s:HasClipboardImage()
+    call mdip#MarkdownClipboardImage()
+  elseif s:IsUrl(trim(clip))
+    call s:PasteUrl()
+  else
+    lua require('yankdown').paste()
+  endif
+endfunction
+
 command! -buffer FrontmatterCreate call s:CreateFrontmatter()
 command! -buffer -nargs=* FrontmatterAdd call s:AddFrontmatter(<f-args>)
 
-" URL pasting with title from meta tags
-command! -buffer PasteUrl call s:PasteUrl()
-nnoremap <buffer><silent> <leader>p :call <SID>PasteUrl()<CR>
+" Route paste by clipboard content: image, URL, or HTML
+nnoremap <buffer><silent> p <Cmd>call <SID>SmartPaste()<CR>
