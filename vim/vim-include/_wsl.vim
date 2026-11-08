@@ -17,22 +17,6 @@ endif
 " ===
 
 
-" windows clipboard sharing
-" - OP: https://github.com/microsoft/WSL/issues/4440#issuecomment-638956838
-let g:clipboard = {
-          \   'name': 'win32yank-wsl',
-          \   'copy': {
-          \      '+': 'win32yank.exe -i --crlf',
-          \      '*': 'win32yank.exe -i --crlf',
-          \    },
-          \   'paste': {
-          \      '+': 'win32yank.exe -o --lf',
-          \      '*': 'win32yank.exe -o --lf',
-          \   },
-          \   'cache_enabled': 0,
-          \ }
-
-
 " Clipboard image pasting
 " Usage: :call WSLSaveImageFromClipboard('sample.png')
 let s:img_paste_cmd = 'powershell.exe -NoProfile -Command "(Get-Clipboard -Format Image).Save(' . "'$(wslpath -w \"%s\")'" . ')"'

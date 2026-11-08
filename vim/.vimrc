@@ -97,7 +97,7 @@ set history=256           " Number of things to remember in history.
 set autowrite             " Writes on make/shell commands
 set autoread
 set timeoutlen=250        " Time to wait after ESC (default causes an annoying delay)
-set clipboard+=unnamed    " Yanking goes on the clipboard instead.
+set clipboard+=unnamedplus " Yanking goes on the clipboard instead.
 set path+=**              " Search all subdirectories and recursively
 
 " Backup
