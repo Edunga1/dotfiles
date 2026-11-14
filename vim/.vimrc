@@ -160,6 +160,8 @@ set background=dark
 set list
 set listchars=tab:T>
 
+set nomodeline           " Disable modeline
+
 " Highlight special keys and extra white spaces
 autocmd ColorScheme * highlight SpecialKey guibg=#424242 ctermfg=236 ctermbg=234
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
