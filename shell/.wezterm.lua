@@ -5,6 +5,6 @@ config.font = wezterm.font 'JetBrains Mono'
 
 config.window_close_confirmation = 'NeverPrompt'
 
-config.window_background_opacity = 0.7
+config.window_background_opacity = 0.85
 
 return config
