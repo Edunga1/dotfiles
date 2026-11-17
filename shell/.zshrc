@@ -155,10 +155,15 @@ fi
 
 # Jira CLI
 if command -v jira &> /dev/null; then
+  # Print jira issue number from the branch name
+  function jira-no() {
+    local branch=${1:-$(git branch --show-current)}
+    echo $branch | grep -o '\b\w\+-\d\+\b'
+  }
+
   # Show jira issue summary
   function jiras() {
-    local branch=${1:-$(git branch --show-current)}
-    local issuenum=$(echo $branch | grep -o '\b\w\+-\d\+\b')
+    local issuenum=$(jira-no "$1")
     if [[ -n $issuenum ]]; then
       jira issue view --raw "$issuenum" | jq -r '.fields.summary'
     else
