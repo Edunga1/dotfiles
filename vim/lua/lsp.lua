@@ -4,6 +4,9 @@ require 'mason'.setup {
 }
 -- automatically enable installed servers
 require("mason-lspconfig").setup()
+-- servers outside mason
+vim.lsp.enable('gdscript') -- served by the running Godot editor
+
 local ns = require 'null-ls'
 ns.setup()
 require("mason-null-ls").setup({
